@@ -1,0 +1,4 @@
+D:\PROJECTS\FORMULARIOC#\FormNewUIdesign\FormNewUIdesign\bin\Debug\EGIS_Project.exe.config
+D:\PROJECTS\FORMULARIOC#\FormNewUIdesign\FormNewUIdesign\bin\Debug\FormNewUIdesign.exe.config
+D:\PROJECTS\FORMULARIOC#\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.exe
+D:\PROJECTS\FORMULARIOC#\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.pdb
