@@ -67,9 +67,9 @@ namespace FormNewUIdesign
                     {
                         string numeroRut = txtRut.Text.Substring(0, txtRut.Text.Length - 1).Replace("k", "0").Replace("K", "0");
                         string dv = txtRut.Text.Substring(txtRut.Text.Length - 1);
-                        if (Rut.ValidarRut(int.Parse(numeroRut), dv))
+                        if (Mixin.ValidarRut(int.Parse(numeroRut), dv))
                         {
-                            txtRut.Text = Rut.FormatearRut(txtRut.Text);
+                            txtRut.Text = Mixin.FormatearRut(txtRut.Text);
                             lineRut.BorderColor = Color.DimGray;
                             lblRut.ForeColor = Color.DimGray;
                             lblErrorRut.Visible = false;
@@ -101,9 +101,9 @@ namespace FormNewUIdesign
                     {
                         string numeroRut = rut.Substring(0, rut.Length - 1).Replace("k", "0").Replace("K", "0");
                         string dv = rut.Substring(rut.Length - 1);
-                        if (Rut.ValidarRut(int.Parse(numeroRut), dv))
+                        if (Mixin.ValidarRut(int.Parse(numeroRut), dv))
                         {
-                            txtRut.Text = Rut.FormatearRut(txtRut.Text);
+                            txtRut.Text = Mixin.FormatearRut(txtRut.Text);
                             lineRut.BorderColor = Color.DimGray;
                             lblRut.ForeColor = Color.DimGray;
                             lblErrorRut.Visible = false;
@@ -346,7 +346,7 @@ namespace FormNewUIdesign
             }
             else
             {
-                if (Email.ValidarCorreo(txtMail.Text))
+                if (Mixin.ValidarCorreo(txtMail.Text))
                 {
                     txtMail.ForeColor = Color.DimGray;
                     lineMail.BorderColor = Color.DimGray;

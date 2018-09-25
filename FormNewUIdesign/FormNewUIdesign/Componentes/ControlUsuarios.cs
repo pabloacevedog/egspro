@@ -25,7 +25,7 @@ namespace FormNewUIdesign
 
         private void tabListUsers_Click(object sender, EventArgs e)
         {
-            if (VariablesGlobales.activeTabEditUser)
+            if (Mixin.VG.activeTabEditUser)
             {
                 DialogResult result = Message.ShowMessage("¿Descartar cambios?", "Existen datos sin guardar, si sale de esta pestaña perderá los datos, ¿Desea continuar?", Message.MessageType.information);
                 if (result == DialogResult.Yes)
@@ -41,7 +41,7 @@ namespace FormNewUIdesign
 
         private void tabAddUser_Click(object sender, EventArgs e)
         {
-            if (VariablesGlobales.activeTabEditUser)
+            if (Mixin.VG.activeTabEditUser)
             {
                 DialogResult result = Message.ShowMessage("¿Descartar cambios?", "Existen datos sin guardar, si sale de esta pestaña perderá los datos, ¿Desea continuar?", Message.MessageType.information);
                 if (result == DialogResult.Yes)
@@ -58,25 +58,25 @@ namespace FormNewUIdesign
 
         public static void ActivarTabListaUsuarios()
         {
-            if (!VariablesGlobales.activeTabListUsers)
+            if (!Mixin.VG.activeTabListUsers)
             {
-                VariablesGlobales.activeTabListUsers = true;
+                Mixin.VG.activeTabListUsers = true;
 
                 tabListUsers.BackColor = Color.FromArgb(50, 137, 201);
                 tabListUsers.ForeColor = Color.White;
                 tabListUsers.Image = Image.FromFile("../../iconos/list_users/white.png");
                 tabEditUser.Visible = false;
 
-                if (VariablesGlobales.activeTabAddUser)
+                if (Mixin.VG.activeTabAddUser)
                 {
-                    VariablesGlobales.activeTabAddUser = false;
+                    Mixin.VG.activeTabAddUser = false;
                     tabAddUser.BackColor = Color.FromArgb(235, 235, 235);
                     tabAddUser.ForeColor = Color.DimGray;
                     tabAddUser.Image = Image.FromFile("../../iconos/add_user/grey.png");
                 }
-                else if (VariablesGlobales.activeTabEditUser)
+                else if (Mixin.VG.activeTabEditUser)
                 {
-                    VariablesGlobales.activeTabEditUser = false;
+                    Mixin.VG.activeTabEditUser = false;
                     tabEditUser.BackColor = Color.FromArgb(235, 235, 235);
                     tabEditUser.ForeColor = Color.DimGray;
                     tabEditUser.Image = Image.FromFile("../../iconos/edit_user/grey.png");
@@ -87,24 +87,24 @@ namespace FormNewUIdesign
 
         public static void ActivarTabAgregarUsuario()
         {
-            if (!VariablesGlobales.activeTabAddUser)
+            if (!Mixin.VG.activeTabAddUser)
             {
-                VariablesGlobales.activeTabAddUser = true;
+                Mixin.VG.activeTabAddUser = true;
                 tabAddUser.BackColor = Color.FromArgb(50, 137, 201);
                 tabAddUser.ForeColor = Color.White;
                 tabAddUser.Image = Image.FromFile("../../iconos/add_user/white.png");
                 tabEditUser.Visible = false;
 
-                if (VariablesGlobales.activeTabListUsers)
+                if (Mixin.VG.activeTabListUsers)
                 {
-                    VariablesGlobales.activeTabListUsers = false;
+                    Mixin.VG.activeTabListUsers = false;
                     tabListUsers.BackColor = Color.FromArgb(235, 235, 235);
                     tabListUsers.ForeColor = Color.DimGray;
                     tabListUsers.Image = Image.FromFile("../../iconos/list_users/grey.png");
                 }
-                else if (VariablesGlobales.activeTabEditUser)
+                else if (Mixin.VG.activeTabEditUser)
                 {
-                    VariablesGlobales.activeTabEditUser = false;
+                    Mixin.VG.activeTabEditUser = false;
                     tabEditUser.BackColor = Color.FromArgb(235, 235, 235);
                     tabEditUser.ForeColor = Color.DimGray;
                     tabEditUser.Image = Image.FromFile("../../iconos/edit_user/grey.png");
@@ -117,9 +117,9 @@ namespace FormNewUIdesign
         public static void ActivarTabEditarUsuario(ObjetoUsuario datosUsuario)
         {
             EditarUsuario editarUsuario = new EditarUsuario();
-            if (!VariablesGlobales.activeTabEditUser)
+            if (!Mixin.VG.activeTabEditUser)
             {
-                VariablesGlobales.activeTabEditUser = true;
+                Mixin.VG.activeTabEditUser = true;
                 tabEditUser.BackColor = Color.FromArgb(50, 137, 201);
                 tabEditUser.ForeColor = Color.White;
                 tabEditUser.Image = Image.FromFile("../../iconos/edit_user/white.png");
@@ -129,16 +129,16 @@ namespace FormNewUIdesign
                 editarUsuario.setDatosFormulario(datosUsuario);
                 tabEditUser.Visible = true;
 
-                if (VariablesGlobales.activeTabAddUser)
+                if (Mixin.VG.activeTabAddUser)
                 {
-                    VariablesGlobales.activeTabAddUser = false;
+                    Mixin.VG.activeTabAddUser = false;
                     tabAddUser.BackColor = Color.FromArgb(235, 235, 235);
                     tabAddUser.ForeColor = Color.DimGray;
                     tabAddUser.Image = Image.FromFile("../../iconos/add_user/grey.png");
                 }
-                else if (VariablesGlobales.activeTabListUsers)
+                else if (Mixin.VG.activeTabListUsers)
                 {
-                    VariablesGlobales.activeTabListUsers = false;
+                    Mixin.VG.activeTabListUsers = false;
                     tabListUsers.BackColor = Color.FromArgb(235, 235, 235);
                     tabListUsers.ForeColor = Color.DimGray;
                     tabListUsers.Image = Image.FromFile("../../iconos/list_users/grey.png");

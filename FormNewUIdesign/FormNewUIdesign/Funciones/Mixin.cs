@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace FormNewUIdesign.Funciones
 {
-    public class Rut
+    public class Mixin
     {
+
+        public class VG
+        {
+            public static bool activeTabListUsers = true;
+            public static bool activeTabAddUser = false;
+            public static bool activeTabEditUser = false;
+        }
+
+        
         public static string FormatearRut(string rut)
         {
             rut = rut.ToUpper();
@@ -69,6 +74,27 @@ namespace FormNewUIdesign.Funciones
             }
 
             return DigitoVerificador == digitoVerificador;
+        }
+
+        public static bool ValidarCorreo(string email)
+        {
+            string expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

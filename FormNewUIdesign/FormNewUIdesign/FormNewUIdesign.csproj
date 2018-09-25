@@ -67,8 +67,7 @@
     <Compile Include="Formularios\MenuContextual.Designer.cs">
       <DependentUpon>MenuContextual.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funciones\Email.cs" />
-    <Compile Include="Funciones\Rut.cs" />
+    <Compile Include="Funciones\Mixin.cs" />
     <Compile Include="Componentes\ControlUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,7 +86,6 @@
     <Compile Include="Formularios\Message.Designer.cs">
       <DependentUpon>Message.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funciones\VariablesGlobales.cs" />
     <Compile Include="Modelo\LoginModel.cs" />
     <Compile Include="Modelo\ConexionMySql.cs" />
     <Compile Include="Formularios\Formulario.cs">
