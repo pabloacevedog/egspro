@@ -114,8 +114,8 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " INSERT INTO usuarios (Rut, Nombre, Apellidos, Username, Password, Telefono, Mail, Sexo, Edad, Perfil) " + 
-                                              " VALUES (@Rut, @Nombre, @Apellidos, @Username, @Password, @Telefono, @Mail, @Sexo, @Edad, @Perfil) ";
+                            cmd.CommandText = " INSERT INTO usuarios (Rut, Nombre, Apellidos, Username, Password, Telefono, Mail, Sexo, Edad, Imagen, Perfil) " + 
+                                              " VALUES (@Rut, @Nombre, @Apellidos, @Username, @Password, @Telefono, @Mail, @Sexo, @Edad, @Imagen, @Perfil) ";
 
                             cmd.Parameters.AddWithValue("@Rut", NuevoUsuario.rut);
                             cmd.Parameters.AddWithValue("@Nombre", NuevoUsuario.nombre);
@@ -126,6 +126,7 @@ namespace FormNewUIdesign.Modelo
                             cmd.Parameters.AddWithValue("@Mail", NuevoUsuario.mail);
                             cmd.Parameters.AddWithValue("@Sexo", NuevoUsuario.sexo);
                             cmd.Parameters.AddWithValue("@Edad", NuevoUsuario.edad);
+                            cmd.Parameters.AddWithValue("@Imagen", NuevoUsuario.img_perfil);
                             cmd.Parameters.AddWithValue("@Perfil", NuevoUsuario.perfil);
 
                             retorno = cmd.ExecuteNonQuery();
@@ -234,6 +235,51 @@ namespace FormNewUIdesign.Modelo
 
 
 
+        public static string ObtenerImagenPerfilUsuario(string rut)
+        {
+            string resultado = "";
+            try
+            {
+                using (MySqlConnection conn = ObtenerConexionBD())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = " SELECT Imagen " +
+                                            " FROM usuarios " +
+                                            " WHERE rut = @rut ";
+
+                        cmd.Parameters.AddWithValue("@rut", rut);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                resultado = reader["Imagen"].ToString();
+                            }
+
+                            reader.Close();
+                            reader.Dispose();
+                        }
+                        cmd.Dispose();
+                    }
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ObtenerImagenPerfilUsuario() \n" + e.Message, Message.MessageType.error);
+            }
+            catch (Exception e2)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ObtenerImagenPerfilUsuario() \n" + e2.Message, Message.MessageType.error);
+            }
+            return resultado;
+        }
+
+
+
         public static int ActualizarUsuario(ObjetoUsuario datosUsuario)
         {
             int retorno = 0;
@@ -256,6 +302,7 @@ namespace FormNewUIdesign.Modelo
                                                 " Mail = @Mail, " +
                                                 " Sexo = @Sexo, " +
                                                 " Edad = @Edad, " +
+                                                " Imagen = @Imagen, " +
                                                 " Perfil = @Perfil " +
                                               " WHERE Rut = @Rut ";
 
@@ -268,6 +315,7 @@ namespace FormNewUIdesign.Modelo
                             cmd.Parameters.AddWithValue("@Mail", datosUsuario.mail);
                             cmd.Parameters.AddWithValue("@Sexo", datosUsuario.sexo);
                             cmd.Parameters.AddWithValue("@Edad", datosUsuario.edad);
+                            cmd.Parameters.AddWithValue("@Imagen", datosUsuario.img_perfil);
                             cmd.Parameters.AddWithValue("@Perfil", datosUsuario.perfil);
 
                             retorno = cmd.ExecuteNonQuery();
@@ -289,6 +337,50 @@ namespace FormNewUIdesign.Modelo
                 Message.ShowMessage("Error MySql", "UsersModel.cs -> ActualizarUsuario() \n" + e2.Message, Message.MessageType.error);
             }
             return retorno;
+        }
+
+
+        public static string ObtenerDirectorioFotosPerfil()
+        {
+            string resultado = "";
+            try
+            {
+                using (MySqlConnection conn = ObtenerConexionBD())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = " SELECT valor " +
+                                            " FROM constantes " +
+                                            " WHERE nombre = @nombre ";
+
+                        cmd.Parameters.AddWithValue("@nombre", "ruta_fotos_perfil");
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                resultado = reader["valor"].ToString();
+                            }
+
+                            reader.Close();
+                            reader.Dispose();
+                        }
+                        cmd.Dispose();
+                    }
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ObtenerIdPerfil() \n" + e.Message, Message.MessageType.error);
+            }
+            catch (Exception e2)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ObtenerIdPerfil() \n" + e2.Message, Message.MessageType.error);
+            }
+            return resultado;
         }
     }
 }

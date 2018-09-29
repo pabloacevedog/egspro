@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using FormNewUIdesign.Formularios;
 using System.Threading;
+using System.IO;
+using FormNewUIdesign.Modelo;
 
 namespace FormNewUIdesign
 {
@@ -310,73 +312,153 @@ namespace FormNewUIdesign
             switch (elemento)
             {
                 case "Dashboard":
-                    btnDashboard.BackColor = Color.FromArgb(50, 137, 201);
+                    btnDashboard.BackColor = Color.FromArgb(251, 168, 39);
                     btnDashboard.ForeColor = Color.White;
-                    btnDashboard.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnDashboard.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnDashboard.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnDashboard.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnDashboard.Image = Image.FromFile("../../iconos/dashboard/white.png");
                     break;
                 case "Usuarios":
-                    btnUsers.BackColor = Color.FromArgb(50, 137, 201);
+                    btnUsers.BackColor = Color.FromArgb(251, 168, 39);
                     btnUsers.ForeColor = Color.White;
-                    btnUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnUsers.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnUsers.Image = Image.FromFile("../../iconos/account_group/white.png");
                     break;
                 case "Postulación":
-                    btnPostulacion.BackColor = Color.FromArgb(50, 137, 201);
+                    btnPostulacion.BackColor = Color.FromArgb(251, 168, 39);
                     btnPostulacion.ForeColor = Color.White;
-                    btnPostulacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnPostulacion.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnPostulacion.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnPostulacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnPostulacion.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnPostulacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnPostulacion.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnPostulacion.Image = Image.FromFile("../../iconos/projects/white.png");
                     break;
                 case "Postulantes":
-                    btnPostulantes.BackColor = Color.FromArgb(50, 137, 201);
+                    btnPostulantes.BackColor = Color.FromArgb(251, 168, 39);
                     btnPostulantes.ForeColor = Color.White;
-                    btnPostulantes.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnPostulantes.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnPostulantes.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnPostulantes.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnPostulantes.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnPostulantes.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnPostulantes.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnPostulantes.Image = Image.FromFile("../../iconos/system/white.png");
                     break;
                 case "Sistema":
-                    btnSystem.BackColor = Color.FromArgb(50, 137, 201);
+                    btnSystem.BackColor = Color.FromArgb(251, 168, 39);
                     btnSystem.ForeColor = Color.White;
-                    btnSystem.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201); 
-                    btnSystem.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnSystem.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnSystem.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnSystem.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnSystem.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnSystem.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnSystem.Image = Image.FromFile("../../iconos/clients/white.png");
                     break;
                 case "Ventas":
-                    btnVentas.BackColor = Color.FromArgb(50, 137, 201);
+                    btnVentas.BackColor = Color.FromArgb(251, 168, 39);
                     btnVentas.ForeColor = Color.White;
-                    btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnVentas.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnVentas.Image = Image.FromFile("../../iconos/sales/white.png");
                     break;
                 case "Configuración":
-                    btnConfig.BackColor = Color.FromArgb(50, 137, 201);
+                    btnConfig.BackColor = Color.FromArgb(251, 168, 39);
                     btnConfig.ForeColor = Color.White;
-                    btnConfig.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnConfig.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnConfig.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnConfig.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnConfig.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnConfig.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnConfig.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnConfig.Image = Image.FromFile("../../iconos/settings/white.png");
                     break;
                 case "Reportes":
-                    btnReportes.BackColor = Color.FromArgb(50, 137, 201);
+                    btnReportes.BackColor = Color.FromArgb(251, 168, 39);
                     btnReportes.ForeColor = Color.White;
-                    btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnReportes.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnReportes.Image = Image.FromFile("../../iconos/reports/white.png");
                     break;
                 case "Reporte Ventas":
-                    btnReporteVentas.BackColor = Color.FromArgb(50, 137, 201);
+                    btnReporteVentas.BackColor = Color.FromArgb(251, 168, 39);
                     btnReporteVentas.ForeColor = Color.White;
-                    btnReporteVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnReporteVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnReporteVentas.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnReporteVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnReporteVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnReporteVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnReporteVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnReporteVentas.Image = Image.FromFile("../../iconos/sales_report/white.png");
                     break;
                 case "Reporte Compras":
-                    btnReporteCompras.BackColor = Color.FromArgb(50, 137, 201);
+                    btnReporteCompras.BackColor = Color.FromArgb(251, 168, 39);
                     btnReporteCompras.ForeColor = Color.White;
-                    btnReporteCompras.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                    btnReporteCompras.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    if (btnReporteCompras.BackColor == Color.FromArgb(251, 168, 39))
+                    {
+                        btnReporteCompras.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnReporteCompras.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                    }
+                    else
+                    {
+                        btnReporteCompras.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnReporteCompras.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                    }
                     btnReporteCompras.Image = Image.FromFile("../../iconos/purchases_report/white.png");
                     break;
             }
@@ -390,60 +472,70 @@ namespace FormNewUIdesign
                     btnDashboard.BackColor = Color.FromArgb(235, 235, 235);
                     btnDashboard.ForeColor = Color.DimGray;
                     btnDashboard.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnDashboard.Image = Image.FromFile("../../iconos/dashboard/grey.png");
                     break;
                 case "Usuarios":
                     btnUsers.BackColor = Color.FromArgb(235, 235, 235);
                     btnUsers.ForeColor = Color.DimGray;
                     btnUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnUsers.Image = Image.FromFile("../../iconos/account_group/grey.png");
                     break;
                 case "Postulación":
                     btnPostulacion.BackColor = Color.FromArgb(235, 235, 235);
                     btnPostulacion.ForeColor = Color.DimGray;
                     btnPostulacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnPostulacion.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnPostulacion.Image = Image.FromFile("../../iconos/projects/grey.png");
                     break;
                 case "Postulantes":
                     btnPostulantes.BackColor = Color.FromArgb(235, 235, 235);
                     btnPostulantes.ForeColor = Color.DimGray;
                     btnPostulantes.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnPostulantes.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnPostulantes.Image = Image.FromFile("../../iconos/clients/grey.png");
                     break;
                 case "Sistema":
                     btnSystem.BackColor = Color.FromArgb(235, 235, 235);
                     btnSystem.ForeColor = Color.DimGray;
                     btnSystem.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnSystem.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnSystem.Image = Image.FromFile("../../iconos/system/grey.png");
                     break;
                 case "Ventas":
                     btnVentas.BackColor = Color.FromArgb(235, 235, 235);
                     btnVentas.ForeColor = Color.DimGray;
                     btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnVentas.Image = Image.FromFile("../../iconos/sales/grey.png");
                     break;
                 case "Configuración":
                     btnConfig.BackColor = Color.FromArgb(235, 235, 235);
                     btnConfig.ForeColor = Color.DimGray;
                     btnConfig.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnConfig.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnConfig.Image = Image.FromFile("../../iconos/settings/grey.png");
                     break;
                 case "Reportes":
                     btnReportes.BackColor = Color.FromArgb(235, 235, 235);
                     btnReportes.ForeColor = Color.DimGray;
                     btnReportes.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnReportes.Image = Image.FromFile("../../iconos/reports/grey.png");
                     break;
                 case "Reporte Ventas":
                     btnReporteVentas.BackColor = Color.FromArgb(235, 235, 235);
                     btnReporteVentas.ForeColor = Color.DimGray;
                     btnReporteVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnReporteVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnReporteVentas.Image = Image.FromFile("../../iconos/sales_report/grey.png");
                     break;
                 case "Reporte Compras":
                     btnReporteCompras.BackColor = Color.FromArgb(235, 235, 235);
                     btnReporteCompras.ForeColor = Color.DimGray;
                     btnReporteCompras.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnReporteCompras.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnReporteCompras.Image = Image.FromFile("../../iconos/purchases_report/grey.png");
                     break;
             }
@@ -454,6 +546,11 @@ namespace FormNewUIdesign
         public void SetTextoUsername(string nombre)
         {
             lblUsername.Text = nombre;
+        }
+
+        public static void SetUserImage(string rutaImagenPerfil)
+        {
+            imgUsername.BackgroundImage = Image.FromFile(rutaImagenPerfil);
         }
 
         private void btnDataUser_MouseEnter(object sender, EventArgs e)
@@ -484,12 +581,6 @@ namespace FormNewUIdesign
             opciones.Add(opcion);
 
             opcion = new OpcionesMenu();
-            opcion.id = "optCambiarIdioma";
-            opcion.texto = "Idioma";
-            opcion.imagen = "../../iconos/idioma/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
             opcion.id = "optAyuda";
             opcion.texto = "Centro de Ayuda";
             opcion.imagen = "../../iconos/help_center/grey.png";
@@ -502,6 +593,22 @@ namespace FormNewUIdesign
             opciones.Add(opcion);
             Point ubicacion = FormPrincipal.ActiveForm.PointToScreen(btnDataUser.Location);
             MenuContextual.ShowMenu(opciones, new Point(ubicacion.X + 200, ubicacion.Y + btnDataUser.Height), null);
+        }
+
+        private void FormPrincipal_Shown(object sender, EventArgs e)
+        {
+            if (objetoUsuario.img_perfil != "" && objetoUsuario.img_perfil != null)
+            {
+                string rutaImagenPerfil = Path.Combine(UsersModel.ObtenerDirectorioFotosPerfil(), objetoUsuario.img_perfil);
+                if (File.Exists(rutaImagenPerfil))
+                {
+                    imgUsername.BackgroundImage = Image.FromFile(rutaImagenPerfil);
+                }
+                else
+                {
+                    imgUsername.BackgroundImage = Image.FromFile(Path.Combine(UsersModel.ObtenerDirectorioFotosPerfil(), "user_default.png"));
+                }
+            }
         }
     }
 }

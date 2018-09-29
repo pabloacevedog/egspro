@@ -62,7 +62,7 @@ namespace FormNewUIdesign
             {
                 Mixin.VG.activeTabListUsers = true;
 
-                tabListUsers.BackColor = Color.FromArgb(50, 137, 201);
+                tabListUsers.BackColor = Color.FromArgb(251, 168, 39);
                 tabListUsers.ForeColor = Color.White;
                 tabListUsers.Image = Image.FromFile("../../iconos/list_users/white.png");
                 tabEditUser.Visible = false;
@@ -90,7 +90,7 @@ namespace FormNewUIdesign
             if (!Mixin.VG.activeTabAddUser)
             {
                 Mixin.VG.activeTabAddUser = true;
-                tabAddUser.BackColor = Color.FromArgb(50, 137, 201);
+                tabAddUser.BackColor = Color.FromArgb(251, 168, 39);
                 tabAddUser.ForeColor = Color.White;
                 tabAddUser.Image = Image.FromFile("../../iconos/add_user/white.png");
                 tabEditUser.Visible = false;
@@ -120,7 +120,7 @@ namespace FormNewUIdesign
             if (!Mixin.VG.activeTabEditUser)
             {
                 Mixin.VG.activeTabEditUser = true;
-                tabEditUser.BackColor = Color.FromArgb(50, 137, 201);
+                tabEditUser.BackColor = Color.FromArgb(251, 168, 39);
                 tabEditUser.ForeColor = Color.White;
                 tabEditUser.Image = Image.FromFile("../../iconos/edit_user/white.png");
 

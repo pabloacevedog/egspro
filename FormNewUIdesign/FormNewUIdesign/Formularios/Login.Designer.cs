@@ -90,7 +90,7 @@ namespace FormNewUIdesign
             this.linePassword.BorderColor = System.Drawing.Color.DimGray;
             this.linePassword.Enabled = false;
             this.linePassword.Name = "linePassword";
-            this.linePassword.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.linePassword.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.linePassword.X1 = 323;
             this.linePassword.X2 = 708;
             this.linePassword.Y1 = 158;
@@ -101,7 +101,7 @@ namespace FormNewUIdesign
             this.lineUser.BorderColor = System.Drawing.Color.DimGray;
             this.lineUser.Enabled = false;
             this.lineUser.Name = "lineUser";
-            this.lineUser.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.lineUser.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.lineUser.X1 = 323;
             this.lineUser.X2 = 708;
             this.lineUser.Y1 = 100;
@@ -140,11 +140,11 @@ namespace FormNewUIdesign
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Font = new System.Drawing.Font("Ink Free", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(442, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 30);
+            this.label1.Size = new System.Drawing.Size(150, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "Iniciar Sesión";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,7 +182,7 @@ namespace FormNewUIdesign
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(195)))), ((int)(((byte)(77)))));
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.DimGray;

@@ -21,14 +21,14 @@ namespace FormNewUIdesign
             switch (type)
             {
                 case MessageType.done:
-                    barraMessageBox.BackColor = Color.FromArgb(46, 204, 113);
-                    footerMessageBox.BackColor = Color.FromArgb(46, 204, 113);
-                    btnCancelar.BackColor = Color.FromArgb(46, 204, 113);
-                    btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(32, 142, 79);
-                    btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(32, 142, 79);
-                    btnAceptar.BackColor = Color.FromArgb(46, 204, 113);
-                    btnAceptar.FlatAppearance.MouseDownBackColor = Color.FromArgb(32, 142, 79);
-                    btnAceptar.FlatAppearance.MouseOverBackColor = Color.FromArgb(32, 142, 79);
+                    barraMessageBox.BackColor = Color.FromArgb(15, 157, 88);
+                    footerMessageBox.BackColor = Color.FromArgb(15, 157, 88);
+                    btnCancelar.BackColor = Color.FromArgb(15, 157, 88);
+                    btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(27, 119, 66);
+                    btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(27, 119, 66);
+                    btnAceptar.BackColor = Color.FromArgb(15, 157, 88);
+                    btnAceptar.FlatAppearance.MouseDownBackColor = Color.FromArgb(27, 119, 66);
+                    btnAceptar.FlatAppearance.MouseOverBackColor = Color.FromArgb(27, 119, 66);
                     MessageIcon.Image = MessageIconList.Images[0];
                     break;
                 case MessageType.error:
@@ -55,12 +55,12 @@ namespace FormNewUIdesign
                     btnCancelar.Visible = true;
                     break;
                 case MessageType.warning:
-                    barraMessageBox.BackColor = Color.FromArgb(243, 156, 18);
-                    footerMessageBox.BackColor = Color.FromArgb(243, 156, 18);
-                    btnCancelar.BackColor = Color.FromArgb(243, 156, 18);
+                    barraMessageBox.BackColor = Color.FromArgb(251, 168, 39);
+                    footerMessageBox.BackColor = Color.FromArgb(251, 168, 39);
+                    btnCancelar.BackColor = Color.FromArgb(251, 168, 39);
                     btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 130, 14);
                     btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(204, 130, 14);
-                    btnAceptar.BackColor = Color.FromArgb(243, 156, 18);
+                    btnAceptar.BackColor = Color.FromArgb(251, 168, 39);
                     btnAceptar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 130, 14);
                     btnAceptar.FlatAppearance.MouseOverBackColor = Color.FromArgb(204, 130, 14);
                     MessageIcon.Image = MessageIconList.Images[3];

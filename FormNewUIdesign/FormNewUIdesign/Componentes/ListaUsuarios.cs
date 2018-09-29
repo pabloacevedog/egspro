@@ -13,6 +13,7 @@ namespace FormNewUIdesign
         {
             InitializeComponent();
             listUsersData.DataSource = UsersModel.ObtenerUsuarios();
+            listUsersData.Columns["Password"].Visible = false;
         }
 
         private DataGridViewCellEventArgs mouseLocation;
@@ -53,6 +54,7 @@ namespace FormNewUIdesign
                     datosUsuario.edad = listUsersData.Rows[mouseLocation.RowIndex].Cells[8].Value.ToString();
                     datosUsuario.perfil = listUsersData.Rows[mouseLocation.RowIndex].Cells[9].Value.ToString();
                     datosUsuario.id_perfil = UsersModel.ObtenerIdPerfil(datosUsuario.perfil);
+                    datosUsuario.img_perfil = UsersModel.ObtenerImagenPerfilUsuario(datosUsuario.rut);
 
                     MenuContextual.ShowMenu(opciones, new Point(Cursor.Position.X, Cursor.Position.Y), datosUsuario);
                 }
@@ -65,44 +67,5 @@ namespace FormNewUIdesign
             mouseLocation = location;
         }
 
-        public void contextMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            switch (e.ClickedItem.Name.ToString())
-            {
-                case "editUser":
-                    ObjetoUsuario datosUsuario = new ObjetoUsuario();
-                    datosUsuario.rut = listUsersData.Rows[mouseLocation.RowIndex].Cells[0].Value.ToString();
-                    datosUsuario.nombre = listUsersData.Rows[mouseLocation.RowIndex].Cells[1].Value.ToString();
-                    datosUsuario.apellidos = listUsersData.Rows[mouseLocation.RowIndex].Cells[2].Value.ToString();
-                    datosUsuario.username = listUsersData.Rows[mouseLocation.RowIndex].Cells[3].Value.ToString();
-                    datosUsuario.password = listUsersData.Rows[mouseLocation.RowIndex].Cells[4].Value.ToString();
-                    datosUsuario.telefono = listUsersData.Rows[mouseLocation.RowIndex].Cells[5].Value.ToString();
-                    datosUsuario.mail = listUsersData.Rows[mouseLocation.RowIndex].Cells[6].Value.ToString();
-                    datosUsuario.sexo = listUsersData.Rows[mouseLocation.RowIndex].Cells[7].Value.ToString();
-                    if (datosUsuario.sexo == "F"){ datosUsuario.text_sexo = "Femenino"; }
-                    else { datosUsuario.text_sexo = "Masculino"; }
-                    datosUsuario.edad = listUsersData.Rows[mouseLocation.RowIndex].Cells[8].Value.ToString();
-                    datosUsuario.perfil = listUsersData.Rows[mouseLocation.RowIndex].Cells[9].Value.ToString();
-                    datosUsuario.id_perfil = UsersModel.ObtenerIdPerfil(datosUsuario.perfil);
-                    ControlUsuarios.ActivarTabEditarUsuario(datosUsuario);
-                    break;
-
-                case "deleteUser":
-                    string rut = listUsersData.Rows[mouseLocation.RowIndex].Cells[0].Value.ToString();
-                    string nombre = listUsersData.Rows[mouseLocation.RowIndex].Cells[1].Value.ToString() + " " + listUsersData.Rows[mouseLocation.RowIndex].Cells[2].Value.ToString();
-                    DialogResult result = Message.ShowMessage("Eliminar Usuario", "Está a punto de eliminar al usuario " + nombre + ", ¿Desea continuar?", Message.MessageType.information);
-                    if (result == DialogResult.Yes)
-                    {
-                        if (UsersModel.EliminarUsuario(rut) > 0)
-                        {
-                            listUsersData.DataSource = UsersModel.ObtenerUsuarios();
-                            listUsersData.ClearSelection();
-                            listUsersData.BringToFront();
-                            Message.ShowMessage("Eliminación correcta", "El usuario " + nombre + ", se ha eliminado de nuestros registros correctamente.", Message.MessageType.done);
-                        }
-                    }
-                    break;
-            }
-        }
     }
 }

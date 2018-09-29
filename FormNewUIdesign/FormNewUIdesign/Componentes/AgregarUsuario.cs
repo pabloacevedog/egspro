@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using FormNewUIdesign.Modelo;
 using FormNewUIdesign.Funciones;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace FormNewUIdesign
 {
@@ -18,6 +20,12 @@ namespace FormNewUIdesign
         bool ERROR_username = true;
         bool ERROR_password = true;
         bool ERROR_confirmar_password = true;
+
+        string directorioDefault = "C:\\";
+        string imgDefault = "user_default.png";
+        string imagenPerfil = "user_default.png";
+        string rutaImagenPerfil = "";
+        string imagenSubida = "";
         public AgregarUsuario()
         {
             InitializeComponent();
@@ -40,6 +48,10 @@ namespace FormNewUIdesign
             {
                 txtRut.Text = "";
                 txtRut.ForeColor = Color.DimGray;
+            }
+            else
+            {
+                txtRut.SelectAll();
             }
             lineRut.BorderColor = Color.FromArgb(50, 137, 201);
             lblRut.ForeColor = Color.FromArgb(50, 137, 201);
@@ -148,6 +160,10 @@ namespace FormNewUIdesign
                 txtNombre.Text = "";
                 txtNombre.ForeColor = Color.DimGray;
             }
+            else
+            {
+                txtNombre.SelectAll();
+            }
             lineNombre.BorderColor = Color.FromArgb(50, 137, 201);
             lblNombre.ForeColor = Color.FromArgb(50, 137, 201);
             arrowNombre.Visible = true;
@@ -184,6 +200,10 @@ namespace FormNewUIdesign
             {
                 txtApellidos.Text = "";
                 txtApellidos.ForeColor = Color.DimGray;
+            }
+            else
+            {
+                txtApellidos.SelectAll();
             }
             lineApellidos.BorderColor = Color.FromArgb(50, 137, 201);
             lblApellidos.ForeColor = Color.FromArgb(50, 137, 201);
@@ -222,6 +242,10 @@ namespace FormNewUIdesign
                 txtEdad.Text = "";
                 txtEdad.ForeColor = Color.DimGray;
             }
+            else
+            {
+                txtEdad.SelectAll();
+            }
             lineEdad.BorderColor = Color.FromArgb(50, 137, 201);
             lblEdad.ForeColor = Color.FromArgb(50, 137, 201);
             arrowEdad.Visible = true;
@@ -255,6 +279,10 @@ namespace FormNewUIdesign
             {
                 txtTelefono.Text = "9";
                 txtTelefono.ForeColor = Color.DimGray;
+            }
+            else
+            {
+                txtTelefono.SelectAll();
             }
             lineTelefono.BorderColor = Color.FromArgb(50, 137, 201);
             lblTelefono.ForeColor = Color.FromArgb(50, 137, 201);
@@ -326,6 +354,10 @@ namespace FormNewUIdesign
             {
                 txtMail.Text = "";
                 txtMail.ForeColor = Color.DimGray;
+            }
+            else
+            {
+                txtMail.SelectAll();
             }
             lineMail.BorderColor = Color.FromArgb(50, 137, 201);
             lblMail.ForeColor = Color.FromArgb(50, 137, 201);
@@ -459,6 +491,10 @@ namespace FormNewUIdesign
                 txtUsername.Text = "";
                 txtUsername.ForeColor = Color.DimGray;
             }
+            else
+            {
+                txtUsername.SelectAll();
+            }
             lineUsername.BorderColor = Color.FromArgb(50, 137, 201);
             lblUsername.ForeColor = Color.FromArgb(50, 137, 201);
             arrowUsername.Visible = true;
@@ -496,6 +532,10 @@ namespace FormNewUIdesign
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.DimGray;
                 txtPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword.SelectAll();
             }
             linePassword.BorderColor = Color.FromArgb(50, 137, 201);
             lblPassword.ForeColor = Color.FromArgb(50, 137, 201);
@@ -554,6 +594,10 @@ namespace FormNewUIdesign
                 txtConfirmarPass.ForeColor = Color.DimGray;
                 txtConfirmarPass.UseSystemPasswordChar = true;
             }
+            else
+            {
+                txtConfirmarPass.SelectAll();
+            }
             lineConfirmarPass.BorderColor = Color.FromArgb(50, 137, 201);
             lblConfirmarPass.ForeColor = Color.FromArgb(50, 137, 201);
             arrowConfirmarPass.Visible = true;
@@ -583,6 +627,7 @@ namespace FormNewUIdesign
                 arrowConfirmarPass.Visible = false;
                 lblErrorPass.Visible = false;
                 ERROR_confirmar_password = false;
+                ERROR_password = false;
             }
         }
 
@@ -603,6 +648,7 @@ namespace FormNewUIdesign
                     if (txtTelefono.Text.Equals("Ingrese teléfono de contacto")) { nuevoUsuario.telefono = "0"; }
                     else { nuevoUsuario.telefono = txtTelefono.Text; }
                     nuevoUsuario.mail = txtMail.Text;
+                    nuevoUsuario.img_perfil = imagenPerfil;
                     nuevoUsuario.username = txtUsername.Text;
                     nuevoUsuario.password = txtPassword.Text;
                     nuevoUsuario.sexo = ((KeyValuePair<string, string>)cbxSexo.SelectedItem).Key;
@@ -610,21 +656,40 @@ namespace FormNewUIdesign
                     int idInsertado = UsersModel.GuardarUsuario(nuevoUsuario);
                     if (idInsertado > 0)
                     {
-                        ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
-                        int rowIndex = 0;
-                        foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                        try
                         {
-                            if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                            if (rutaImagenPerfil == "")
                             {
-                                rowIndex = row.Cells[0].RowIndex;
-                                break;
+                                rutaImagenPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
+                                rutaImagenPerfil = Path.Combine(rutaImagenPerfil, imagenPerfil);
                             }
-                        }
-                        ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
-                        ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
 
-                        ControlUsuarios.ActivarTabListaUsuarios();
-                        Message.ShowMessage("Agregar Usuario", "El usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", ha sido agregado en nuestros registros correctamente.", Message.MessageType.done);
+                            if (!File.Exists(rutaImagenPerfil))
+                            {
+                                File.Copy(imagenSubida, rutaImagenPerfil, true);
+                            }
+
+                            ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
+                            ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
+                            int rowIndex = 0;
+                            foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                            {
+                                if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                                {
+                                    rowIndex = row.Cells[0].RowIndex;
+                                    break;
+                                }
+                            }
+                            ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
+                            ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
+
+                            ControlUsuarios.ActivarTabListaUsuarios();
+                            Message.ShowMessage("Agregar Usuario", "El usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", ha sido creado correctamente.", Message.MessageType.done);
+                        }
+                        catch (Exception ex)
+                        {
+                            Message.ShowMessage("Error", "AgregarUsuario.cs -> btnGuardarAddUser_Click() \n" + ex.Message, Message.MessageType.error);
+                        }
                     }
                 }
                 else
@@ -637,6 +702,62 @@ namespace FormNewUIdesign
                 Message.ShowMessage("Error", "AgregarUsuario.cs -> btnGuardarAddUser_Click() \n" + ex.Message, Message.MessageType.error);
             }
             
+        }
+
+        private void btnSubirImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = directorioDefault;
+            openFileDialog.Filter = "Imágenes (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if (openFileDialog.OpenFile() != null)
+                    {
+                        imagenSubida = Path.GetFullPath(openFileDialog.FileName).ToString();
+                        string directorioFotosPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
+                        if (!Directory.Exists(directorioFotosPerfil))
+                        {
+                            Directory.CreateDirectory(directorioFotosPerfil);
+                        }
+
+                        string[] valores = imagenSubida.ToString().Split('\\');
+                        imagenPerfil = valores[valores.Length - 1];
+                        rutaImagenPerfil = Path.Combine(directorioFotosPerfil, imagenPerfil);                        
+                        imgFotoPerfil.BackgroundImage = Image.FromFile(imagenSubida); ;
+
+                        //La próxima vez que se abra el cuadro de dialogo para seleccionar una imagen, se abrirá en el último directorio abierto
+                        directorioDefault = "";
+                        for (int x = 0; x < valores.Length - 1; x++)
+                        {
+                            directorioDefault += valores[x] + "\\";
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Message.ShowMessage("Error", "AgregarUsuario.cs -> btnSubirImagen_Click() \n" + ex.Message, Message.MessageType.error);
+                }
+            }
+        }
+
+        private void btnBorrarImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string directorioFotosPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
+                imgFotoPerfil.BackgroundImage = Image.FromFile(Path.Combine(directorioFotosPerfil, imgDefault));
+                imagenPerfil = imgDefault;
+            }
+            catch (Exception ex)
+            {
+                Message.ShowMessage("Error", "AgregarUsuario.cs -> btnBorrarImagen_Click() \n" + ex.Message, Message.MessageType.error);
+            }
         }
     }
 }

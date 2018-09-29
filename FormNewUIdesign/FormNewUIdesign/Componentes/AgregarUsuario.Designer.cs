@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarUsuario));
             this.panelAgregarUsuario = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBorrarImagen = new System.Windows.Forms.Button();
+            this.btnSubirImagen = new System.Windows.Forms.Button();
+            this.lblErrorTelefono = new System.Windows.Forms.Label();
             this.lblErrorPassword = new System.Windows.Forms.Label();
             this.lblErrorPerfil = new System.Windows.Forms.Label();
             this.lblErrorSexo = new System.Windows.Forms.Label();
@@ -75,6 +78,7 @@
             this.txtRut = new System.Windows.Forms.TextBox();
             this.lblRut = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.imgFotoPerfil = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.linePerfil = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineEdad = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineConfirmarPass = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -86,7 +90,6 @@
             this.lineApellidos = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineNombre = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineRut = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lblErrorTelefono = new System.Windows.Forms.Label();
             this.panelAgregarUsuario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arrowPerfil)).BeginInit();
@@ -104,18 +107,22 @@
             // 
             // panelAgregarUsuario
             // 
+            this.panelAgregarUsuario.AutoScroll = true;
             this.panelAgregarUsuario.AutoSize = true;
             this.panelAgregarUsuario.BackColor = System.Drawing.Color.White;
             this.panelAgregarUsuario.Controls.Add(this.groupBox1);
             this.panelAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAgregarUsuario.Location = new System.Drawing.Point(0, 0);
             this.panelAgregarUsuario.Name = "panelAgregarUsuario";
-            this.panelAgregarUsuario.Size = new System.Drawing.Size(1000, 508);
+            this.panelAgregarUsuario.Padding = new System.Windows.Forms.Padding(11, 0, 5, 0);
+            this.panelAgregarUsuario.Size = new System.Drawing.Size(1100, 605);
             this.panelAgregarUsuario.TabIndex = 13;
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.btnBorrarImagen);
+            this.groupBox1.Controls.Add(this.btnSubirImagen);
             this.groupBox1.Controls.Add(this.lblErrorTelefono);
             this.groupBox1.Controls.Add(this.lblErrorPassword);
             this.groupBox1.Controls.Add(this.lblErrorPerfil);
@@ -164,21 +171,74 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(11, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1000, 508);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Size = new System.Drawing.Size(1084, 605);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "      Datos del Usuario      ";
             // 
+            // btnBorrarImagen
+            // 
+            this.btnBorrarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
+            this.btnBorrarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrarImagen.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrarImagen.FlatAppearance.BorderSize = 0;
+            this.btnBorrarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarImagen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarImagen.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarImagen.Image")));
+            this.btnBorrarImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrarImagen.Location = new System.Drawing.Point(593, 133);
+            this.btnBorrarImagen.Name = "btnBorrarImagen";
+            this.btnBorrarImagen.Size = new System.Drawing.Size(100, 30);
+            this.btnBorrarImagen.TabIndex = 51;
+            this.btnBorrarImagen.TabStop = false;
+            this.btnBorrarImagen.Text = "        Borrar ";
+            this.btnBorrarImagen.UseVisualStyleBackColor = false;
+            this.btnBorrarImagen.Click += new System.EventHandler(this.btnBorrarImagen_Click);
+            // 
+            // btnSubirImagen
+            // 
+            this.btnSubirImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
+            this.btnSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubirImagen.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubirImagen.FlatAppearance.BorderSize = 0;
+            this.btnSubirImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirImagen.ForeColor = System.Drawing.Color.White;
+            this.btnSubirImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirImagen.Image")));
+            this.btnSubirImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubirImagen.Location = new System.Drawing.Point(593, 91);
+            this.btnSubirImagen.Name = "btnSubirImagen";
+            this.btnSubirImagen.Size = new System.Drawing.Size(100, 30);
+            this.btnSubirImagen.TabIndex = 50;
+            this.btnSubirImagen.TabStop = false;
+            this.btnSubirImagen.Text = "      Subir";
+            this.btnSubirImagen.UseVisualStyleBackColor = false;
+            this.btnSubirImagen.Click += new System.EventHandler(this.btnSubirImagen_Click);
+            // 
+            // lblErrorTelefono
+            // 
+            this.lblErrorTelefono.AutoSize = true;
+            this.lblErrorTelefono.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
+            this.lblErrorTelefono.Location = new System.Drawing.Point(157, 310);
+            this.lblErrorTelefono.Name = "lblErrorTelefono";
+            this.lblErrorTelefono.Size = new System.Drawing.Size(80, 15);
+            this.lblErrorTelefono.TabIndex = 49;
+            this.lblErrorTelefono.Text = "Error Teléfono";
+            this.lblErrorTelefono.Visible = false;
+            // 
             // lblErrorPassword
             // 
             this.lblErrorPassword.AutoSize = true;
-            this.lblErrorPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorPassword.Location = new System.Drawing.Point(667, 323);
+            this.lblErrorPassword.Location = new System.Drawing.Point(697, 430);
             this.lblErrorPassword.Name = "lblErrorPassword";
-            this.lblErrorPassword.Size = new System.Drawing.Size(84, 16);
+            this.lblErrorPassword.Size = new System.Drawing.Size(88, 15);
             this.lblErrorPassword.TabIndex = 48;
             this.lblErrorPassword.Text = "Error Password";
             this.lblErrorPassword.Visible = false;
@@ -186,11 +246,11 @@
             // lblErrorPerfil
             // 
             this.lblErrorPerfil.AutoSize = true;
-            this.lblErrorPerfil.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPerfil.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorPerfil.Location = new System.Drawing.Point(668, 228);
+            this.lblErrorPerfil.Location = new System.Drawing.Point(157, 493);
             this.lblErrorPerfil.Name = "lblErrorPerfil";
-            this.lblErrorPerfil.Size = new System.Drawing.Size(57, 16);
+            this.lblErrorPerfil.Size = new System.Drawing.Size(61, 15);
             this.lblErrorPerfil.TabIndex = 47;
             this.lblErrorPerfil.Text = "Error Perfil";
             this.lblErrorPerfil.Visible = false;
@@ -198,11 +258,11 @@
             // lblErrorSexo
             // 
             this.lblErrorSexo.AutoSize = true;
-            this.lblErrorSexo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorSexo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorSexo.Location = new System.Drawing.Point(668, 178);
+            this.lblErrorSexo.Location = new System.Drawing.Point(157, 433);
             this.lblErrorSexo.Name = "lblErrorSexo";
-            this.lblErrorSexo.Size = new System.Drawing.Size(59, 16);
+            this.lblErrorSexo.Size = new System.Drawing.Size(60, 15);
             this.lblErrorSexo.TabIndex = 46;
             this.lblErrorSexo.Text = "Error Sexo";
             this.lblErrorSexo.Visible = false;
@@ -210,11 +270,11 @@
             // lblErrorMail
             // 
             this.lblErrorMail.AutoSize = true;
-            this.lblErrorMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorMail.Location = new System.Drawing.Point(666, 123);
+            this.lblErrorMail.Location = new System.Drawing.Point(157, 370);
             this.lblErrorMail.Name = "lblErrorMail";
-            this.lblErrorMail.Size = new System.Drawing.Size(56, 16);
+            this.lblErrorMail.Size = new System.Drawing.Size(58, 15);
             this.lblErrorMail.TabIndex = 45;
             this.lblErrorMail.Text = "Error Mail";
             this.lblErrorMail.Visible = false;
@@ -222,11 +282,11 @@
             // lblErrorUsername
             // 
             this.lblErrorUsername.AutoSize = true;
-            this.lblErrorUsername.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorUsername.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorUsername.Location = new System.Drawing.Point(157, 323);
+            this.lblErrorUsername.Location = new System.Drawing.Point(697, 371);
             this.lblErrorUsername.Name = "lblErrorUsername";
-            this.lblErrorUsername.Size = new System.Drawing.Size(87, 16);
+            this.lblErrorUsername.Size = new System.Drawing.Size(90, 15);
             this.lblErrorUsername.TabIndex = 44;
             this.lblErrorUsername.Text = "Error Username";
             this.lblErrorUsername.Visible = false;
@@ -236,7 +296,7 @@
             this.lblErrorApellidos.AutoSize = true;
             this.lblErrorApellidos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorApellidos.Location = new System.Drawing.Point(157, 173);
+            this.lblErrorApellidos.Location = new System.Drawing.Point(157, 190);
             this.lblErrorApellidos.Name = "lblErrorApellidos";
             this.lblErrorApellidos.Size = new System.Drawing.Size(85, 15);
             this.lblErrorApellidos.TabIndex = 43;
@@ -248,7 +308,7 @@
             this.lblErrorNombre.AutoSize = true;
             this.lblErrorNombre.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorNombre.Location = new System.Drawing.Point(157, 123);
+            this.lblErrorNombre.Location = new System.Drawing.Point(157, 130);
             this.lblErrorNombre.Name = "lblErrorNombre";
             this.lblErrorNombre.Size = new System.Drawing.Size(79, 15);
             this.lblErrorNombre.TabIndex = 42;
@@ -260,7 +320,7 @@
             this.lblErrorRut.AutoSize = true;
             this.lblErrorRut.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorRut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorRut.Location = new System.Drawing.Point(157, 73);
+            this.lblErrorRut.Location = new System.Drawing.Point(157, 70);
             this.lblErrorRut.Name = "lblErrorRut";
             this.lblErrorRut.Size = new System.Drawing.Size(54, 15);
             this.lblErrorRut.TabIndex = 41;
@@ -269,7 +329,7 @@
             // 
             // btnGuardarAddUser
             // 
-            this.btnGuardarAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.btnGuardarAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.btnGuardarAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarAddUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGuardarAddUser.FlatAppearance.BorderSize = 0;
@@ -278,7 +338,7 @@
             this.btnGuardarAddUser.ForeColor = System.Drawing.Color.White;
             this.btnGuardarAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAddUser.Image")));
             this.btnGuardarAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarAddUser.Location = new System.Drawing.Point(716, 426);
+            this.btnGuardarAddUser.Location = new System.Drawing.Point(744, 544);
             this.btnGuardarAddUser.Name = "btnGuardarAddUser";
             this.btnGuardarAddUser.Size = new System.Drawing.Size(155, 35);
             this.btnGuardarAddUser.TabIndex = 40;
@@ -290,11 +350,11 @@
             // lblErrorPass
             // 
             this.lblErrorPass.AutoSize = true;
-            this.lblErrorPass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorPass.Location = new System.Drawing.Point(667, 373);
+            this.lblErrorPass.Location = new System.Drawing.Point(697, 490);
             this.lblErrorPass.Name = "lblErrorPass";
-            this.lblErrorPass.Size = new System.Drawing.Size(168, 16);
+            this.lblErrorPass.Size = new System.Drawing.Size(174, 15);
             this.lblErrorPass.TabIndex = 39;
             this.lblErrorPass.Text = "Las contraseñas no coinciden";
             this.lblErrorPass.Visible = false;
@@ -311,7 +371,7 @@
             this.cbxPerfil.FormattingEnabled = true;
             this.cbxPerfil.IntegralHeight = false;
             this.cbxPerfil.ItemHeight = 17;
-            this.cbxPerfil.Location = new System.Drawing.Point(671, 200);
+            this.cbxPerfil.Location = new System.Drawing.Point(160, 465);
             this.cbxPerfil.Name = "cbxPerfil";
             this.cbxPerfil.Size = new System.Drawing.Size(200, 25);
             this.cbxPerfil.TabIndex = 8;
@@ -323,7 +383,7 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(568, 200);
+            this.lblPerfil.Location = new System.Drawing.Point(54, 470);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(40, 16);
             this.lblPerfil.TabIndex = 38;
@@ -332,7 +392,7 @@
             // arrowPerfil
             // 
             this.arrowPerfil.Image = ((System.Drawing.Image)(resources.GetObject("arrowPerfil.Image")));
-            this.arrowPerfil.Location = new System.Drawing.Point(536, 200);
+            this.arrowPerfil.Location = new System.Drawing.Point(25, 470);
             this.arrowPerfil.Name = "arrowPerfil";
             this.arrowPerfil.Size = new System.Drawing.Size(17, 17);
             this.arrowPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -346,7 +406,7 @@
             this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEdad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtEdad.Location = new System.Drawing.Point(160, 200);
+            this.txtEdad.Location = new System.Drawing.Point(160, 230);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(200, 16);
@@ -360,7 +420,7 @@
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(57, 200);
+            this.lblEdad.Location = new System.Drawing.Point(54, 230);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(42, 16);
             this.lblEdad.TabIndex = 35;
@@ -369,7 +429,7 @@
             // arrowEdad
             // 
             this.arrowEdad.Image = ((System.Drawing.Image)(resources.GetObject("arrowEdad.Image")));
-            this.arrowEdad.Location = new System.Drawing.Point(25, 200);
+            this.arrowEdad.Location = new System.Drawing.Point(25, 230);
             this.arrowEdad.Name = "arrowEdad";
             this.arrowEdad.Size = new System.Drawing.Size(17, 17);
             this.arrowEdad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -383,7 +443,7 @@
             this.txtConfirmarPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmarPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarPass.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtConfirmarPass.Location = new System.Drawing.Point(671, 350);
+            this.txtConfirmarPass.Location = new System.Drawing.Point(700, 470);
             this.txtConfirmarPass.MaxLength = 50;
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.Size = new System.Drawing.Size(200, 16);
@@ -396,16 +456,16 @@
             // 
             this.lblConfirmarPass.AutoSize = true;
             this.lblConfirmarPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmarPass.Location = new System.Drawing.Point(499, 350);
+            this.lblConfirmarPass.Location = new System.Drawing.Point(587, 470);
             this.lblConfirmarPass.Name = "lblConfirmarPass";
-            this.lblConfirmarPass.Size = new System.Drawing.Size(152, 16);
+            this.lblConfirmarPass.Size = new System.Drawing.Size(73, 16);
             this.lblConfirmarPass.TabIndex = 32;
-            this.lblConfirmarPass.Text = "Confirmar Contraseña";
+            this.lblConfirmarPass.Text = "Confirmar";
             // 
             // arrowConfirmarPass
             // 
             this.arrowConfirmarPass.Image = ((System.Drawing.Image)(resources.GetObject("arrowConfirmarPass.Image")));
-            this.arrowConfirmarPass.Location = new System.Drawing.Point(467, 350);
+            this.arrowConfirmarPass.Location = new System.Drawing.Point(558, 470);
             this.arrowConfirmarPass.Name = "arrowConfirmarPass";
             this.arrowConfirmarPass.Size = new System.Drawing.Size(17, 17);
             this.arrowConfirmarPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -416,7 +476,7 @@
             // arrowUsername
             // 
             this.arrowUsername.Image = ((System.Drawing.Image)(resources.GetObject("arrowUsername.Image")));
-            this.arrowUsername.Location = new System.Drawing.Point(25, 300);
+            this.arrowUsername.Location = new System.Drawing.Point(558, 351);
             this.arrowUsername.Name = "arrowUsername";
             this.arrowUsername.Size = new System.Drawing.Size(17, 17);
             this.arrowUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -430,7 +490,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsername.Location = new System.Drawing.Point(160, 300);
+            this.txtUsername.Location = new System.Drawing.Point(700, 350);
             this.txtUsername.MaxLength = 50;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(200, 16);
@@ -443,7 +503,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(57, 300);
+            this.lblUsername.Location = new System.Drawing.Point(587, 351);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(72, 16);
             this.lblUsername.TabIndex = 29;
@@ -452,7 +512,7 @@
             // arrowPassword
             // 
             this.arrowPassword.Image = ((System.Drawing.Image)(resources.GetObject("arrowPassword.Image")));
-            this.arrowPassword.Location = new System.Drawing.Point(536, 300);
+            this.arrowPassword.Location = new System.Drawing.Point(558, 410);
             this.arrowPassword.Name = "arrowPassword";
             this.arrowPassword.Size = new System.Drawing.Size(17, 17);
             this.arrowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -466,7 +526,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.Location = new System.Drawing.Point(670, 300);
+            this.txtPassword.Location = new System.Drawing.Point(700, 410);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(200, 16);
@@ -479,7 +539,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(568, 300);
+            this.lblPassword.Location = new System.Drawing.Point(587, 410);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(83, 16);
             this.lblPassword.TabIndex = 26;
@@ -488,7 +548,7 @@
             // arrowSexo
             // 
             this.arrowSexo.Image = ((System.Drawing.Image)(resources.GetObject("arrowSexo.Image")));
-            this.arrowSexo.Location = new System.Drawing.Point(536, 150);
+            this.arrowSexo.Location = new System.Drawing.Point(25, 410);
             this.arrowSexo.Name = "arrowSexo";
             this.arrowSexo.Size = new System.Drawing.Size(17, 17);
             this.arrowSexo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -508,7 +568,7 @@
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.IntegralHeight = false;
             this.cbxSexo.ItemHeight = 17;
-            this.cbxSexo.Location = new System.Drawing.Point(670, 150);
+            this.cbxSexo.Location = new System.Drawing.Point(159, 405);
             this.cbxSexo.Name = "cbxSexo";
             this.cbxSexo.Size = new System.Drawing.Size(200, 25);
             this.cbxSexo.TabIndex = 7;
@@ -520,7 +580,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(568, 150);
+            this.lblSexo.Location = new System.Drawing.Point(54, 410);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(38, 16);
             this.lblSexo.TabIndex = 23;
@@ -529,7 +589,7 @@
             // arrowMail
             // 
             this.arrowMail.Image = ((System.Drawing.Image)(resources.GetObject("arrowMail.Image")));
-            this.arrowMail.Location = new System.Drawing.Point(536, 100);
+            this.arrowMail.Location = new System.Drawing.Point(25, 350);
             this.arrowMail.Name = "arrowMail";
             this.arrowMail.Size = new System.Drawing.Size(17, 17);
             this.arrowMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -540,7 +600,7 @@
             // arrowTelefono
             // 
             this.arrowTelefono.Image = ((System.Drawing.Image)(resources.GetObject("arrowTelefono.Image")));
-            this.arrowTelefono.Location = new System.Drawing.Point(536, 50);
+            this.arrowTelefono.Location = new System.Drawing.Point(25, 290);
             this.arrowTelefono.Name = "arrowTelefono";
             this.arrowTelefono.Size = new System.Drawing.Size(17, 17);
             this.arrowTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -551,7 +611,7 @@
             // arrowApellidos
             // 
             this.arrowApellidos.Image = ((System.Drawing.Image)(resources.GetObject("arrowApellidos.Image")));
-            this.arrowApellidos.Location = new System.Drawing.Point(25, 150);
+            this.arrowApellidos.Location = new System.Drawing.Point(25, 170);
             this.arrowApellidos.Name = "arrowApellidos";
             this.arrowApellidos.Size = new System.Drawing.Size(17, 17);
             this.arrowApellidos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -562,7 +622,7 @@
             // arrowNombre
             // 
             this.arrowNombre.Image = ((System.Drawing.Image)(resources.GetObject("arrowNombre.Image")));
-            this.arrowNombre.Location = new System.Drawing.Point(25, 100);
+            this.arrowNombre.Location = new System.Drawing.Point(25, 110);
             this.arrowNombre.Name = "arrowNombre";
             this.arrowNombre.Size = new System.Drawing.Size(17, 17);
             this.arrowNombre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -587,7 +647,7 @@
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtMail.Location = new System.Drawing.Point(670, 100);
+            this.txtMail.Location = new System.Drawing.Point(159, 350);
             this.txtMail.MaxLength = 100;
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(200, 16);
@@ -600,7 +660,7 @@
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMail.Location = new System.Drawing.Point(568, 100);
+            this.lblMail.Location = new System.Drawing.Point(54, 350);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(49, 16);
             this.lblMail.TabIndex = 13;
@@ -612,7 +672,7 @@
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtTelefono.Location = new System.Drawing.Point(670, 50);
+            this.txtTelefono.Location = new System.Drawing.Point(159, 290);
             this.txtTelefono.MaxLength = 9;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(200, 16);
@@ -626,7 +686,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(568, 50);
+            this.lblTelefono.Location = new System.Drawing.Point(54, 290);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(62, 16);
             this.lblTelefono.TabIndex = 11;
@@ -638,7 +698,7 @@
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtApellidos.Location = new System.Drawing.Point(160, 150);
+            this.txtApellidos.Location = new System.Drawing.Point(160, 170);
             this.txtApellidos.MaxLength = 300;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(200, 16);
@@ -651,7 +711,7 @@
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(57, 150);
+            this.lblApellidos.Location = new System.Drawing.Point(54, 170);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(70, 16);
             this.lblApellidos.TabIndex = 5;
@@ -663,7 +723,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtNombre.Location = new System.Drawing.Point(160, 100);
+            this.txtNombre.Location = new System.Drawing.Point(160, 110);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 16);
@@ -676,7 +736,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(57, 100);
+            this.lblNombre.Location = new System.Drawing.Point(54, 110);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(60, 16);
             this.lblNombre.TabIndex = 3;
@@ -702,7 +762,7 @@
             // 
             this.lblRut.AutoSize = true;
             this.lblRut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRut.Location = new System.Drawing.Point(57, 50);
+            this.lblRut.Location = new System.Drawing.Point(54, 50);
             this.lblRut.Name = "lblRut";
             this.lblRut.Size = new System.Drawing.Size(28, 16);
             this.lblRut.TabIndex = 0;
@@ -710,10 +770,11 @@
             // 
             // shapeContainer1
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 22);
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 19);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.imgFotoPerfil,
             this.linePerfil,
             this.lineEdad,
             this.lineConfirmarPass,
@@ -725,139 +786,140 @@
             this.lineApellidos,
             this.lineNombre,
             this.lineRut});
-            this.shapeContainer1.Size = new System.Drawing.Size(994, 483);
+            this.shapeContainer1.Size = new System.Drawing.Size(1084, 586);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
+            // 
+            // imgFotoPerfil
+            // 
+            this.imgFotoPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.imgFotoPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgFotoPerfil.BackgroundImage")));
+            this.imgFotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgFotoPerfil.BorderColor = System.Drawing.Color.DarkGray;
+            this.imgFotoPerfil.Enabled = false;
+            this.imgFotoPerfil.Location = new System.Drawing.Point(725, 29);
+            this.imgFotoPerfil.Name = "imgFotoPerfil";
+            this.imgFotoPerfil.Size = new System.Drawing.Size(150, 150);
             // 
             // linePerfil
             // 
             this.linePerfil.BorderColor = System.Drawing.Color.DimGray;
             this.linePerfil.Enabled = false;
             this.linePerfil.Name = "linePerfil";
-            this.linePerfil.X1 = 666;
-            this.linePerfil.X2 = 867;
-            this.linePerfil.Y1 = 205;
-            this.linePerfil.Y2 = 205;
+            this.linePerfil.X1 = 155;
+            this.linePerfil.X2 = 355;
+            this.linePerfil.Y1 = 473;
+            this.linePerfil.Y2 = 473;
             // 
             // lineEdad
             // 
             this.lineEdad.BorderColor = System.Drawing.Color.DimGray;
             this.lineEdad.Enabled = false;
             this.lineEdad.Name = "lineEdad";
-            this.lineEdad.X1 = 156;
+            this.lineEdad.X1 = 155;
             this.lineEdad.X2 = 355;
-            this.lineEdad.Y1 = 200;
-            this.lineEdad.Y2 = 200;
+            this.lineEdad.Y1 = 230;
+            this.lineEdad.Y2 = 230;
             // 
             // lineConfirmarPass
             // 
             this.lineConfirmarPass.BorderColor = System.Drawing.Color.DimGray;
             this.lineConfirmarPass.Enabled = false;
             this.lineConfirmarPass.Name = "lineConfirmarPass";
-            this.lineConfirmarPass.X1 = 668;
-            this.lineConfirmarPass.X2 = 867;
-            this.lineConfirmarPass.Y1 = 350;
-            this.lineConfirmarPass.Y2 = 350;
+            this.lineConfirmarPass.X1 = 695;
+            this.lineConfirmarPass.X2 = 895;
+            this.lineConfirmarPass.Y1 = 470;
+            this.lineConfirmarPass.Y2 = 470;
             // 
             // lineSexo
             // 
             this.lineSexo.BorderColor = System.Drawing.Color.DimGray;
             this.lineSexo.Enabled = false;
             this.lineSexo.Name = "lineSexo";
-            this.lineSexo.X1 = 666;
-            this.lineSexo.X2 = 867;
-            this.lineSexo.Y1 = 155;
-            this.lineSexo.Y2 = 155;
+            this.lineSexo.X1 = 155;
+            this.lineSexo.X2 = 355;
+            this.lineSexo.Y1 = 413;
+            this.lineSexo.Y2 = 413;
             // 
             // lineMail
             // 
             this.lineMail.BorderColor = System.Drawing.Color.DimGray;
             this.lineMail.Enabled = false;
             this.lineMail.Name = "lineMail";
-            this.lineMail.X1 = 666;
-            this.lineMail.X2 = 867;
-            this.lineMail.Y1 = 100;
-            this.lineMail.Y2 = 100;
+            this.lineMail.X1 = 155;
+            this.lineMail.X2 = 355;
+            this.lineMail.Y1 = 350;
+            this.lineMail.Y2 = 350;
             // 
             // lineTelefono
             // 
             this.lineTelefono.BorderColor = System.Drawing.Color.DimGray;
             this.lineTelefono.Enabled = false;
             this.lineTelefono.Name = "lineTelefono";
-            this.lineTelefono.X1 = 666;
-            this.lineTelefono.X2 = 867;
-            this.lineTelefono.Y1 = 50;
-            this.lineTelefono.Y2 = 50;
+            this.lineTelefono.X1 = 155;
+            this.lineTelefono.X2 = 355;
+            this.lineTelefono.Y1 = 290;
+            this.lineTelefono.Y2 = 290;
             // 
             // linePassword
             // 
             this.linePassword.BorderColor = System.Drawing.Color.DimGray;
             this.linePassword.Enabled = false;
             this.linePassword.Name = "linePassword";
-            this.linePassword.X1 = 668;
-            this.linePassword.X2 = 867;
-            this.linePassword.Y1 = 300;
-            this.linePassword.Y2 = 300;
+            this.linePassword.X1 = 695;
+            this.linePassword.X2 = 895;
+            this.linePassword.Y1 = 410;
+            this.linePassword.Y2 = 410;
             // 
             // lineUsername
             // 
             this.lineUsername.BorderColor = System.Drawing.Color.DimGray;
             this.lineUsername.Enabled = false;
             this.lineUsername.Name = "lineUsername";
-            this.lineUsername.X1 = 155;
-            this.lineUsername.X2 = 354;
-            this.lineUsername.Y1 = 300;
-            this.lineUsername.Y2 = 300;
+            this.lineUsername.X1 = 695;
+            this.lineUsername.X2 = 895;
+            this.lineUsername.Y1 = 350;
+            this.lineUsername.Y2 = 350;
             // 
             // lineApellidos
             // 
             this.lineApellidos.BorderColor = System.Drawing.Color.DimGray;
             this.lineApellidos.Enabled = false;
             this.lineApellidos.Name = "lineApellidos";
-            this.lineApellidos.X1 = 156;
+            this.lineApellidos.X1 = 155;
             this.lineApellidos.X2 = 355;
-            this.lineApellidos.Y1 = 150;
-            this.lineApellidos.Y2 = 150;
+            this.lineApellidos.Y1 = 170;
+            this.lineApellidos.Y2 = 170;
             // 
             // lineNombre
             // 
             this.lineNombre.BorderColor = System.Drawing.Color.DimGray;
             this.lineNombre.Enabled = false;
             this.lineNombre.Name = "lineNombre";
-            this.lineNombre.X1 = 156;
+            this.lineNombre.X1 = 155;
             this.lineNombre.X2 = 355;
-            this.lineNombre.Y1 = 100;
-            this.lineNombre.Y2 = 100;
+            this.lineNombre.Y1 = 110;
+            this.lineNombre.Y2 = 110;
             // 
             // lineRut
             // 
             this.lineRut.BorderColor = System.Drawing.Color.DimGray;
             this.lineRut.Enabled = false;
             this.lineRut.Name = "lineRut";
-            this.lineRut.X1 = 156;
+            this.lineRut.X1 = 155;
             this.lineRut.X2 = 355;
             this.lineRut.Y1 = 50;
             this.lineRut.Y2 = 50;
-            // 
-            // lblErrorTelefono
-            // 
-            this.lblErrorTelefono.AutoSize = true;
-            this.lblErrorTelefono.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
-            this.lblErrorTelefono.Location = new System.Drawing.Point(668, 73);
-            this.lblErrorTelefono.Name = "lblErrorTelefono";
-            this.lblErrorTelefono.Size = new System.Drawing.Size(78, 16);
-            this.lblErrorTelefono.TabIndex = 49;
-            this.lblErrorTelefono.Text = "Error Teléfono";
-            this.lblErrorTelefono.Visible = false;
             // 
             // AgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.Controls.Add(this.panelAgregarUsuario);
             this.Name = "AgregarUsuario";
-            this.Size = new System.Drawing.Size(1000, 508);
+            this.Size = new System.Drawing.Size(1100, 605);
             this.panelAgregarUsuario.ResumeLayout(false);
             this.panelAgregarUsuario.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -904,9 +966,6 @@
         private System.Windows.Forms.PictureBox arrowUsername;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.PictureBox arrowPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.PictureBox arrowSexo;
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.Label lblSexo;
@@ -938,5 +997,11 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineNombre;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineRut;
         private System.Windows.Forms.Label lblErrorTelefono;
+        private System.Windows.Forms.PictureBox arrowPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Button btnBorrarImagen;
+        private System.Windows.Forms.Button btnSubirImagen;
+        private Microsoft.VisualBasic.PowerPacks.OvalShape imgFotoPerfil;
     }
 }

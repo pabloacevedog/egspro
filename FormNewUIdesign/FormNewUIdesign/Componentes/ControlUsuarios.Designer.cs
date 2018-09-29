@@ -42,13 +42,13 @@
             tabEditUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             tabEditUser.FlatAppearance.BorderSize = 0;
             tabEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            tabEditUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabEditUser.Font = new System.Drawing.Font("Century Gothic", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabEditUser.ForeColor = System.Drawing.Color.DimGray;
             tabEditUser.Image = ((System.Drawing.Image)(resources.GetObject("tabEditUser.Image")));
             tabEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            tabEditUser.Location = new System.Drawing.Point(315, 11);
+            tabEditUser.Location = new System.Drawing.Point(316, 11);
             tabEditUser.Name = "tabEditUser";
-            tabEditUser.Size = new System.Drawing.Size(167, 35);
+            tabEditUser.Size = new System.Drawing.Size(180, 35);
             tabEditUser.TabIndex = 0;
             tabEditUser.TabStop = false;
             tabEditUser.Text = "      Editar Usuario";
@@ -62,13 +62,13 @@
             tabAddUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             tabAddUser.FlatAppearance.BorderSize = 0;
             tabAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            tabAddUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabAddUser.Font = new System.Drawing.Font("Century Gothic", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabAddUser.ForeColor = System.Drawing.Color.DimGray;
             tabAddUser.Image = ((System.Drawing.Image)(resources.GetObject("tabAddUser.Image")));
             tabAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            tabAddUser.Location = new System.Drawing.Point(137, 11);
+            tabAddUser.Location = new System.Drawing.Point(136, 11);
             tabAddUser.Name = "tabAddUser";
-            tabAddUser.Size = new System.Drawing.Size(177, 35);
+            tabAddUser.Size = new System.Drawing.Size(180, 35);
             tabAddUser.TabIndex = 0;
             tabAddUser.TabStop = false;
             tabAddUser.Text = "      Agregar Usuario";
@@ -77,12 +77,12 @@
             // 
             // tabListUsers
             // 
-            tabListUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            tabListUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             tabListUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             tabListUsers.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             tabListUsers.FlatAppearance.BorderSize = 0;
             tabListUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            tabListUsers.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabListUsers.Font = new System.Drawing.Font("Century Gothic", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabListUsers.ForeColor = System.Drawing.Color.White;
             tabListUsers.Image = ((System.Drawing.Image)(resources.GetObject("tabListUsers.Image")));
             tabListUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,13 +97,15 @@
             // 
             // contenidoUsuarios
             // 
-            contenidoUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            contenidoUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            contenidoUsuarios.AutoScroll = true;
             contenidoUsuarios.AutoSize = true;
             contenidoUsuarios.BackColor = System.Drawing.Color.White;
-            contenidoUsuarios.Location = new System.Drawing.Point(0, 52);
+            contenidoUsuarios.Location = new System.Drawing.Point(0, 55);
             contenidoUsuarios.Name = "contenidoUsuarios";
-            contenidoUsuarios.Padding = new System.Windows.Forms.Padding(11);
-            contenidoUsuarios.Size = new System.Drawing.Size(1000, 508);
+            contenidoUsuarios.Size = new System.Drawing.Size(1100, 605);
             contenidoUsuarios.TabIndex = 11;
             // 
             // ControlUsuarios
@@ -117,7 +119,7 @@
             this.Controls.Add(tabAddUser);
             this.Controls.Add(tabListUsers);
             this.Name = "ControlUsuarios";
-            this.Size = new System.Drawing.Size(1000, 563);
+            this.Size = new System.Drawing.Size(1103, 663);
             this.ResumeLayout(false);
             this.PerformLayout();
 

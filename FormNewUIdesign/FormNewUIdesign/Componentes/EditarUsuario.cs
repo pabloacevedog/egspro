@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using FormNewUIdesign.Modelo;
 using FormNewUIdesign.Funciones;
+using System.IO;
 
 namespace FormNewUIdesign.Componentes
 {
@@ -18,6 +19,12 @@ namespace FormNewUIdesign.Componentes
         bool ERROR_username = false;
         bool ERROR_password = false;
         bool ERROR_confirmar_password = false;
+
+        string directorioDefault = "C:\\";
+        string imgDefault = "user_default.png";
+        string imagenPerfil = "user_default.png";
+        string rutaImagenPerfil = "";
+        string imagenSubida = "";
         public EditarUsuario()
         {
             InitializeComponent();
@@ -601,6 +608,7 @@ namespace FormNewUIdesign.Componentes
                 if (txtTelefono.Text.Equals("Ingrese teléfono de contacto")) { nuevoUsuario.telefono = "0"; }
                 else { nuevoUsuario.telefono = txtTelefono.Text; }
                 nuevoUsuario.mail = txtMail.Text;
+                nuevoUsuario.img_perfil = imagenPerfil;
                 nuevoUsuario.username = txtUsername.Text;
                 nuevoUsuario.password = txtPassword.Text;
                 nuevoUsuario.sexo = ((KeyValuePair<string, string>)cbxSexo.SelectedItem).Key;
@@ -608,22 +616,42 @@ namespace FormNewUIdesign.Componentes
                 int idInsertado = UsersModel.ActualizarUsuario(nuevoUsuario);
                 if (idInsertado > 0)
                 {
-                    ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
-                    int rowIndex = 0;
-                    foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                    try
                     {
-                        if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                        if (imagenPerfil != imgDefault)
                         {
-                            rowIndex = row.Cells[0].RowIndex;
-                            break;
+                            if (!File.Exists(rutaImagenPerfil))
+                            {
+                                File.Copy(imagenSubida, rutaImagenPerfil, true);
+                            }
                         }
-                    }
-                    ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
-                    ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
 
-                    ControlUsuarios.ActivarTabListaUsuarios();
-                    ControlUsuarios.listaUsuarios.BringToFront();
-                    Message.ShowMessage("Editar Usuario", "Los datos del usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", han sido modificados correctamente.", Message.MessageType.done);
+                        //setear imagen de usuario después de guardar la edición
+                        FormPrincipal.SetUserImage(rutaImagenPerfil);
+                        
+
+                        ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
+                        ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
+                        int rowIndex = 0;
+                        foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                        {
+                            if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                            {
+                                rowIndex = row.Cells[0].RowIndex;
+                                break;
+                            }
+                        }
+                        ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
+                        ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
+
+                        ControlUsuarios.ActivarTabListaUsuarios();
+                        ControlUsuarios.listaUsuarios.BringToFront();
+                        Message.ShowMessage("Editar Usuario", "Los datos del usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", han sido modificados correctamente.", Message.MessageType.done);
+                    }
+                    catch (Exception ex)
+                    {
+                        Message.ShowMessage("Error", "EditarUsuario.cs -> btnGuardarEditUser_Click() \n" + ex.Message, Message.MessageType.error);
+                    }
                 }
             }
             else
@@ -695,6 +723,77 @@ namespace FormNewUIdesign.Componentes
             cbxPerfil.DisplayMember = "Value";
             cbxPerfil.ValueMember = "Key";
             cbxPerfil.ForeColor = Color.DimGray;
+
+
+            if (datosUsuario.img_perfil != "" && datosUsuario.img_perfil != null)
+            {
+                rutaImagenPerfil = Path.Combine(UsersModel.ObtenerDirectorioFotosPerfil(), datosUsuario.img_perfil);
+                if (File.Exists(rutaImagenPerfil))
+                {
+                    imgFotoPerfil.BackgroundImage = Image.FromFile(rutaImagenPerfil);
+                    imagenPerfil = datosUsuario.img_perfil;
+                }
+                else
+                {
+                    imgFotoPerfil.BackgroundImage = Image.FromFile(Path.Combine(UsersModel.ObtenerDirectorioFotosPerfil(), "user_default.png"));
+                }
+            }
+        }
+
+        private void btnSubirImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = directorioDefault;
+            openFileDialog.Filter = "Imágenes (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if (openFileDialog.OpenFile() != null)
+                    {
+                        imagenSubida = Path.GetFullPath(openFileDialog.FileName).ToString();
+                        string directorioFotosPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
+                        if (!Directory.Exists(directorioFotosPerfil))
+                        {
+                            Directory.CreateDirectory(directorioFotosPerfil);
+                        }
+
+                        string[] valores = imagenSubida.ToString().Split('\\');
+                        imagenPerfil = valores[valores.Length - 1];
+                        rutaImagenPerfil = Path.Combine(directorioFotosPerfil, imagenPerfil);
+                        imgFotoPerfil.BackgroundImage = Image.FromFile(imagenSubida); ;
+
+                        //La próxima vez que se abra el cuadro de dialogo para seleccionar una imagen, se abrirá en el último directorio abierto
+                        directorioDefault = "";
+                        for (int x = 0; x < valores.Length - 1; x++)
+                        {
+                            directorioDefault += valores[x] + "\\";
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Message.ShowMessage("Error", "EditarUsuario.cs -> btnSubirImagen_Click() \n" + ex.Message, Message.MessageType.error);
+                }
+            }
+        }
+
+        private void btnBorrarImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string directorioFotosPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
+                imgFotoPerfil.BackgroundImage = Image.FromFile(Path.Combine(directorioFotosPerfil, imgDefault));
+                imagenPerfil = imgDefault;
+            }
+            catch (Exception ex)
+            {
+                Message.ShowMessage("Error", "EditarUsuario.cs -> btnBorrarImagen_Click() \n" + ex.Message, Message.MessageType.error);
+            }
         }
     }
 }

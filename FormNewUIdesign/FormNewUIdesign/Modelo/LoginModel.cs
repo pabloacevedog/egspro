@@ -72,6 +72,7 @@ namespace FormNewUIdesign.Modelo
                                                 " usr.Mail,  " +
                                                 " usr.Sexo,  " +
                                                 " usr.Edad,  " +
+                                                " usr.Imagen,  " +
                                                 " prf.Nombre AS Perfil  " +
                                             " FROM usuarios AS usr  " +
                                             " INNER JOIN perfiles AS prf ON prf.id = usr.perfil  " +
@@ -92,6 +93,7 @@ namespace FormNewUIdesign.Modelo
                                 objetoUsuario.mail = reader["Mail"].ToString();
                                 objetoUsuario.sexo = reader["Sexo"].ToString();
                                 objetoUsuario.edad = reader["Edad"].ToString();
+                                objetoUsuario.img_perfil = reader["Imagen"].ToString();
                                 objetoUsuario.perfil = reader["Perfil"].ToString();
                             }
 

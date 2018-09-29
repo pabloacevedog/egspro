@@ -1,4 +1,5 @@
-﻿using FormNewUIdesign.Modelo;
+﻿using FormNewUIdesign.Funciones;
+using FormNewUIdesign.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -22,7 +23,7 @@ namespace FormNewUIdesign.Formularios
             foreach (var item in opciones)
             {
                 Panel bordeBoton = new Panel();
-                bordeBoton.BackColor = Color.FromArgb(50, 137, 201);
+                bordeBoton.BackColor = Color.FromArgb(255, 154, 0);
                 bordeBoton.Location = new Point(0, posicion_Y);
                 bordeBoton.Name = "borde_" + x;
                 bordeBoton.Size = new Size(5, 40);
@@ -33,8 +34,8 @@ namespace FormNewUIdesign.Formularios
                 botonOpcion.FlatAppearance.BorderSize = 0;
                 botonOpcion.FlatAppearance.BorderColor = Color.FromArgb(167, 204, 232);
                 botonOpcion.Cursor = Cursors.Hand;
-                botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(167, 204, 232);
-                botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 204, 232);
+                botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
                 botonOpcion.BackColor = Color.FromArgb(245, 245, 245);
                 botonOpcion.FlatStyle = FlatStyle.Flat;
                 botonOpcion.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
@@ -51,6 +52,8 @@ namespace FormNewUIdesign.Formularios
                 botonOpcion.Text = "     " + item.texto;
                 botonOpcion.UseVisualStyleBackColor = true;
                 botonOpcion.Click += new EventHandler(MenuItem_Click);
+                botonOpcion.MouseEnter += new EventHandler(botonOpcion_MouseEnter);
+                botonOpcion.MouseLeave += new EventHandler(botonOpcion_MouseLeave);
 
                 contenedorOpciones.Controls.Add(bordeBoton);
                 contenedorOpciones.Controls.Add(botonOpcion);
@@ -89,6 +92,7 @@ namespace FormNewUIdesign.Formularios
                         if (UsersModel.EliminarUsuario(rut) > 0)
                         {
                             ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
+                            ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
                             ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
                             ControlUsuarios.listaUsuarios.listUsersData.BringToFront();
                             Message.ShowMessage("Eliminación correcta", "El usuario " + nombre + ", se ha eliminado correctamente.", Message.MessageType.done);
@@ -103,12 +107,7 @@ namespace FormNewUIdesign.Formularios
 
                 case "optCambiarPass":
                     nuevoMenu.Dispose();
-                    Message.ShowMessage("CONTRASEÑA", "Cambiar contraseña de la cuenta.", Message.MessageType.information);
-                    break;
-
-                case "optCambiarIdioma":
-                    nuevoMenu.Dispose();
-                    Message.ShowMessage("IDIOMA", "Cambiar idioma del sistema.", Message.MessageType.done);
+                    Message.ShowMessage("CONTRASEÑA", "Cambiar contraseña de la cuenta.", Message.MessageType.done);
                     break;
 
                 case "optAyuda":
@@ -134,6 +133,9 @@ namespace FormNewUIdesign.Formularios
                                 break;
                         }
                     }
+                    Mixin.VG.activeTabListUsers = true;
+                    Mixin.VG.activeTabAddUser = false;
+                    Mixin.VG.activeTabEditUser = false;
                     formCerrar.Dispose();
                     formMostrar.Show();               
                     break;
@@ -144,6 +146,74 @@ namespace FormNewUIdesign.Formularios
         {
             nuevoMenu.Close();
             nuevoMenu.Dispose();
+        }
+
+        public void botonOpcion_MouseEnter(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            boton.ForeColor = Color.White;
+
+            switch (boton.Name)
+            {
+                case "optEditarUsuario":
+                    boton.Image = Image.FromFile("../../iconos/edit/white.png");
+                    
+                    break;
+
+                case "optEliminarUsuario":
+                    boton.Image = Image.FromFile("../../iconos/delete_user/white.png");
+                    break;
+
+                case "optActualizarDatos":
+                    boton.Image = Image.FromFile("../../iconos/edit/white.png");
+                    break;
+
+                case "optCambiarPass":
+                    boton.Image = Image.FromFile("../../iconos/password/white.png");
+                    break;
+
+                case "optAyuda":
+                    boton.Image = Image.FromFile("../../iconos/help_center/white.png");
+                    break;
+
+                case "optCerrarSesion":
+                    boton.Image = Image.FromFile("../../iconos/log_out/white.png");
+                    break;
+            }
+        }
+
+        public void botonOpcion_MouseLeave(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            boton.ForeColor = Color.DimGray;
+
+            switch (boton.Name)
+            {
+                case "optEditarUsuario":
+                    boton.Image = Image.FromFile("../../iconos/edit/grey.png");
+
+                    break;
+
+                case "optEliminarUsuario":
+                    boton.Image = Image.FromFile("../../iconos/delete_user/grey.png");
+                    break;
+
+                case "optActualizarDatos":
+                    boton.Image = Image.FromFile("../../iconos/edit/grey.png");
+                    break;
+
+                case "optCambiarPass":
+                    boton.Image = Image.FromFile("../../iconos/password/grey.png");
+                    break;
+
+                case "optAyuda":
+                    boton.Image = Image.FromFile("../../iconos/help_center/grey.png");
+                    break;
+
+                case "optCerrarSesion":
+                    boton.Image = Image.FromFile("../../iconos/log_out/grey.png");
+                    break;
+            }
         }
     }
 }

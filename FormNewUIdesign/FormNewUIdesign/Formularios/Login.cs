@@ -84,7 +84,7 @@ namespace FormNewUIdesign
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.LightGray;
             }
-            lineUser.BorderColor = Color.FromArgb(50, 137, 201);
+            lineUser.BorderColor = Color.FromArgb(219, 133, 0);
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
@@ -117,7 +117,11 @@ namespace FormNewUIdesign
                 txtContrasena.ForeColor = Color.LightGray;
                 txtContrasena.UseSystemPasswordChar = true;
             }
-            linePassword.BorderColor = Color.FromArgb(50, 137, 201);
+            else
+            {
+                txtContrasena.SelectAll();
+            }
+            linePassword.BorderColor = Color.FromArgb(219, 133, 0);
         }
 
         private void txtContrasena_Leave(object sender, EventArgs e)

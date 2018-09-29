@@ -37,7 +37,7 @@
             this.btnDataUser = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.imgUsername = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            imgUsername = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnResturar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -155,15 +155,15 @@
             resources.ApplyResources(this.shapeContainer2, "shapeContainer2");
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.imgUsername});
+            imgUsername});
             this.shapeContainer2.TabStop = false;
             // 
             // imgUsername
             // 
-            resources.ApplyResources(this.imgUsername, "imgUsername");
-            this.imgUsername.BackColor = System.Drawing.Color.Transparent;
-            this.imgUsername.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgUsername.Name = "imgUsername";
+            resources.ApplyResources(imgUsername, "imgUsername");
+            imgUsername.BackColor = System.Drawing.Color.Transparent;
+            imgUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            imgUsername.Name = "imgUsername";
             // 
             // btnCerrar
             // 
@@ -217,7 +217,7 @@
             // 
             // logoPanel
             // 
-            this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             this.logoPanel.Controls.Add(this.imgSlideMenu);
             this.logoPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.logoPanel, "logoPanel");
@@ -235,7 +235,7 @@
             // btnDashboard
             // 
             this.btnDashboard.AutoEllipsis = true;
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             resources.ApplyResources(this.btnDashboard, "btnDashboard");
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
@@ -263,7 +263,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
@@ -283,7 +283,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
@@ -303,7 +303,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
@@ -323,7 +323,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
@@ -343,7 +343,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
@@ -363,7 +363,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
@@ -383,19 +383,19 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.panel10.Controls.Add(this.pictureBox2);
             this.panel10.Controls.Add(this.lblCalendario);
             resources.ApplyResources(this.panel10, "panel10");
@@ -424,13 +424,13 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(137)))), ((int)(((byte)(201)))));
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
             // 
@@ -505,6 +505,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
             this.Tag = "";
+            this.Shown += new System.EventHandler(this.FormPrincipal_Shown);
             this.tituloPanel.ResumeLayout(false);
             this.tituloPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -542,7 +543,7 @@
         private System.Windows.Forms.Panel panelUserData;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.PictureBox btnDataUser;
-        private Microsoft.VisualBasic.PowerPacks.OvalShape imgUsername;
+        public static Microsoft.VisualBasic.PowerPacks.OvalShape imgUsername;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel logoPanel;

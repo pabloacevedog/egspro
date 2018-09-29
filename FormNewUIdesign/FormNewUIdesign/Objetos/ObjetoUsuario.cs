@@ -10,6 +10,7 @@
     public string sexo { set; get; }
     public string text_sexo { set; get; }
     public string edad { set; get; }
+    public string img_perfil { set; get; }
     public string perfil { set; get; }
     public string id_perfil { set; get; }
 }
