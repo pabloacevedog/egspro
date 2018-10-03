@@ -38,3 +38,5 @@ D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdes
 D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.csproj.GenerateResource.Cache
 D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.exe
 D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.pdb
+D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.Componentes.Dashboard.resources
+D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.Componentes.ControlPostulacion.resources

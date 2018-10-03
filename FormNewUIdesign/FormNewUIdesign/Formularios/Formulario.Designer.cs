@@ -543,7 +543,6 @@
         private System.Windows.Forms.Panel panelUserData;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.PictureBox btnDataUser;
-        public static Microsoft.VisualBasic.PowerPacks.OvalShape imgUsername;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel logoPanel;
@@ -574,6 +573,7 @@
         private System.Windows.Forms.Button btnReporteVentas;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel menuPanel;
+        public static Microsoft.VisualBasic.PowerPacks.OvalShape imgUsername;
     }
 }
 

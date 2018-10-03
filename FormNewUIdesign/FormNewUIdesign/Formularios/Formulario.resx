@@ -117,111 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.Name" xml:space="preserve">
-    <value>panelUserData</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
-    <value>btnCerrar</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnResturar.Name" xml:space="preserve">
-    <value>btnResturar</value>
-  </data>
-  <data name="&gt;&gt;btnResturar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnResturar.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;btnResturar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnMinimizar.Name" xml:space="preserve">
-    <value>btnMinimizar</value>
-  </data>
-  <data name="&gt;&gt;btnMinimizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMinimizar.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;btnMinimizar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnMaximizar.Name" xml:space="preserve">
-    <value>btnMaximizar</value>
-  </data>
-  <data name="&gt;&gt;btnMaximizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMaximizar.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;btnMaximizar.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tituloPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tituloPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 0</value>
-  </data>
-  <data name="tituloPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 40</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tituloPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tituloPanel.Name" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;tituloPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tituloPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tituloPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="panel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="imgTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="imgTitle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAKVJREFUWEft
@@ -320,66 +224,6 @@
   <data name="panelUserData.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;btnDataUser.Name" xml:space="preserve">
-    <value>btnDataUser</value>
-  </data>
-  <data name="&gt;&gt;btnDataUser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDataUser.Parent" xml:space="preserve">
-    <value>panelUserData</value>
-  </data>
-  <data name="&gt;&gt;btnDataUser.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblUsername.Name" xml:space="preserve">
-    <value>lblUsername</value>
-  </data>
-  <data name="&gt;&gt;lblUsername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblUsername.Parent" xml:space="preserve">
-    <value>panelUserData</value>
-  </data>
-  <data name="&gt;&gt;lblUsername.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.Name" xml:space="preserve">
-    <value>shapeContainer2</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.Type" xml:space="preserve">
-    <value>Microsoft.VisualBasic.PowerPacks.ShapeContainer, Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.Parent" xml:space="preserve">
-    <value>panelUserData</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelUserData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="panelUserData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelUserData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 40</value>
-  </data>
-  <data name="panelUserData.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.Name" xml:space="preserve">
-    <value>panelUserData</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.Parent" xml:space="preserve">
-    <value>tituloPanel</value>
-  </data>
-  <data name="&gt;&gt;panelUserData.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnDataUser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -462,24 +306,6 @@
   </data>
   <data name="shapeContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="shapeContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 40</value>
-  </data>
-  <data name="shapeContainer2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.Name" xml:space="preserve">
-    <value>shapeContainer2</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.Type" xml:space="preserve">
-    <value>Microsoft.VisualBasic.PowerPacks.ShapeContainer, Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.Parent" xml:space="preserve">
-    <value>panelUserData</value>
-  </data>
-  <data name="&gt;&gt;shapeContainer2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="imgUsername.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1584,6 +1410,48 @@
   <data name="imgUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 38</value>
   </data>
+  <data name="shapeContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 40</value>
+  </data>
+  <data name="shapeContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.Name" xml:space="preserve">
+    <value>shapeContainer2</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.Type" xml:space="preserve">
+    <value>Microsoft.VisualBasic.PowerPacks.ShapeContainer, Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.Parent" xml:space="preserve">
+    <value>panelUserData</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelUserData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panelUserData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelUserData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 40</value>
+  </data>
+  <data name="panelUserData.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panelUserData.Name" xml:space="preserve">
+    <value>panelUserData</value>
+  </data>
+  <data name="&gt;&gt;panelUserData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelUserData.Parent" xml:space="preserve">
+    <value>tituloPanel</value>
+  </data>
+  <data name="&gt;&gt;panelUserData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="btnCerrar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -1743,6 +1611,30 @@
   </data>
   <data name="&gt;&gt;btnMaximizar.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="tituloPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tituloPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 0</value>
+  </data>
+  <data name="tituloPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1100, 40</value>
+  </data>
+  <data name="tituloPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tituloPanel.Name" xml:space="preserve">
+    <value>tituloPanel</value>
+  </data>
+  <data name="&gt;&gt;tituloPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tituloPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tituloPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="contentPanel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2448,54 +2340,6 @@
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>panel10</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblCalendario.Name" xml:space="preserve">
-    <value>lblCalendario</value>
-  </data>
-  <data name="&gt;&gt;lblCalendario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCalendario.Parent" xml:space="preserve">
-    <value>panel10</value>
-  </data>
-  <data name="&gt;&gt;lblCalendario.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 660</value>
-  </data>
-  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 40</value>
-  </data>
-  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
-    <value>panel10</value>
-  </data>
-  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
-    <value>menuPanel</value>
-  </data>
-  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAIlJREFUWEft
@@ -2564,77 +2408,29 @@
   <data name="&gt;&gt;lblCalendario.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;panel13.Name" xml:space="preserve">
-    <value>panel13</value>
+  <data name="panel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
-  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
+  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 660</value>
+  </data>
+  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 40</value>
+  </data>
+  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
-    <value>SubmenuReportes</value>
-  </data>
-  <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel12.Name" xml:space="preserve">
-    <value>panel12</value>
-  </data>
-  <data name="&gt;&gt;panel12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
-    <value>SubmenuReportes</value>
-  </data>
-  <data name="&gt;&gt;panel12.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnReporteCompras.Name" xml:space="preserve">
-    <value>btnReporteCompras</value>
-  </data>
-  <data name="&gt;&gt;btnReporteCompras.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReporteCompras.Parent" xml:space="preserve">
-    <value>SubmenuReportes</value>
-  </data>
-  <data name="&gt;&gt;btnReporteCompras.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnReporteVentas.Name" xml:space="preserve">
-    <value>btnReporteVentas</value>
-  </data>
-  <data name="&gt;&gt;btnReporteVentas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReporteVentas.Parent" xml:space="preserve">
-    <value>SubmenuReportes</value>
-  </data>
-  <data name="&gt;&gt;btnReporteVentas.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="SubmenuReportes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 465</value>
-  </data>
-  <data name="SubmenuReportes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 74</value>
-  </data>
-  <data name="SubmenuReportes.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="SubmenuReportes.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;SubmenuReportes.Name" xml:space="preserve">
-    <value>SubmenuReportes</value>
-  </data>
-  <data name="&gt;&gt;SubmenuReportes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SubmenuReportes.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
     <value>menuPanel</value>
   </data>
-  <data name="&gt;&gt;SubmenuReportes.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="panel13.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 38</value>
@@ -2787,6 +2583,30 @@
   </data>
   <data name="&gt;&gt;btnReporteVentas.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="SubmenuReportes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 465</value>
+  </data>
+  <data name="SubmenuReportes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 74</value>
+  </data>
+  <data name="SubmenuReportes.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="SubmenuReportes.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;SubmenuReportes.Name" xml:space="preserve">
+    <value>SubmenuReportes</value>
+  </data>
+  <data name="&gt;&gt;SubmenuReportes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SubmenuReportes.Parent" xml:space="preserve">
+    <value>menuPanel</value>
+  </data>
+  <data name="&gt;&gt;SubmenuReportes.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3492,10 +3312,10 @@
     <value>NoControl</value>
   </data>
   <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 38</value>
+    <value>1, 40</value>
   </data>
   <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 123</value>
+    <value>200, 121</value>
   </data>
   <data name="logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>

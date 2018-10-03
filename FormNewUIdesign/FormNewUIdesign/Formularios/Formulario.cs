@@ -13,6 +13,7 @@ using FormNewUIdesign.Formularios;
 using System.Threading;
 using System.IO;
 using FormNewUIdesign.Modelo;
+using FormNewUIdesign.Componentes;
 
 namespace FormNewUIdesign
 {
@@ -177,6 +178,10 @@ namespace FormNewUIdesign
             {
                 colorInactiveMenu(elementoMenuAnterior);
             }
+            Dashboard dashboardControl = new Dashboard();
+            contentPanel.Controls.Add(dashboardControl);
+            dashboardControl.Dock = DockStyle.Fill;
+            dashboardControl.BringToFront();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -207,6 +212,10 @@ namespace FormNewUIdesign
             {
                 colorInactiveMenu(elementoMenuAnterior);
             }
+            ControlPostulacion controlPostulacion = new ControlPostulacion();
+            contentPanel.Controls.Add(controlPostulacion);
+            controlPostulacion.Dock = DockStyle.Fill;
+            controlPostulacion.BringToFront();
         }
 
         private void btnPostulantes_Click(object sender, EventArgs e)
@@ -597,6 +606,11 @@ namespace FormNewUIdesign
 
         private void FormPrincipal_Shown(object sender, EventArgs e)
         {
+            Dashboard dashboardControl = new Dashboard();
+            contentPanel.Controls.Add(dashboardControl);
+            dashboardControl.Dock = DockStyle.Fill;
+            dashboardControl.BringToFront();
+
             if (objetoUsuario.img_perfil != "" && objetoUsuario.img_perfil != null)
             {
                 string rutaImagenPerfil = Path.Combine(UsersModel.ObtenerDirectorioFotosPerfil(), objetoUsuario.img_perfil);
@@ -608,6 +622,11 @@ namespace FormNewUIdesign
                 {
                     imgUsername.BackgroundImage = Image.FromFile(Path.Combine(UsersModel.ObtenerDirectorioFotosPerfil(), "user_default.png"));
                 }
+            }
+
+            if (objetoUsuario.perfil != "Administrador")
+            {
+                btnConfig.Visible = false;
             }
         }
     }

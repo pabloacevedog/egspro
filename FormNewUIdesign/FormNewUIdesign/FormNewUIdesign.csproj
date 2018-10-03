@@ -55,6 +55,18 @@
     <Compile Include="Componentes\AgregarUsuario.Designer.cs">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\ControlPostulacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\ControlPostulacion.Designer.cs">
+      <DependentUpon>ControlPostulacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\EditarUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Componentes\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\ControlPostulacion.resx">
+      <DependentUpon>ControlPostulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\EditarUsuario.resx">
       <DependentUpon>EditarUsuario.cs</DependentUpon>

@@ -599,60 +599,69 @@ namespace FormNewUIdesign.Componentes
         {
             if (!ERROR_rut && !ERROR_nombre && !ERROR_apellidos && !ERROR_mail && !ERROR_sexo && !ERROR_perfil && !ERROR_username && !ERROR_password && !ERROR_confirmar_password)
             {
-                ObjetoUsuario nuevoUsuario = new ObjetoUsuario();
-                nuevoUsuario.rut = txtRut.Text.Replace(".", "").Replace("-", "");
-                nuevoUsuario.nombre = txtNombre.Text;
-                nuevoUsuario.apellidos = txtApellidos.Text;
-                if (txtEdad.Text.Equals("Ingrese edad")) { nuevoUsuario.edad = "0"; }
-                else { nuevoUsuario.edad = txtEdad.Text; }
-                if (txtTelefono.Text.Equals("Ingrese teléfono de contacto")) { nuevoUsuario.telefono = "0"; }
-                else { nuevoUsuario.telefono = txtTelefono.Text; }
-                nuevoUsuario.mail = txtMail.Text;
-                nuevoUsuario.img_perfil = imagenPerfil;
-                nuevoUsuario.username = txtUsername.Text;
-                nuevoUsuario.password = txtPassword.Text;
-                nuevoUsuario.sexo = ((KeyValuePair<string, string>)cbxSexo.SelectedItem).Key;
-                nuevoUsuario.perfil = ((KeyValuePair<string, string>)cbxPerfil.SelectedItem).Key;
-                int idInsertado = UsersModel.ActualizarUsuario(nuevoUsuario);
-                if (idInsertado > 0)
+                if (!UsersModel.ExisteUsername(txtUsername.Text, txtRut.Text.Replace(".","").Replace("-","")))
                 {
-                    try
+                    ObjetoUsuario nuevoUsuario = new ObjetoUsuario();
+                    nuevoUsuario.rut = txtRut.Text.Replace(".", "").Replace("-", "");
+                    nuevoUsuario.nombre = txtNombre.Text;
+                    nuevoUsuario.apellidos = txtApellidos.Text;
+                    if (txtEdad.Text.Equals("Ingrese edad")) { nuevoUsuario.edad = "0"; }
+                    else { nuevoUsuario.edad = txtEdad.Text; }
+                    if (txtTelefono.Text.Equals("Ingrese teléfono de contacto")) { nuevoUsuario.telefono = "0"; }
+                    else { nuevoUsuario.telefono = txtTelefono.Text; }
+                    nuevoUsuario.mail = txtMail.Text;
+                    nuevoUsuario.img_perfil = imagenPerfil;
+                    nuevoUsuario.username = txtUsername.Text;
+                    nuevoUsuario.password = txtPassword.Text;
+                    nuevoUsuario.sexo = ((KeyValuePair<string, string>)cbxSexo.SelectedItem).Key;
+                    nuevoUsuario.perfil = ((KeyValuePair<string, string>)cbxPerfil.SelectedItem).Key;
+                    int idInsertado = UsersModel.ActualizarUsuario(nuevoUsuario);
+                    if (idInsertado > 0)
                     {
-                        if (imagenPerfil != imgDefault)
+                        try
                         {
-                            if (!File.Exists(rutaImagenPerfil))
+                            if (imagenPerfil != imgDefault)
                             {
-                                File.Copy(imagenSubida, rutaImagenPerfil, true);
+                                if (!File.Exists(rutaImagenPerfil))
+                                {
+                                    File.Copy(imagenSubida, rutaImagenPerfil, true);
+                                }
                             }
+
+                            //setear imagen de usuario después de guardar la edición
+                            FormPrincipal.SetUserImage(rutaImagenPerfil);
+
+                            ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
+                            ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
+                            int rowIndex = 0;
+                            foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                            {
+                                if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                                {
+                                    rowIndex = row.Cells[0].RowIndex;
+                                    break;
+                                }
+                            }
+                            ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
+                            ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
+
+                            ControlUsuarios.ActivarTabListaUsuarios();
+                            ControlUsuarios.listaUsuarios.BringToFront();
+                            Message.ShowMessage("Editar Usuario", "Los datos del usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", han sido modificados correctamente.", Message.MessageType.done);
                         }
-
-                        //setear imagen de usuario después de guardar la edición
-                        FormPrincipal.SetUserImage(rutaImagenPerfil);
-                        
-
-                        ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
-                        ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
-                        int rowIndex = 0;
-                        foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                        catch (Exception ex)
                         {
-                            if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
-                            {
-                                rowIndex = row.Cells[0].RowIndex;
-                                break;
-                            }
+                            Message.ShowMessage("Error", "EditarUsuario.cs -> btnGuardarEditUser_Click() \n" + ex.Message, Message.MessageType.error);
                         }
-                        ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
-                        ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
-
-                        ControlUsuarios.ActivarTabListaUsuarios();
-                        ControlUsuarios.listaUsuarios.BringToFront();
-                        Message.ShowMessage("Editar Usuario", "Los datos del usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", han sido modificados correctamente.", Message.MessageType.done);
-                    }
-                    catch (Exception ex)
-                    {
-                        Message.ShowMessage("Error", "EditarUsuario.cs -> btnGuardarEditUser_Click() \n" + ex.Message, Message.MessageType.error);
                     }
                 }
+                else
+                {
+                    Message.ShowMessage("Nombre de usuario en uso", "El nombre de usuario ya se encuentra en uso, favor registrar otro nombre.", Message.MessageType.warning);
+                    txtUsername.Focus();
+                    txtUsername.SelectAll();
+                }
+                
             }
             else
             {

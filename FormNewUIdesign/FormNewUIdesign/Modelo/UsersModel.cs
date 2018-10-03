@@ -382,5 +382,112 @@ namespace FormNewUIdesign.Modelo
             }
             return resultado;
         }
+
+
+        public static bool ExisteUsername(string username, string rut)
+        {
+            bool resultado = false;
+            try
+            {
+                using (MySqlConnection conn = ObtenerConexionBD())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Connection = conn;
+                        if (rut != "")
+                        {
+                            cmd.CommandText = " SELECT COUNT(1) AS Username " +
+                                            " FROM usuarios " +
+                                            " WHERE Username = @username " + 
+                                            " AND Rut <> @rut ";
+
+                            cmd.Parameters.AddWithValue("@username", username);
+                            cmd.Parameters.AddWithValue("@rut", rut);
+                        }
+                        else
+                        {
+                            cmd.CommandText = " SELECT COUNT(1) AS Username " +
+                                            " FROM usuarios " +
+                                            " WHERE Username = @username ";
+
+                            cmd.Parameters.AddWithValue("@username", username);
+                        }
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                if (Convert.ToInt32(reader["Username"].ToString()) > 0)
+                                {
+                                    resultado = true;
+                                }
+                            }
+
+                            reader.Close();
+                            reader.Dispose();
+                        }
+                        cmd.Dispose();
+                    }
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ExisteUsername() \n" + e.Message, Message.MessageType.error);
+            }
+            catch (Exception e2)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ExisteUsername() \n" + e2.Message, Message.MessageType.error);
+            }
+            return resultado;
+        }
+
+
+        public static bool ExisteRut(string rut)
+        {
+            bool resultado = false;
+            try
+            {
+                using (MySqlConnection conn = ObtenerConexionBD())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = " SELECT COUNT(1) AS rut " +
+                                            " FROM usuarios " +
+                                            " WHERE Rut = @rut ";
+
+                        cmd.Parameters.AddWithValue("@rut", rut);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                if (Convert.ToInt32(reader["rut"].ToString()) > 0)
+                                {
+                                    resultado = true;
+                                }
+                            }
+
+                            reader.Close();
+                            reader.Dispose();
+                        }
+                        cmd.Dispose();
+                    }
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ExisteRut() \n" + e.Message, Message.MessageType.error);
+            }
+            catch (Exception e2)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> ExisteRut() \n" + e2.Message, Message.MessageType.error);
+            }
+            return resultado;
+        }
     }
 }

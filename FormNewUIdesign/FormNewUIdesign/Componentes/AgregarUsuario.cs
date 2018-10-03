@@ -639,57 +639,75 @@ namespace FormNewUIdesign
             {
                 if (!ERROR_rut && !ERROR_nombre && !ERROR_apellidos && !ERROR_mail && !ERROR_sexo && !ERROR_perfil && !ERROR_username && !ERROR_password && !ERROR_confirmar_password)
                 {
-                    ObjetoUsuario nuevoUsuario = new ObjetoUsuario();
-                    nuevoUsuario.rut = txtRut.Text.Replace(".", "").Replace("-", "");
-                    nuevoUsuario.nombre = txtNombre.Text;
-                    nuevoUsuario.apellidos = txtApellidos.Text;
-                    if (txtEdad.Text.Equals("Ingrese edad")) { nuevoUsuario.edad = "0"; }
-                    else { nuevoUsuario.edad = txtEdad.Text; }
-                    if (txtTelefono.Text.Equals("Ingrese teléfono de contacto")) { nuevoUsuario.telefono = "0"; }
-                    else { nuevoUsuario.telefono = txtTelefono.Text; }
-                    nuevoUsuario.mail = txtMail.Text;
-                    nuevoUsuario.img_perfil = imagenPerfil;
-                    nuevoUsuario.username = txtUsername.Text;
-                    nuevoUsuario.password = txtPassword.Text;
-                    nuevoUsuario.sexo = ((KeyValuePair<string, string>)cbxSexo.SelectedItem).Key;
-                    nuevoUsuario.perfil = ((KeyValuePair<string, string>)cbxPerfil.SelectedItem).Key;
-                    int idInsertado = UsersModel.GuardarUsuario(nuevoUsuario);
-                    if (idInsertado > 0)
+                    if (!UsersModel.ExisteRut(txtRut.Text.Replace(".", "").Replace("-", "")))
                     {
-                        try
+                        if (!UsersModel.ExisteUsername(txtUsername.Text, ""))
                         {
-                            if (rutaImagenPerfil == "")
+                            ObjetoUsuario nuevoUsuario = new ObjetoUsuario();
+                            nuevoUsuario.rut = txtRut.Text.Replace(".", "").Replace("-", "");
+                            nuevoUsuario.nombre = txtNombre.Text;
+                            nuevoUsuario.apellidos = txtApellidos.Text;
+                            if (txtEdad.Text.Equals("Ingrese edad")) { nuevoUsuario.edad = "0"; }
+                            else { nuevoUsuario.edad = txtEdad.Text; }
+                            if (txtTelefono.Text.Equals("Ingrese teléfono de contacto")) { nuevoUsuario.telefono = "0"; }
+                            else { nuevoUsuario.telefono = txtTelefono.Text; }
+                            nuevoUsuario.mail = txtMail.Text;
+                            nuevoUsuario.img_perfil = imagenPerfil;
+                            nuevoUsuario.username = txtUsername.Text;
+                            nuevoUsuario.password = txtPassword.Text;
+                            nuevoUsuario.sexo = ((KeyValuePair<string, string>)cbxSexo.SelectedItem).Key;
+                            nuevoUsuario.perfil = ((KeyValuePair<string, string>)cbxPerfil.SelectedItem).Key;
+                            int idInsertado = UsersModel.GuardarUsuario(nuevoUsuario);
+                            if (idInsertado > 0)
                             {
-                                rutaImagenPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
-                                rutaImagenPerfil = Path.Combine(rutaImagenPerfil, imagenPerfil);
-                            }
-
-                            if (!File.Exists(rutaImagenPerfil))
-                            {
-                                File.Copy(imagenSubida, rutaImagenPerfil, true);
-                            }
-
-                            ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
-                            ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
-                            int rowIndex = 0;
-                            foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
-                            {
-                                if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                                try
                                 {
-                                    rowIndex = row.Cells[0].RowIndex;
-                                    break;
+                                    if (rutaImagenPerfil == "")
+                                    {
+                                        rutaImagenPerfil = UsersModel.ObtenerDirectorioFotosPerfil();
+                                        rutaImagenPerfil = Path.Combine(rutaImagenPerfil, imagenPerfil);
+                                    }
+
+                                    if (!File.Exists(rutaImagenPerfil))
+                                    {
+                                        File.Copy(imagenSubida, rutaImagenPerfil, true);
+                                    }
+
+                                    ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
+                                    ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
+                                    int rowIndex = 0;
+                                    foreach (DataGridViewRow row in ControlUsuarios.listaUsuarios.listUsersData.Rows)
+                                    {
+                                        if (row.Cells[0].Value.ToString() == nuevoUsuario.rut)
+                                        {
+                                            rowIndex = row.Cells[0].RowIndex;
+                                            break;
+                                        }
+                                    }
+                                    ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
+                                    ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
+
+                                    ControlUsuarios.ActivarTabListaUsuarios();
+                                    Message.ShowMessage("Agregar Usuario", "El usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", ha sido creado correctamente.", Message.MessageType.done);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Message.ShowMessage("Error", "AgregarUsuario.cs -> btnGuardarAddUser_Click() \n" + ex.Message, Message.MessageType.error);
                                 }
                             }
-                            ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
-                            ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
-
-                            ControlUsuarios.ActivarTabListaUsuarios();
-                            Message.ShowMessage("Agregar Usuario", "El usuario " + nuevoUsuario.nombre + " " + nuevoUsuario.apellidos + ", ha sido creado correctamente.", Message.MessageType.done);
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            Message.ShowMessage("Error", "AgregarUsuario.cs -> btnGuardarAddUser_Click() \n" + ex.Message, Message.MessageType.error);
+                            Message.ShowMessage("Nombre de usuario en uso", "El nombre de usuario ya se encuentra en uso, favor registrar otro nombre.", Message.MessageType.warning);
+                            txtUsername.Focus();
+                            txtUsername.SelectAll();
                         }
+                    }
+                    else
+                    {
+                        Message.ShowMessage("Usuario ya registrado", "El rut ingresado ya se encuentra registrado, favor registrar otro rut.", Message.MessageType.warning);
+                        txtRut.Focus();
+                        txtRut.SelectAll();
                     }
                 }
                 else
