@@ -35,6 +35,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelListaUsuarios = new System.Windows.Forms.Panel();
             this.listUsersData = new System.Windows.Forms.DataGridView();
+            this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelListaUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listUsersData)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +66,8 @@
             // 
             this.listUsersData.AllowUserToAddRows = false;
             this.listUsersData.AllowUserToDeleteRows = false;
-            this.listUsersData.AllowUserToOrderColumns = true;
+            this.listUsersData.AllowUserToResizeColumns = false;
+            this.listUsersData.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,6 +94,17 @@
             this.listUsersData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.listUsersData.ColumnHeadersHeight = 40;
             this.listUsersData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.listUsersData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Rut,
+            this.Nombre,
+            this.Apellidos,
+            this.Username,
+            this.Password,
+            this.Telefono,
+            this.Mail,
+            this.Sexo,
+            this.Edad,
+            this.Perfil});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,6 +147,85 @@
             this.listUsersData.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.listUsersData_CellMouseEnter);
             this.listUsersData.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listUsersData_MouseClick);
             // 
+            // Rut
+            // 
+            this.Rut.DataPropertyName = "rut";
+            this.Rut.HeaderText = "Rut";
+            this.Rut.Name = "Rut";
+            this.Rut.ReadOnly = true;
+            this.Rut.Width = 58;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 90;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.DataPropertyName = "apellidos";
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "username";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            this.Username.Width = 102;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Width = 98;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "telefono";
+            this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 92;
+            // 
+            // Mail
+            // 
+            this.Mail.DataPropertyName = "mail";
+            this.Mail.HeaderText = "Mail";
+            this.Mail.Name = "Mail";
+            this.Mail.ReadOnly = true;
+            this.Mail.Width = 67;
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
+            this.Sexo.Width = 68;
+            // 
+            // Edad
+            // 
+            this.Edad.DataPropertyName = "edad";
+            this.Edad.HeaderText = "Edad";
+            this.Edad.Name = "Edad";
+            this.Edad.ReadOnly = true;
+            this.Edad.Width = 72;
+            // 
+            // Perfil
+            // 
+            this.Perfil.DataPropertyName = "perfil";
+            this.Perfil.HeaderText = "Perfil";
+            this.Perfil.Name = "Perfil";
+            this.Perfil.ReadOnly = true;
+            this.Perfil.Width = 70;
+            // 
             // ListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,5 +247,15 @@
 
         private System.Windows.Forms.Panel panelListaUsuarios;
         public System.Windows.Forms.DataGridView listUsersData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Perfil;
     }
 }

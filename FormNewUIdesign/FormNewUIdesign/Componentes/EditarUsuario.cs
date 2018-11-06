@@ -642,6 +642,7 @@ namespace FormNewUIdesign.Componentes
                                     break;
                                 }
                             }
+                            ControlUsuarios.listaUsuarios.listUsersData.AutoGenerateColumns = false;
                             ControlUsuarios.listaUsuarios.listUsersData.ClearSelection();
                             ControlUsuarios.listaUsuarios.listUsersData.Rows[rowIndex].Selected = true;
 

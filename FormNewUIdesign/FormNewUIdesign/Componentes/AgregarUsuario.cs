@@ -672,7 +672,7 @@ namespace FormNewUIdesign
                                     {
                                         File.Copy(imagenSubida, rutaImagenPerfil, true);
                                     }
-
+                                    ControlUsuarios.listaUsuarios.listUsersData.AutoGenerateColumns = false;
                                     ControlUsuarios.listaUsuarios.listUsersData.DataSource = UsersModel.ObtenerUsuarios();
                                     ControlUsuarios.listaUsuarios.listUsersData.Columns["Password"].Visible = false;
                                     int rowIndex = 0;

@@ -13,6 +13,10 @@ namespace FormNewUIdesign.Funciones
             public static bool activeTabListUsers = true;
             public static bool activeTabAddUser = false;
             public static bool activeTabEditUser = false;
+            public static string etapaCrearGrupo = "Crear Grupo Postulantes";
+            public static string etapaRegPostulantes = "Registrar Postulantes";
+            public static string etapaAgregarDocs = "Agregar Documentación";
+            public static string etapaGenerarFormatos = "Generar Formatos";
         }
 
         

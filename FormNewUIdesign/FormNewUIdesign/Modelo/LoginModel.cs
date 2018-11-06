@@ -75,7 +75,7 @@ namespace FormNewUIdesign.Modelo
                                                 " usr.Imagen,  " +
                                                 " prf.Nombre AS Perfil  " +
                                             " FROM usuarios AS usr  " +
-                                            " INNER JOIN perfiles AS prf ON prf.id = usr.perfil  " +
+                                            " INNER JOIN perfiles AS prf ON prf.Id_perfil = usr.Id_perfil  " +
                                             " WHERE Username = @username " ;
 
                         cmd.Parameters.AddWithValue("@username", username);

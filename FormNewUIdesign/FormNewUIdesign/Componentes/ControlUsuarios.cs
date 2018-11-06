@@ -21,6 +21,9 @@ namespace FormNewUIdesign
             contenidoUsuarios.Controls.Add(agregarUsuario);
             agregarUsuario.Dock = DockStyle.Fill;
             listaUsuarios.BringToFront();
+            Mixin.VG.activeTabListUsers = true;
+            Mixin.VG.activeTabAddUser = false;
+            Mixin.VG.activeTabEditUser = false;
         }
 
         private void tabListUsers_Click(object sender, EventArgs e)

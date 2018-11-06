@@ -7,9 +7,9 @@ namespace FormNewUIdesign.Modelo
 {
     public class UsersModel : ConexionMySql
     {
-        public static DataTable ObtenerUsuarios()
+        public static List<ObjetoUsuario> ObtenerUsuarios()
         {
-            DataTable tabla = new DataTable();
+            List<ObjetoUsuario> lista = new List<ObjetoUsuario>();
             try
             {
                 using (MySqlConnection conn = ObtenerConexionBD())
@@ -29,12 +29,27 @@ namespace FormNewUIdesign.Modelo
                                                 " usr.Edad,  " +
                                                 " prf.Nombre AS Perfil  " +
                                             " FROM usuarios AS usr  " +
-                                            " INNER JOIN perfiles AS prf ON prf.id = usr.perfil  " +
+                                            " INNER JOIN perfiles AS prf ON prf.Id_perfil = usr.Id_perfil  " +
                                             " ORDER BY usr.Nombre ASC ";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            tabla.Load(reader);
+                            while (reader.Read())
+                            {
+                                ObjetoUsuario objetoUsuario = new ObjetoUsuario();
+                                objetoUsuario.rut = reader["Rut"].ToString();
+                                objetoUsuario.nombre = reader["Nombre"].ToString();
+                                objetoUsuario.apellidos = reader["Apellidos"].ToString();
+                                objetoUsuario.username = reader["Username"].ToString();
+                                objetoUsuario.password = reader["Password"].ToString();
+                                objetoUsuario.telefono = reader["Telefono"].ToString();
+                                objetoUsuario.mail = reader["Mail"].ToString();
+                                objetoUsuario.sexo = reader["Sexo"].ToString();
+                                objetoUsuario.edad = reader["Edad"].ToString();
+                                objetoUsuario.perfil = reader["Perfil"].ToString();
+
+                                lista.Add(objetoUsuario);
+                            }
 
                             reader.Close();
                             reader.Dispose();
@@ -53,7 +68,7 @@ namespace FormNewUIdesign.Modelo
             {
                 Message.ShowMessage("Error MySql", "UsersModel.cs -> ObtenerUsuarios() \n" + e2.Message, Message.MessageType.error);
             }
-            return tabla;
+            return lista;
         }
 
 
@@ -68,17 +83,17 @@ namespace FormNewUIdesign.Modelo
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  " +
-                                                " Id,  " +
+                                                " Id_perfil,  " +
                                                 " Nombre  " +
                                             " FROM perfiles " +
-                                            " ORDER BY Id ASC ";
+                                            " ORDER BY Id_perfil ASC ";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             resultado.Add("0", "Seleccione");
                             while (reader.Read())
                             {
-                                resultado.Add(reader["Id"].ToString(), reader["Nombre"].ToString());
+                                resultado.Add(reader["Id_perfil"].ToString(), reader["Nombre"].ToString());
                             }
 
                             reader.Close();
@@ -114,8 +129,8 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " INSERT INTO usuarios (Rut, Nombre, Apellidos, Username, Password, Telefono, Mail, Sexo, Edad, Imagen, Perfil) " + 
-                                              " VALUES (@Rut, @Nombre, @Apellidos, @Username, @Password, @Telefono, @Mail, @Sexo, @Edad, @Imagen, @Perfil) ";
+                            cmd.CommandText = " INSERT INTO usuarios (Rut, Nombre, Apellidos, Username, Password, Telefono, Mail, Sexo, Edad, Imagen, Id_perfil) " +
+                                              " VALUES (@Rut, @Nombre, @Apellidos, @Username, @Password, @Telefono, @Mail, @Sexo, @Edad, @Imagen, @Id_perfil) ";
 
                             cmd.Parameters.AddWithValue("@Rut", NuevoUsuario.rut);
                             cmd.Parameters.AddWithValue("@Nombre", NuevoUsuario.nombre);
@@ -127,7 +142,7 @@ namespace FormNewUIdesign.Modelo
                             cmd.Parameters.AddWithValue("@Sexo", NuevoUsuario.sexo);
                             cmd.Parameters.AddWithValue("@Edad", NuevoUsuario.edad);
                             cmd.Parameters.AddWithValue("@Imagen", NuevoUsuario.img_perfil);
-                            cmd.Parameters.AddWithValue("@Perfil", NuevoUsuario.perfil);
+                            cmd.Parameters.AddWithValue("@Id_perfil", NuevoUsuario.perfil);
 
                             retorno = cmd.ExecuteNonQuery();
                             tran.Commit();
@@ -200,7 +215,7 @@ namespace FormNewUIdesign.Modelo
                     using (MySqlCommand cmd = conn.CreateCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = " SELECT Id " +
+                        cmd.CommandText = " SELECT Id_perfil " +
                                             " FROM perfiles " +
                                             " WHERE nombre = @nombre ";
 
@@ -210,7 +225,7 @@ namespace FormNewUIdesign.Modelo
                         {
                             while (reader.Read())
                             {
-                                resultado = reader["Id"].ToString();
+                                resultado = reader["Id_perfil"].ToString();
                             }
 
                             reader.Close();
@@ -303,7 +318,7 @@ namespace FormNewUIdesign.Modelo
                                                 " Sexo = @Sexo, " +
                                                 " Edad = @Edad, " +
                                                 " Imagen = @Imagen, " +
-                                                " Perfil = @Perfil " +
+                                                " Id_perfil = @Id_perfil " +
                                               " WHERE Rut = @Rut ";
 
                             cmd.Parameters.AddWithValue("@Rut", datosUsuario.rut);
@@ -316,7 +331,7 @@ namespace FormNewUIdesign.Modelo
                             cmd.Parameters.AddWithValue("@Sexo", datosUsuario.sexo);
                             cmd.Parameters.AddWithValue("@Edad", datosUsuario.edad);
                             cmd.Parameters.AddWithValue("@Imagen", datosUsuario.img_perfil);
-                            cmd.Parameters.AddWithValue("@Perfil", datosUsuario.perfil);
+                            cmd.Parameters.AddWithValue("@Id_perfil", datosUsuario.perfil);
 
                             retorno = cmd.ExecuteNonQuery();
                             tran.Commit();

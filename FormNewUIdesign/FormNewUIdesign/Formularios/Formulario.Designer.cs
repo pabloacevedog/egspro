@@ -56,7 +56,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnVentas = new System.Windows.Forms.Button();
+            this.btnGrupos = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnPostulantes = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -347,19 +347,19 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // btnVentas
+            // btnGrupos
             // 
-            this.btnVentas.AutoEllipsis = true;
-            resources.ApplyResources(this.btnVentas, "btnVentas");
-            this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
-            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
-            this.btnVentas.ForeColor = System.Drawing.Color.DimGray;
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.TabStop = false;
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            this.btnGrupos.AutoEllipsis = true;
+            resources.ApplyResources(this.btnGrupos, "btnGrupos");
+            this.btnGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrupos.FlatAppearance.BorderSize = 0;
+            this.btnGrupos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.btnGrupos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.btnGrupos.ForeColor = System.Drawing.Color.DimGray;
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.TabStop = false;
+            this.btnGrupos.UseVisualStyleBackColor = true;
+            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
             // 
             // panel7
             // 
@@ -480,7 +480,7 @@
             this.menuPanel.Controls.Add(this.panel8);
             this.menuPanel.Controls.Add(this.btnPostulantes);
             this.menuPanel.Controls.Add(this.panel7);
-            this.menuPanel.Controls.Add(this.btnVentas);
+            this.menuPanel.Controls.Add(this.btnGrupos);
             this.menuPanel.Controls.Add(this.panel6);
             this.menuPanel.Controls.Add(this.btnReportes);
             this.menuPanel.Controls.Add(this.panel5);
@@ -558,7 +558,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.Button btnGrupos;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnPostulantes;
         private System.Windows.Forms.Panel panel8;

@@ -1,7 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using FormNewUIdesign.Modelo;
-using FormNewUIdesign.Componentes;
 using System.Collections.Generic;
 using FormNewUIdesign.Formularios;
 
@@ -12,6 +11,7 @@ namespace FormNewUIdesign
         public ListaUsuarios()
         {
             InitializeComponent();
+            listUsersData.AutoGenerateColumns = false;
             listUsersData.DataSource = UsersModel.ObtenerUsuarios();
             listUsersData.Columns["Password"].Visible = false;
         }

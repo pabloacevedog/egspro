@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPostulacion));
             this.panelPostulacion = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.panelProcesos = new System.Windows.Forms.Panel();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.lblAddFormats = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             // panelPostulacion
             // 
             this.panelPostulacion.BackColor = System.Drawing.Color.White;
-            this.panelPostulacion.Controls.Add(this.btnGuardar);
+            this.panelPostulacion.Controls.Add(this.panelProcesos);
             this.panelPostulacion.Controls.Add(this.btnAnterior);
             this.panelPostulacion.Controls.Add(this.btnSiguiente);
             this.panelPostulacion.Controls.Add(this.lblAddFormats);
@@ -68,25 +68,18 @@
             this.panelPostulacion.Size = new System.Drawing.Size(1100, 660);
             this.panelPostulacion.TabIndex = 0;
             // 
-            // btnGuardar
+            // panelProcesos
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(466, 257);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(155, 35);
-            this.btnGuardar.TabIndex = 41;
-            this.btnGuardar.TabStop = false;
-            this.btnGuardar.Text = "      GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.panelProcesos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelProcesos.AutoScroll = true;
+            this.panelProcesos.AutoSize = true;
+            this.panelProcesos.BackColor = System.Drawing.Color.Transparent;
+            this.panelProcesos.Location = new System.Drawing.Point(0, 100);
+            this.panelProcesos.Name = "panelProcesos";
+            this.panelProcesos.Size = new System.Drawing.Size(1100, 560);
+            this.panelProcesos.TabIndex = 42;
             // 
             // btnAnterior
             // 
@@ -362,6 +355,7 @@
             this.Name = "ControlPostulacion";
             this.Size = new System.Drawing.Size(1100, 660);
             this.panelPostulacion.ResumeLayout(false);
+            this.panelPostulacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -383,9 +377,9 @@
         private System.Windows.Forms.Label lblCrearGrupo;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnGuardar;
         private Microsoft.VisualBasic.PowerPacks.OvalShape checkAddDocs;
         private Microsoft.VisualBasic.PowerPacks.OvalShape checkAddGrupo;
         private Microsoft.VisualBasic.PowerPacks.OvalShape checkCrearGrupo;
+        private System.Windows.Forms.Panel panelProcesos;
     }
 }

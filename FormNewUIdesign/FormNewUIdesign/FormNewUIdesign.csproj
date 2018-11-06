@@ -61,6 +61,12 @@
     <Compile Include="Componentes\ControlPostulacion.Designer.cs">
       <DependentUpon>ControlPostulacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\CrearGrupo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\CrearGrupo.Designer.cs">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,6 +78,18 @@
     </Compile>
     <Compile Include="Componentes\EditarUsuario.Designer.cs">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\GruposIngresados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\GruposIngresados.Designer.cs">
+      <DependentUpon>GruposIngresados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\RegistrarPostulantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\RegistrarPostulantes.Designer.cs">
+      <DependentUpon>RegistrarPostulantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\MenuContextual.cs">
       <SubType>Form</SubType>
@@ -98,6 +116,7 @@
     <Compile Include="Formularios\Message.Designer.cs">
       <DependentUpon>Message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\GruposModel.cs" />
     <Compile Include="Modelo\LoginModel.cs" />
     <Compile Include="Modelo\ConexionMySql.cs" />
     <Compile Include="Formularios\Formulario.cs">
@@ -113,6 +132,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\UsersModel.cs" />
+    <Compile Include="Objetos\ObjetoGrupo.cs" />
     <Compile Include="Objetos\OpcionesMenu.cs" />
     <Compile Include="Objetos\ObjetoUsuario.cs" />
     <Compile Include="Program.cs" />
@@ -123,11 +143,20 @@
     <EmbeddedResource Include="Componentes\ControlPostulacion.resx">
       <DependentUpon>ControlPostulacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\CrearGrupo.resx">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\EditarUsuario.resx">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\GruposIngresados.resx">
+      <DependentUpon>GruposIngresados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\RegistrarPostulantes.resx">
+      <DependentUpon>RegistrarPostulantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>

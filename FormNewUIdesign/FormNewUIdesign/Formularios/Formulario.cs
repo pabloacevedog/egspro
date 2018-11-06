@@ -154,6 +154,7 @@ namespace FormNewUIdesign
             {
                 logo.Visible = false;
                 menuPanel.Width = 55;
+                imgSlideMenu.Image = Image.FromFile("../../iconos/slide_right/white.png");
                 if (SubmenuReportes.Visible)
                 {
                     SubmenuReportes.Visible = false;
@@ -244,17 +245,22 @@ namespace FormNewUIdesign
             }
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void btnGrupos_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Ventas";
+            lblTitulo.Text = "Grupos Ingresados";
             elementoMenuAnterior = elementoMenuActual;
-            elementoMenuActual = "Ventas";
-            imgTitle.Image = Image.FromFile("../../iconos/sales/grey.png");
+            elementoMenuActual = "Grupos Ingresados";
+            imgTitle.Image = Image.FromFile("../../iconos/groups/grey.png");
             colorActiveMenu(elementoMenuActual);
             if (elementoMenuActual != elementoMenuAnterior)
             {
                 colorInactiveMenu(elementoMenuAnterior);
             }
+
+            GruposIngresados gruposIngresados = new GruposIngresados();
+            contentPanel.Controls.Add(gruposIngresados);
+            gruposIngresados.Dock = DockStyle.Fill;
+            gruposIngresados.BringToFront();
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
@@ -395,20 +401,20 @@ namespace FormNewUIdesign
                     }
                     btnSystem.Image = Image.FromFile("../../iconos/clients/white.png");
                     break;
-                case "Ventas":
-                    btnVentas.BackColor = Color.FromArgb(251, 168, 39);
-                    btnVentas.ForeColor = Color.White;
-                    if (btnVentas.BackColor == Color.FromArgb(251, 168, 39))
+                case "Grupos Ingresados":
+                    btnGrupos.BackColor = Color.FromArgb(251, 168, 39);
+                    btnGrupos.ForeColor = Color.White;
+                    if (btnGrupos.BackColor == Color.FromArgb(251, 168, 39))
                     {
-                        btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
-                        btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                        btnGrupos.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                        btnGrupos.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
                     }
                     else
                     {
-                        btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                        btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                        btnGrupos.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
+                        btnGrupos.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
                     }
-                    btnVentas.Image = Image.FromFile("../../iconos/sales/white.png");
+                    btnGrupos.Image = Image.FromFile("../../iconos/groups/white.png");
                     break;
                 case "Configuración":
                     btnConfig.BackColor = Color.FromArgb(251, 168, 39);
@@ -512,12 +518,12 @@ namespace FormNewUIdesign
                     btnSystem.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
                     btnSystem.Image = Image.FromFile("../../iconos/system/grey.png");
                     break;
-                case "Ventas":
-                    btnVentas.BackColor = Color.FromArgb(235, 235, 235);
-                    btnVentas.ForeColor = Color.DimGray;
-                    btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
-                    btnVentas.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
-                    btnVentas.Image = Image.FromFile("../../iconos/sales/grey.png");
+                case "Grupos Ingresados":
+                    btnGrupos.BackColor = Color.FromArgb(235, 235, 235);
+                    btnGrupos.ForeColor = Color.DimGray;
+                    btnGrupos.FlatAppearance.MouseOverBackColor = Color.FromArgb(210, 210, 210);
+                    btnGrupos.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 210, 210);
+                    btnGrupos.Image = Image.FromFile("../../iconos/groups/grey.png");
                     break;
                 case "Configuración":
                     btnConfig.BackColor = Color.FromArgb(235, 235, 235);

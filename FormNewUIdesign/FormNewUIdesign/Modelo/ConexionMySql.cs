@@ -13,7 +13,7 @@ namespace FormNewUIdesign
             builder.Server = "localhost";
             builder.UserID = "root";
             builder.Password = "";
-            builder.Database = "test_system";
+            builder.Database = "egis_db";
 
             MySqlConnection conn = new MySqlConnection(builder.ToString());
             try

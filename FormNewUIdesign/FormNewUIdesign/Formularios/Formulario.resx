@@ -1753,7 +1753,7 @@
     <value>4, 161</value>
   </data>
   <data name="btnDashboard.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnDashboard.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -1762,10 +1762,10 @@
     <value>0</value>
   </data>
   <data name="btnDashboard.Text" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>            Dashboard</value>
   </data>
   <data name="btnDashboard.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnDashboard.Name" xml:space="preserve">
     <value>btnDashboard</value>
@@ -1810,7 +1810,7 @@
     <value>4, 199</value>
   </data>
   <data name="btnUsers.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnUsers.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -1819,10 +1819,10 @@
     <value>0</value>
   </data>
   <data name="btnUsers.Text" xml:space="preserve">
-    <value>Usuarios</value>
+    <value>            Usuarios</value>
   </data>
   <data name="btnUsers.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnUsers.Name" xml:space="preserve">
     <value>btnUsers</value>
@@ -1886,7 +1886,7 @@
     <value>4, 237</value>
   </data>
   <data name="btnPostulacion.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnPostulacion.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -1895,10 +1895,10 @@
     <value>0</value>
   </data>
   <data name="btnPostulacion.Text" xml:space="preserve">
-    <value>Postulación</value>
+    <value>            Postulación</value>
   </data>
   <data name="btnPostulacion.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnPostulacion.Name" xml:space="preserve">
     <value>btnPostulacion</value>
@@ -1957,10 +1957,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnSystem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 313</value>
+    <value>5, 351</value>
   </data>
   <data name="btnSystem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnSystem.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -1969,10 +1969,10 @@
     <value>0</value>
   </data>
   <data name="btnSystem.Text" xml:space="preserve">
-    <value>Sistema</value>
+    <value>            Sistema</value>
   </data>
   <data name="btnSystem.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnSystem.Name" xml:space="preserve">
     <value>btnSystem</value>
@@ -2038,7 +2038,7 @@
     <value>4, 389</value>
   </data>
   <data name="btnConfig.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnConfig.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -2047,10 +2047,10 @@
     <value>0</value>
   </data>
   <data name="btnConfig.Text" xml:space="preserve">
-    <value>Configuración</value>
+    <value>            Configuración</value>
   </data>
   <data name="btnConfig.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnConfig.Name" xml:space="preserve">
     <value>btnConfig</value>
@@ -2114,7 +2114,7 @@
     <value>4, 427</value>
   </data>
   <data name="btnReportes.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnReportes.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -2123,10 +2123,10 @@
     <value>0</value>
   </data>
   <data name="btnReportes.Text" xml:space="preserve">
-    <value>Reportes</value>
+    <value>            Reportes</value>
   </data>
   <data name="btnReportes.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnReportes.Name" xml:space="preserve">
     <value>btnReportes</value>
@@ -2161,60 +2161,69 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="btnVentas.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="btnGrupos.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="btnVentas.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnGrupos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnVentas.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnGrupos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
-  <data name="btnVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnGrupos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAVRJREFUWEft
-        k79Kw1AUxmOLUArOfYHOvkBHlwYnpcE1hBDy5wEc083RF/AF3FydOxQKglPFSayuXboVS9vv2i8gSS23
-        zQ0J9P7gI+TLueece+6NodFoNFUmCIJVojAM+7TL429D0NRxnDN+Khff9wep5vaWyMF0+UFCM13gAI2Z
-        Tg3Y4YtIjLtk05JC3D2uu6alBiS94U7f4jiu0d6J67otxM+gIV5PNq4iLMuqY0rvoik8r2jvBHEPiF/i
-        2aGlFiR2RUPQiNa/IOYcWuCoHmmpx/O8UxT5FE1FUXRBeyto/hlxczTUplUMKHAnGpLUPZcVg23bDRT5
-        SBXdph9M6AkTbXJpMaDQLQu+yv5phYJGfqeDY+vRKhccwxcntJe4XD1Ibh7SFJcfAdjtJfTNKZm0M8jG
-        5SZ1XBPaGWTjclO5hpA8udQT/Ppd2hlk4zQajaZ6GMYakXhckDBIf7gAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAz1JREFUWEft
+        lktIlFEUx30UPUwrTcMwWxhUtCjGFikI02bAognJ0Ujn5Tgz6kaL2mSPRUQtAikDbRNBy6gWLtpURG1a
+        GENtorAEyWogwgmnUhvrd8bzwZfVYphHEN+Bw733nHPP/3/PfXxfniWWWGLJfyIF2v5b8Xg8ZcFg8GxX
+        V9dLdDQUCh2ura1dqu7cCuAr0SvhcHi+u7v7hyikpiDoxp39igG0U8DQFpfLtSIQCGwWAgYZE6m7tGvx
+        byLW19nZ2dze3l6paTIjJG0AJALYDBX5yLjK7/fbzEQMxf8UXznV8xM/h8bo32lrayvRdOmLrtoATXR0
+        dNShG7CPmewGoWs9PT2raAcMG3HfUZ+mS1vySf7CDMqKr/t8vuVUKgDQJPoVjaOj2HazpeXMiS6ac0bz
+        pS+chXOAJYzkgMW8Xm+N3CgI2PH1E3MEklslHlufmQz6iW2sTybLhMiKldQoZJ6w2uNysNVd6Ha7KyCz
+        RsdyA2uIu0r8c9oHEPRgzl/wZkgaGxuX6WFdJ5URheRBAB+jE4CP47vB7dom8ZAswlbBuJRhZp8BOS+A
+        VUvZWe16u92+hPEJAGeNbaEvB/cRRHYJGWI3Qriew79HngitYPpVInk1iS8AFkWfQcQGwH7630xnRAg9
+        lOpAYAf9QXTS5Jtm3giL2Wva6tRFVsV2XCbhjCSmf4utK6G9Z4Ap4BQVsSmZ+9jmzH6NmWfeG4jByVWo
+        EKkJSeQGjWvSBAmHnE5nscmWVEAG9MwMMv6NjCgx8r2bJUdEtl0hUhMSHEI/k/CLtOh5VldK+0psao9T
+        yQZAqgB7pwRkO5PPBP5pfKcgtJr+TbER16oQqQlnZzt6TPUoie1ywDkrYcMOUB9bVSwH3iCA7SKgt+m/
+        J+a0w+EoYm4r47cSg/+SQmRP5DYpoSn6dYBWQuJAU1NTGW3yRRe/xgzrtOyJvNwAxQFM0I7xMd2CuVDJ
+        /PIZoXq9C7OyKHIjqcoI4Mn/I0AnGA8z/mAmI+TkXdJpWZUCCOwD8LVBarFij6H9cg51TnZFHj22qJnq
+        RP5AJor9JG2FhudG5NETUG5Xi9wmSAzR7+WvUT4fuamMJZZY8lfJy/sJcLpAcxVcpi0AAAAASUVORK5C
+        YII=
 </value>
   </data>
-  <data name="btnVentas.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnGrupos.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="btnVentas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnGrupos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnVentas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 351</value>
+  <data name="btnGrupos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 313</value>
   </data>
-  <data name="btnVentas.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+  <data name="btnGrupos.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 0, 0</value>
   </data>
-  <data name="btnVentas.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnGrupos.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
   </data>
-  <data name="btnVentas.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnGrupos.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnVentas.Text" xml:space="preserve">
-    <value>Ventas</value>
+  <data name="btnGrupos.Text" xml:space="preserve">
+    <value>            Grupos Ingresados</value>
   </data>
-  <data name="btnVentas.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="btnGrupos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;btnVentas.Name" xml:space="preserve">
-    <value>btnVentas</value>
+  <data name="&gt;&gt;btnGrupos.Name" xml:space="preserve">
+    <value>btnGrupos</value>
   </data>
-  <data name="&gt;&gt;btnVentas.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnGrupos.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnVentas.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnGrupos.Parent" xml:space="preserve">
     <value>menuPanel</value>
   </data>
-  <data name="&gt;&gt;btnVentas.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnGrupos.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
@@ -2272,7 +2281,7 @@
     <value>5, 275</value>
   </data>
   <data name="btnPostulantes.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 20, 0</value>
+    <value>3, 0, 0, 0</value>
   </data>
   <data name="btnPostulantes.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 32</value>
@@ -2281,10 +2290,10 @@
     <value>0</value>
   </data>
   <data name="btnPostulantes.Text" xml:space="preserve">
-    <value>Postulantes</value>
+    <value>            Postulantes</value>
   </data>
   <data name="btnPostulantes.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnPostulantes.Name" xml:space="preserve">
     <value>btnPostulantes</value>

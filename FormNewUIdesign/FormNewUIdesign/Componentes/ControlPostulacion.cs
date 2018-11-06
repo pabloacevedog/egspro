@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FormNewUIdesign.Funciones;
 
 namespace FormNewUIdesign.Componentes
 {
@@ -21,6 +22,8 @@ namespace FormNewUIdesign.Componentes
         bool activeAddGrupo = false;
         bool activeAddDocs = false;
         bool activeAddFormats = false;
+        CrearGrupo crearGrupo;
+        RegistrarPostulantes regPostulantes;
 
         public ControlPostulacion()
         {
@@ -29,13 +32,21 @@ namespace FormNewUIdesign.Componentes
             ovalCrearGrupo.BackgroundImage = Image.FromFile("../../iconos/account_group/orange.png");
             lblCrearGrupo.ForeColor = Color.FromArgb(251, 168, 39);
             lblCrearGrupo.Text = "Crear Grupo" + Environment.NewLine + "Postulantes";
-            lblAddGrupo.Text = "Agregar" + Environment.NewLine + "Postulantes";
+            lblAddGrupo.Text = "Registrar" + Environment.NewLine + "Postulantes";
             lblAddDocs.Text = "Agregar" + Environment.NewLine + "Documentación";
             lblAddFormats.Text = "Generar" + Environment.NewLine + "Formatos";
+            crearGrupo = new CrearGrupo(this);
+            panelProcesos.Controls.Add(crearGrupo);
+            crearGrupo.Dock = DockStyle.Fill;
+            crearGrupo.BringToFront();
+
+            regPostulantes = new RegistrarPostulantes();
+            panelProcesos.Controls.Add(regPostulantes);
+            regPostulantes.Dock = DockStyle.Fill;
         }
         
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        public void btnGuardar_Click()
         {
             if (activeCrearGrupo)
             {
@@ -61,8 +72,29 @@ namespace FormNewUIdesign.Componentes
             }
         }
 
-        private void ovalCrearGrupo_Click(object sender, EventArgs e)
+        public void ovalCrearGrupo_Click(object sender, EventArgs e)
         {
+            activarTabCrearGrupo();
+        }
+
+        public void ovalAddGrupo_Click(object sender, EventArgs e)
+        {
+            activarTabRegistrarPostulantes();
+        }
+
+        public void ovalAddDocs_Click(object sender, EventArgs e)
+        {
+            activarTabAgregarDocs();
+        }
+
+        public void ovalAddFormats_Click(object sender, EventArgs e)
+        {
+            activarTabAgregarFormats();
+        }
+
+        public void activarTabCrearGrupo()
+        {
+            crearGrupo.BringToFront();
             activeCrearGrupo = true;
             activeAddGrupo = false;
             activeAddDocs = false;
@@ -111,8 +143,9 @@ namespace FormNewUIdesign.Componentes
             }
         }
 
-        private void ovalAddGrupo_Click(object sender, EventArgs e)
+        public void activarTabRegistrarPostulantes()
         {
+            regPostulantes.BringToFront();
             activeCrearGrupo = false;
             activeAddGrupo = true;
             activeAddDocs = false;
@@ -161,7 +194,7 @@ namespace FormNewUIdesign.Componentes
             }
         }
 
-        private void ovalAddDocs_Click(object sender, EventArgs e)
+        public void activarTabAgregarDocs()
         {
             activeCrearGrupo = false;
             activeAddGrupo = false;
@@ -211,7 +244,7 @@ namespace FormNewUIdesign.Componentes
             }
         }
 
-        private void ovalAddFormats_Click(object sender, EventArgs e)
+        public void activarTabAgregarFormats()
         {
             activeCrearGrupo = false;
             activeAddGrupo = false;
