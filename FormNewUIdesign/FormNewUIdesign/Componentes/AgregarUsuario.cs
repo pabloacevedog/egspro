@@ -777,5 +777,6 @@ namespace FormNewUIdesign
                 Message.ShowMessage("Error", "AgregarUsuario.cs -> btnBorrarImagen_Click() \n" + ex.Message, Message.MessageType.error);
             }
         }
+        
     }
 }

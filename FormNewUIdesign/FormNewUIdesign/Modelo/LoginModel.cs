@@ -15,14 +15,14 @@ namespace FormNewUIdesign.Modelo
                 {
                     using (MySqlCommand cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = "SELECT Password FROM usuarios WHERE Username = @username";
+                        cmd.CommandText = "SELECT password FROM usuarios WHERE username = @username";
                         cmd.Parameters.AddWithValue("@username", username);
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                passwordBD = reader["Password"].ToString();
+                                passwordBD = reader["password"].ToString();
                             }
 
                             reader.Close();
@@ -63,20 +63,20 @@ namespace FormNewUIdesign.Modelo
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  " +
-                                                " usr.Rut,  " +
-                                                " usr.Nombre,  " +
-                                                " usr.Apellidos,  " +
-                                                " usr.Username,  " +
-                                                " usr.Password,  " +
-                                                " usr.Telefono,  " +
-                                                " usr.Mail,  " +
-                                                " usr.Sexo,  " +
-                                                " usr.Edad,  " +
-                                                " usr.Imagen,  " +
-                                                " prf.Nombre AS Perfil  " +
+                                                " usr.rut,  " +
+                                                " usr.nombre,  " +
+                                                " usr.apellidos,  " +
+                                                " usr.username,  " +
+                                                " usr.password,  " +
+                                                " usr.telefono,  " +
+                                                " usr.mail,  " +
+                                                " usr.sexo,  " +
+                                                " usr.edad,  " +
+                                                " usr.imagen,  " +
+                                                " prf.nombre AS perfil  " +
                                             " FROM usuarios AS usr  " +
-                                            " INNER JOIN perfiles AS prf ON prf.Id_perfil = usr.Id_perfil  " +
-                                            " WHERE Username = @username " ;
+                                            " INNER JOIN perfiles AS prf ON prf.id_perfil = usr.id_perfil  " +
+                                            " WHERE username = @username " ;
 
                         cmd.Parameters.AddWithValue("@username", username);
 
@@ -84,17 +84,17 @@ namespace FormNewUIdesign.Modelo
                         {
                             while (reader.Read())
                             {
-                                objetoUsuario.rut = reader["Rut"].ToString();
-                                objetoUsuario.nombre = reader["Nombre"].ToString();
-                                objetoUsuario.apellidos = reader["Apellidos"].ToString();
-                                objetoUsuario.username = reader["Username"].ToString();
-                                objetoUsuario.password = reader["Password"].ToString();
-                                objetoUsuario.telefono = reader["Telefono"].ToString();
-                                objetoUsuario.mail = reader["Mail"].ToString();
-                                objetoUsuario.sexo = reader["Sexo"].ToString();
-                                objetoUsuario.edad = reader["Edad"].ToString();
-                                objetoUsuario.img_perfil = reader["Imagen"].ToString();
-                                objetoUsuario.perfil = reader["Perfil"].ToString();
+                                objetoUsuario.rut = reader["rut"].ToString();
+                                objetoUsuario.nombre = reader["nombre"].ToString();
+                                objetoUsuario.apellidos = reader["apellidos"].ToString();
+                                objetoUsuario.username = reader["username"].ToString();
+                                objetoUsuario.password = reader["password"].ToString();
+                                objetoUsuario.telefono = reader["telefono"].ToString();
+                                objetoUsuario.mail = reader["mail"].ToString();
+                                objetoUsuario.sexo = reader["sexo"].ToString();
+                                objetoUsuario.edad = reader["edad"].ToString();
+                                objetoUsuario.img_perfil = reader["imagen"].ToString();
+                                objetoUsuario.perfil = reader["perfil"].ToString();
                             }
 
                             reader.Close();

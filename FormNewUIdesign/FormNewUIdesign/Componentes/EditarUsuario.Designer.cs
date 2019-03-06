@@ -173,7 +173,7 @@
             this.btnBorrarImagen.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBorrarImagen.FlatAppearance.BorderSize = 0;
             this.btnBorrarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarImagen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarImagen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarImagen.ForeColor = System.Drawing.Color.White;
             this.btnBorrarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrarImagen.Image")));
             this.btnBorrarImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,7 +193,7 @@
             this.btnSubirImagen.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSubirImagen.FlatAppearance.BorderSize = 0;
             this.btnSubirImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirImagen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubirImagen.ForeColor = System.Drawing.Color.White;
             this.btnSubirImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirImagen.Image")));
             this.btnSubirImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,11 +209,11 @@
             // lblErrorTelefono
             // 
             this.lblErrorTelefono.AutoSize = true;
-            this.lblErrorTelefono.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorTelefono.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorTelefono.Location = new System.Drawing.Point(157, 310);
             this.lblErrorTelefono.Name = "lblErrorTelefono";
-            this.lblErrorTelefono.Size = new System.Drawing.Size(80, 15);
+            this.lblErrorTelefono.Size = new System.Drawing.Size(73, 13);
             this.lblErrorTelefono.TabIndex = 50;
             this.lblErrorTelefono.Text = "Error Teléfono";
             this.lblErrorTelefono.Visible = false;
@@ -225,7 +225,7 @@
             this.btnCancelarEditar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCancelarEditar.FlatAppearance.BorderSize = 0;
             this.btnCancelarEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarEditar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarEditar.ForeColor = System.Drawing.Color.White;
             this.btnCancelarEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarEditar.Image")));
             this.btnCancelarEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,11 +241,11 @@
             // lblErrorPassword
             // 
             this.lblErrorPassword.AutoSize = true;
-            this.lblErrorPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPassword.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorPassword.Location = new System.Drawing.Point(697, 430);
             this.lblErrorPassword.Name = "lblErrorPassword";
-            this.lblErrorPassword.Size = new System.Drawing.Size(88, 15);
+            this.lblErrorPassword.Size = new System.Drawing.Size(77, 13);
             this.lblErrorPassword.TabIndex = 48;
             this.lblErrorPassword.Text = "Error Password";
             this.lblErrorPassword.Visible = false;
@@ -253,11 +253,11 @@
             // lblErrorPerfil
             // 
             this.lblErrorPerfil.AutoSize = true;
-            this.lblErrorPerfil.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPerfil.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorPerfil.Location = new System.Drawing.Point(157, 493);
             this.lblErrorPerfil.Name = "lblErrorPerfil";
-            this.lblErrorPerfil.Size = new System.Drawing.Size(61, 15);
+            this.lblErrorPerfil.Size = new System.Drawing.Size(57, 13);
             this.lblErrorPerfil.TabIndex = 47;
             this.lblErrorPerfil.Text = "Error Perfil";
             this.lblErrorPerfil.Visible = false;
@@ -265,11 +265,11 @@
             // lblErrorSexo
             // 
             this.lblErrorSexo.AutoSize = true;
-            this.lblErrorSexo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorSexo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorSexo.Location = new System.Drawing.Point(157, 433);
             this.lblErrorSexo.Name = "lblErrorSexo";
-            this.lblErrorSexo.Size = new System.Drawing.Size(60, 15);
+            this.lblErrorSexo.Size = new System.Drawing.Size(54, 13);
             this.lblErrorSexo.TabIndex = 46;
             this.lblErrorSexo.Text = "Error Sexo";
             this.lblErrorSexo.Visible = false;
@@ -277,11 +277,11 @@
             // lblErrorMail
             // 
             this.lblErrorMail.AutoSize = true;
-            this.lblErrorMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMail.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorMail.Location = new System.Drawing.Point(157, 370);
             this.lblErrorMail.Name = "lblErrorMail";
-            this.lblErrorMail.Size = new System.Drawing.Size(58, 15);
+            this.lblErrorMail.Size = new System.Drawing.Size(54, 13);
             this.lblErrorMail.TabIndex = 45;
             this.lblErrorMail.Text = "Error Mail";
             this.lblErrorMail.Visible = false;
@@ -289,11 +289,11 @@
             // lblErrorUsername
             // 
             this.lblErrorUsername.AutoSize = true;
-            this.lblErrorUsername.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorUsername.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorUsername.Location = new System.Drawing.Point(697, 370);
             this.lblErrorUsername.Name = "lblErrorUsername";
-            this.lblErrorUsername.Size = new System.Drawing.Size(90, 15);
+            this.lblErrorUsername.Size = new System.Drawing.Size(80, 13);
             this.lblErrorUsername.TabIndex = 44;
             this.lblErrorUsername.Text = "Error Username";
             this.lblErrorUsername.Visible = false;
@@ -301,11 +301,11 @@
             // lblErrorApellidos
             // 
             this.lblErrorApellidos.AutoSize = true;
-            this.lblErrorApellidos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorApellidos.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorApellidos.Location = new System.Drawing.Point(157, 190);
             this.lblErrorApellidos.Name = "lblErrorApellidos";
-            this.lblErrorApellidos.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorApellidos.Size = new System.Drawing.Size(76, 13);
             this.lblErrorApellidos.TabIndex = 43;
             this.lblErrorApellidos.Text = "Error Apellidos";
             this.lblErrorApellidos.Visible = false;
@@ -313,11 +313,11 @@
             // lblErrorNombre
             // 
             this.lblErrorNombre.AutoSize = true;
-            this.lblErrorNombre.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorNombre.Location = new System.Drawing.Point(157, 130);
             this.lblErrorNombre.Name = "lblErrorNombre";
-            this.lblErrorNombre.Size = new System.Drawing.Size(79, 15);
+            this.lblErrorNombre.Size = new System.Drawing.Size(71, 13);
             this.lblErrorNombre.TabIndex = 42;
             this.lblErrorNombre.Text = "Error Nombre";
             this.lblErrorNombre.Visible = false;
@@ -325,11 +325,11 @@
             // lblErrorRut
             // 
             this.lblErrorRut.AutoSize = true;
-            this.lblErrorRut.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorRut.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorRut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorRut.Location = new System.Drawing.Point(157, 70);
             this.lblErrorRut.Name = "lblErrorRut";
-            this.lblErrorRut.Size = new System.Drawing.Size(54, 15);
+            this.lblErrorRut.Size = new System.Drawing.Size(49, 13);
             this.lblErrorRut.TabIndex = 41;
             this.lblErrorRut.Text = "Error Rut";
             this.lblErrorRut.Visible = false;
@@ -341,7 +341,7 @@
             this.btnGuardarEditUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGuardarEditUser.FlatAppearance.BorderSize = 0;
             this.btnGuardarEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarEditUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarEditUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarEditUser.ForeColor = System.Drawing.Color.White;
             this.btnGuardarEditUser.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarEditUser.Image")));
             this.btnGuardarEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -357,11 +357,11 @@
             // lblErrorPass
             // 
             this.lblErrorPass.AutoSize = true;
-            this.lblErrorPass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPass.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.lblErrorPass.Location = new System.Drawing.Point(697, 490);
             this.lblErrorPass.Name = "lblErrorPass";
-            this.lblErrorPass.Size = new System.Drawing.Size(174, 15);
+            this.lblErrorPass.Size = new System.Drawing.Size(144, 13);
             this.lblErrorPass.TabIndex = 39;
             this.lblErrorPass.Text = "Las contraseñas no coinciden";
             this.lblErrorPass.Visible = false;
@@ -373,7 +373,7 @@
             this.cbxPerfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPerfil.DropDownWidth = 150;
             this.cbxPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxPerfil.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPerfil.ForeColor = System.Drawing.Color.DarkGray;
             this.cbxPerfil.FormattingEnabled = true;
             this.cbxPerfil.IntegralHeight = false;
@@ -389,10 +389,10 @@
             // lblPerfil
             // 
             this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfil.Location = new System.Drawing.Point(54, 470);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(40, 16);
+            this.lblPerfil.Size = new System.Drawing.Size(38, 17);
             this.lblPerfil.TabIndex = 38;
             this.lblPerfil.Text = "Perfil";
             // 
@@ -411,12 +411,12 @@
             // 
             this.txtEdad.BackColor = System.Drawing.Color.White;
             this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEdad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.ForeColor = System.Drawing.Color.DarkGray;
             this.txtEdad.Location = new System.Drawing.Point(160, 230);
             this.txtEdad.MaxLength = 3;
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(200, 16);
+            this.txtEdad.Size = new System.Drawing.Size(200, 18);
             this.txtEdad.TabIndex = 4;
             this.txtEdad.Text = "Ingrese edad";
             this.txtEdad.Enter += new System.EventHandler(this.txtEdad_Enter);
@@ -426,10 +426,10 @@
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEdad.Location = new System.Drawing.Point(54, 230);
             this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(42, 16);
+            this.lblEdad.Size = new System.Drawing.Size(38, 17);
             this.lblEdad.TabIndex = 35;
             this.lblEdad.Text = "Edad";
             // 
@@ -448,12 +448,12 @@
             // 
             this.txtConfirmarPass.BackColor = System.Drawing.Color.White;
             this.txtConfirmarPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmarPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarPass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarPass.ForeColor = System.Drawing.Color.DarkGray;
             this.txtConfirmarPass.Location = new System.Drawing.Point(700, 470);
             this.txtConfirmarPass.MaxLength = 50;
             this.txtConfirmarPass.Name = "txtConfirmarPass";
-            this.txtConfirmarPass.Size = new System.Drawing.Size(200, 16);
+            this.txtConfirmarPass.Size = new System.Drawing.Size(200, 18);
             this.txtConfirmarPass.TabIndex = 11;
             this.txtConfirmarPass.Text = "Confirme la contraseña";
             this.txtConfirmarPass.Enter += new System.EventHandler(this.txtConfirmarPass_Enter);
@@ -462,10 +462,10 @@
             // lblConfirmarPass
             // 
             this.lblConfirmarPass.AutoSize = true;
-            this.lblConfirmarPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarPass.Location = new System.Drawing.Point(587, 470);
             this.lblConfirmarPass.Name = "lblConfirmarPass";
-            this.lblConfirmarPass.Size = new System.Drawing.Size(73, 16);
+            this.lblConfirmarPass.Size = new System.Drawing.Size(68, 17);
             this.lblConfirmarPass.TabIndex = 32;
             this.lblConfirmarPass.Text = "Confirmar";
             // 
@@ -495,12 +495,12 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DarkGray;
             this.txtUsername.Location = new System.Drawing.Point(700, 350);
             this.txtUsername.MaxLength = 50;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 16);
+            this.txtUsername.Size = new System.Drawing.Size(200, 18);
             this.txtUsername.TabIndex = 9;
             this.txtUsername.Text = "Ingrese nombre de usuario";
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
@@ -509,10 +509,10 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Location = new System.Drawing.Point(587, 350);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(72, 16);
+            this.lblUsername.Size = new System.Drawing.Size(69, 17);
             this.lblUsername.TabIndex = 29;
             this.lblUsername.Text = "Username";
             // 
@@ -531,12 +531,12 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPassword.Location = new System.Drawing.Point(700, 410);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(200, 16);
+            this.txtPassword.Size = new System.Drawing.Size(200, 18);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.Text = "Ingrese una contraseña";
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -545,10 +545,10 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(587, 410);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(83, 16);
+            this.lblPassword.Size = new System.Drawing.Size(77, 17);
             this.lblPassword.TabIndex = 26;
             this.lblPassword.Text = "Contraseña";
             // 
@@ -570,7 +570,7 @@
             this.cbxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSexo.DropDownWidth = 150;
             this.cbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSexo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSexo.ForeColor = System.Drawing.Color.DarkGray;
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.IntegralHeight = false;
@@ -586,10 +586,10 @@
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
-            this.lblSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.Location = new System.Drawing.Point(54, 410);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(38, 16);
+            this.lblSexo.Size = new System.Drawing.Size(37, 17);
             this.lblSexo.TabIndex = 23;
             this.lblSexo.Text = "Sexo";
             // 
@@ -652,12 +652,12 @@
             // 
             this.txtMail.BackColor = System.Drawing.Color.White;
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.ForeColor = System.Drawing.Color.DarkGray;
             this.txtMail.Location = new System.Drawing.Point(160, 350);
             this.txtMail.MaxLength = 100;
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(200, 16);
+            this.txtMail.Size = new System.Drawing.Size(200, 18);
             this.txtMail.TabIndex = 6;
             this.txtMail.Text = "Ingrese correo electrónico";
             this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
@@ -666,10 +666,10 @@
             // lblMail
             // 
             this.lblMail.AutoSize = true;
-            this.lblMail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.Location = new System.Drawing.Point(54, 350);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(49, 16);
+            this.lblMail.Size = new System.Drawing.Size(45, 17);
             this.lblMail.TabIndex = 13;
             this.lblMail.Text = "E-Mail";
             // 
@@ -677,12 +677,12 @@
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DarkGray;
             this.txtTelefono.Location = new System.Drawing.Point(160, 290);
             this.txtTelefono.MaxLength = 9;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(200, 16);
+            this.txtTelefono.Size = new System.Drawing.Size(200, 18);
             this.txtTelefono.TabIndex = 5;
             this.txtTelefono.Text = "Ingrese teléfono de contacto";
             this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
@@ -692,10 +692,10 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(54, 290);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(62, 16);
+            this.lblTelefono.Size = new System.Drawing.Size(59, 17);
             this.lblTelefono.TabIndex = 11;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -703,12 +703,12 @@
             // 
             this.txtApellidos.BackColor = System.Drawing.Color.White;
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.ForeColor = System.Drawing.Color.DarkGray;
             this.txtApellidos.Location = new System.Drawing.Point(160, 170);
             this.txtApellidos.MaxLength = 300;
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(200, 16);
+            this.txtApellidos.Size = new System.Drawing.Size(200, 18);
             this.txtApellidos.TabIndex = 3;
             this.txtApellidos.Text = "Ingrese apellidos";
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
@@ -717,10 +717,10 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidos.Location = new System.Drawing.Point(54, 170);
             this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(70, 16);
+            this.lblApellidos.Size = new System.Drawing.Size(63, 17);
             this.lblApellidos.TabIndex = 5;
             this.lblApellidos.Text = "Apellidos";
             // 
@@ -728,12 +728,12 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DarkGray;
             this.txtNombre.Location = new System.Drawing.Point(160, 110);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 16);
+            this.txtNombre.Size = new System.Drawing.Size(200, 18);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.Text = "Ingrese nombre";
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
@@ -742,10 +742,10 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(54, 110);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(60, 16);
+            this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
             // 
@@ -754,13 +754,13 @@
             this.txtRut.BackColor = System.Drawing.Color.White;
             this.txtRut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRut.Enabled = false;
-            this.txtRut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRut.ForeColor = System.Drawing.Color.DarkGray;
             this.txtRut.Location = new System.Drawing.Point(160, 50);
             this.txtRut.MaxLength = 9;
             this.txtRut.Name = "txtRut";
             this.txtRut.ReadOnly = true;
-            this.txtRut.Size = new System.Drawing.Size(200, 16);
+            this.txtRut.Size = new System.Drawing.Size(200, 18);
             this.txtRut.TabIndex = 1;
             this.txtRut.Text = "Ingrese rut";
             this.txtRut.Enter += new System.EventHandler(this.txtRut_Enter);
@@ -770,10 +770,10 @@
             // lblRut
             // 
             this.lblRut.AutoSize = true;
-            this.lblRut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRut.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRut.Location = new System.Drawing.Point(54, 50);
             this.lblRut.Name = "lblRut";
-            this.lblRut.Size = new System.Drawing.Size(28, 16);
+            this.lblRut.Size = new System.Drawing.Size(29, 17);
             this.lblRut.TabIndex = 0;
             this.lblRut.Text = "Rut";
             // 

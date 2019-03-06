@@ -34,11 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelGruposIng = new System.Windows.Forms.Panel();
-            this.listGruposIng = new System.Windows.Forms.DataGridView();
-            this.Etapa_crear_grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Etapa_reg_postulantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Etapa_add_docs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Etapa_add_formats = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            listGruposIng = new System.Windows.Forms.DataGridView();
             this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Razon_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,13 +42,17 @@
             this.Nombre_presidente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contacto_presidente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etapa_crear_grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etapa_reg_postulantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etapa_add_docs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etapa_add_formats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelGruposIng.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listGruposIng)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(listGruposIng)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGruposIng
             // 
-            this.panelGruposIng.Controls.Add(this.listGruposIng);
+            this.panelGruposIng.Controls.Add(listGruposIng);
             this.panelGruposIng.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGruposIng.Location = new System.Drawing.Point(0, 0);
             this.panelGruposIng.Name = "panelGruposIng";
@@ -62,120 +62,90 @@
             // 
             // listGruposIng
             // 
-            this.listGruposIng.AllowUserToAddRows = false;
-            this.listGruposIng.AllowUserToDeleteRows = false;
-            this.listGruposIng.AllowUserToResizeColumns = false;
-            this.listGruposIng.AllowUserToResizeRows = false;
+            listGruposIng.AllowUserToAddRows = false;
+            listGruposIng.AllowUserToDeleteRows = false;
+            listGruposIng.AllowUserToResizeColumns = false;
+            listGruposIng.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listGruposIng.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.listGruposIng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.listGruposIng.BackgroundColor = System.Drawing.Color.White;
-            this.listGruposIng.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listGruposIng.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.listGruposIng.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            listGruposIng.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            listGruposIng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            listGruposIng.BackgroundColor = System.Drawing.Color.White;
+            listGruposIng.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            listGruposIng.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            listGruposIng.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.NullValue = "Sin Datos";
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listGruposIng.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.listGruposIng.ColumnHeadersHeight = 40;
-            this.listGruposIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.listGruposIng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Etapa_crear_grupo,
-            this.Etapa_reg_postulantes,
-            this.Etapa_add_docs,
-            this.Etapa_add_formats,
+            listGruposIng.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            listGruposIng.ColumnHeadersHeight = 40;
+            listGruposIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            listGruposIng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Identificador,
             this.Nombre,
             this.Razon_social,
             this.Personalidad_juridica,
             this.Nombre_presidente,
             this.Contacto_presidente,
-            this.Proyecto});
+            this.Proyecto,
+            this.Etapa_crear_grupo,
+            this.Etapa_reg_postulantes,
+            this.Etapa_add_docs,
+            this.Etapa_add_formats});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listGruposIng.DefaultCellStyle = dataGridViewCellStyle3;
-            this.listGruposIng.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listGruposIng.EnableHeadersVisualStyles = false;
-            this.listGruposIng.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.listGruposIng.Location = new System.Drawing.Point(11, 11);
-            this.listGruposIng.Name = "listGruposIng";
-            this.listGruposIng.ReadOnly = true;
-            this.listGruposIng.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            listGruposIng.DefaultCellStyle = dataGridViewCellStyle3;
+            listGruposIng.Dock = System.Windows.Forms.DockStyle.Fill;
+            listGruposIng.EnableHeadersVisualStyles = false;
+            listGruposIng.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            listGruposIng.Location = new System.Drawing.Point(11, 11);
+            listGruposIng.Name = "listGruposIng";
+            listGruposIng.ReadOnly = true;
+            listGruposIng.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listGruposIng.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.listGruposIng.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            listGruposIng.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            listGruposIng.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listGruposIng.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.listGruposIng.RowTemplate.DefaultCellStyle.NullValue = "Sin datos";
-            this.listGruposIng.RowTemplate.Height = 35;
-            this.listGruposIng.Size = new System.Drawing.Size(1078, 638);
-            this.listGruposIng.StandardTab = true;
-            this.listGruposIng.TabIndex = 10;
-            this.listGruposIng.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.listGruposIng_CellFormatting);
-            // 
-            // Etapa_crear_grupo
-            // 
-            this.Etapa_crear_grupo.DataPropertyName = "Etapa_crear_grupo";
-            this.Etapa_crear_grupo.HeaderText = "Et. Crear Grupo";
-            this.Etapa_crear_grupo.Name = "Etapa_crear_grupo";
-            this.Etapa_crear_grupo.ReadOnly = true;
-            this.Etapa_crear_grupo.Width = 139;
-            // 
-            // Etapa_reg_postulantes
-            // 
-            this.Etapa_reg_postulantes.DataPropertyName = "Etapa_reg_postulantes";
-            this.Etapa_reg_postulantes.HeaderText = "Et. Registrar Post.";
-            this.Etapa_reg_postulantes.Name = "Etapa_reg_postulantes";
-            this.Etapa_reg_postulantes.ReadOnly = true;
-            this.Etapa_reg_postulantes.Width = 148;
-            // 
-            // Etapa_add_docs
-            // 
-            this.Etapa_add_docs.DataPropertyName = "Etapa_add_docs";
-            this.Etapa_add_docs.HeaderText = "Et. Agregar Docs.";
-            this.Etapa_add_docs.Name = "Etapa_add_docs";
-            this.Etapa_add_docs.ReadOnly = true;
-            this.Etapa_add_docs.Width = 151;
-            // 
-            // Etapa_add_formats
-            // 
-            this.Etapa_add_formats.DataPropertyName = "Etapa_add_formats";
-            this.Etapa_add_formats.HeaderText = "Et. Generar Formatos";
-            this.Etapa_add_formats.Name = "Etapa_add_formats";
-            this.Etapa_add_formats.ReadOnly = true;
-            this.Etapa_add_formats.Width = 173;
+            listGruposIng.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            listGruposIng.RowTemplate.DefaultCellStyle.NullValue = "Sin datos";
+            listGruposIng.RowTemplate.Height = 35;
+            listGruposIng.Size = new System.Drawing.Size(1078, 638);
+            listGruposIng.StandardTab = true;
+            listGruposIng.TabIndex = 10;
+            listGruposIng.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.listGruposIng_CellFormatting);
+            listGruposIng.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.listGruposIng_CellMouseEnter);
+            listGruposIng.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listGruposIng_MouseClick);
             // 
             // Identificador
             // 
@@ -183,7 +153,7 @@
             this.Identificador.HeaderText = "Identificador";
             this.Identificador.Name = "Identificador";
             this.Identificador.ReadOnly = true;
-            this.Identificador.Width = 122;
+            this.Identificador.Width = 114;
             // 
             // Nombre
             // 
@@ -192,7 +162,7 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 90;
+            this.Nombre.Width = 88;
             // 
             // Razon_social
             // 
@@ -200,31 +170,31 @@
             this.Razon_social.HeaderText = "Razón Social";
             this.Razon_social.Name = "Razon_social";
             this.Razon_social.ReadOnly = true;
-            this.Razon_social.Width = 121;
+            this.Razon_social.Width = 113;
             // 
             // Personalidad_juridica
             // 
             this.Personalidad_juridica.DataPropertyName = "Personalidad_juridica";
-            this.Personalidad_juridica.HeaderText = "Personalidad Jurídica";
+            this.Personalidad_juridica.HeaderText = "Pers. Jurídica";
             this.Personalidad_juridica.Name = "Personalidad_juridica";
             this.Personalidad_juridica.ReadOnly = true;
-            this.Personalidad_juridica.Width = 180;
+            this.Personalidad_juridica.Width = 116;
             // 
             // Nombre_presidente
             // 
             this.Nombre_presidente.DataPropertyName = "Nombre_presidente";
-            this.Nombre_presidente.HeaderText = "Nombre Presidente";
+            this.Nombre_presidente.HeaderText = "Presidente";
             this.Nombre_presidente.Name = "Nombre_presidente";
             this.Nombre_presidente.ReadOnly = true;
-            this.Nombre_presidente.Width = 161;
+            this.Nombre_presidente.Width = 102;
             // 
             // Contacto_presidente
             // 
             this.Contacto_presidente.DataPropertyName = "Contacto_presidente";
-            this.Contacto_presidente.HeaderText = "Contacto Presidente";
+            this.Contacto_presidente.HeaderText = "Contacto Presi.";
             this.Contacto_presidente.Name = "Contacto_presidente";
             this.Contacto_presidente.ReadOnly = true;
-            this.Contacto_presidente.Width = 168;
+            this.Contacto_presidente.Width = 129;
             // 
             // Proyecto
             // 
@@ -232,7 +202,39 @@
             this.Proyecto.HeaderText = "Proyecto";
             this.Proyecto.Name = "Proyecto";
             this.Proyecto.ReadOnly = true;
-            this.Proyecto.Width = 94;
+            this.Proyecto.Width = 92;
+            // 
+            // Etapa_crear_grupo
+            // 
+            this.Etapa_crear_grupo.DataPropertyName = "Etapa_crear_grupo";
+            this.Etapa_crear_grupo.HeaderText = "Crear Grupo";
+            this.Etapa_crear_grupo.Name = "Etapa_crear_grupo";
+            this.Etapa_crear_grupo.ReadOnly = true;
+            this.Etapa_crear_grupo.Width = 112;
+            // 
+            // Etapa_reg_postulantes
+            // 
+            this.Etapa_reg_postulantes.DataPropertyName = "Etapa_reg_postulantes";
+            this.Etapa_reg_postulantes.HeaderText = "Postulantes";
+            this.Etapa_reg_postulantes.Name = "Etapa_reg_postulantes";
+            this.Etapa_reg_postulantes.ReadOnly = true;
+            this.Etapa_reg_postulantes.Width = 109;
+            // 
+            // Etapa_add_docs
+            // 
+            this.Etapa_add_docs.DataPropertyName = "Etapa_add_docs";
+            this.Etapa_add_docs.HeaderText = "Documentos";
+            this.Etapa_add_docs.Name = "Etapa_add_docs";
+            this.Etapa_add_docs.ReadOnly = true;
+            this.Etapa_add_docs.Width = 115;
+            // 
+            // Etapa_add_formats
+            // 
+            this.Etapa_add_formats.DataPropertyName = "Etapa_add_formats";
+            this.Etapa_add_formats.HeaderText = "Formatos";
+            this.Etapa_add_formats.Name = "Etapa_add_formats";
+            this.Etapa_add_formats.ReadOnly = true;
+            this.Etapa_add_formats.Width = 96;
             // 
             // GruposIngresados
             // 
@@ -243,7 +245,7 @@
             this.Name = "GruposIngresados";
             this.Size = new System.Drawing.Size(1100, 660);
             this.panelGruposIng.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.listGruposIng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(listGruposIng)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,11 +253,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelGruposIng;
-        public System.Windows.Forms.DataGridView listGruposIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_crear_grupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_reg_postulantes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_add_docs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_add_formats;
         private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Razon_social;
@@ -263,5 +260,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_presidente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contacto_presidente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proyecto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_crear_grupo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_reg_postulantes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_add_docs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Etapa_add_formats;
+        public static System.Windows.Forms.DataGridView listGruposIng;
     }
 }

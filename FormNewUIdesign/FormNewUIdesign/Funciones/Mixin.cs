@@ -17,6 +17,7 @@ namespace FormNewUIdesign.Funciones
             public static string etapaRegPostulantes = "Registrar Postulantes";
             public static string etapaAgregarDocs = "Agregar Documentación";
             public static string etapaGenerarFormatos = "Generar Formatos";
+            public static ObjetoUsuario Usuario_login;
         }
 
         

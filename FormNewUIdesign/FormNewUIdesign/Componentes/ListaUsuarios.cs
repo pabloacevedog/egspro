@@ -56,7 +56,7 @@ namespace FormNewUIdesign
                     datosUsuario.id_perfil = UsersModel.ObtenerIdPerfil(datosUsuario.perfil);
                     datosUsuario.img_perfil = UsersModel.ObtenerImagenPerfilUsuario(datosUsuario.rut);
 
-                    MenuContextual.ShowMenu(opciones, new Point(Cursor.Position.X, Cursor.Position.Y), datosUsuario);
+                    MenuContextual.ShowMenu(opciones, new Point(Cursor.Position.X, Cursor.Position.Y), datosUsuario, "usuario");
                 }
             }
         }

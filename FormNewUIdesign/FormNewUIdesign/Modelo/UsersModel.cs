@@ -18,35 +18,35 @@ namespace FormNewUIdesign.Modelo
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  " +
-                                                " usr.Rut,  " +
-                                                " usr.Nombre,  " +
-                                                " usr.Apellidos,  " +
-                                                " usr.Username,  " +
-                                                " usr.Password,  " +
-                                                " usr.Telefono,  " +
-                                                " usr.Mail,  " +
-                                                " usr.Sexo,  " +
-                                                " usr.Edad,  " +
-                                                " prf.Nombre AS Perfil  " +
+                                                " usr.rut,  " +
+                                                " usr.nombre,  " +
+                                                " usr.apellidos,  " +
+                                                " usr.username,  " +
+                                                " usr.password,  " +
+                                                " usr.telefono,  " +
+                                                " usr.mail,  " +
+                                                " CASE WHEN usr.sexo = 'F' THEN 'Femenino' ELSE 'Masculino' END sexo ,  " +
+                                                " usr.edad,  " +
+                                                " prf.nombre AS perfil  " +
                                             " FROM usuarios AS usr  " +
-                                            " INNER JOIN perfiles AS prf ON prf.Id_perfil = usr.Id_perfil  " +
-                                            " ORDER BY usr.Nombre ASC ";
+                                            " INNER JOIN perfiles AS prf ON prf.id_perfil = usr.id_perfil  " +
+                                            " ORDER BY usr.nombre ASC ";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
                                 ObjetoUsuario objetoUsuario = new ObjetoUsuario();
-                                objetoUsuario.rut = reader["Rut"].ToString();
-                                objetoUsuario.nombre = reader["Nombre"].ToString();
-                                objetoUsuario.apellidos = reader["Apellidos"].ToString();
-                                objetoUsuario.username = reader["Username"].ToString();
-                                objetoUsuario.password = reader["Password"].ToString();
-                                objetoUsuario.telefono = reader["Telefono"].ToString();
-                                objetoUsuario.mail = reader["Mail"].ToString();
-                                objetoUsuario.sexo = reader["Sexo"].ToString();
-                                objetoUsuario.edad = reader["Edad"].ToString();
-                                objetoUsuario.perfil = reader["Perfil"].ToString();
+                                objetoUsuario.rut = reader["rut"].ToString();
+                                objetoUsuario.nombre = reader["nombre"].ToString();
+                                objetoUsuario.apellidos = reader["apellidos"].ToString();
+                                objetoUsuario.username = reader["username"].ToString();
+                                objetoUsuario.password = reader["password"].ToString();
+                                objetoUsuario.telefono = reader["telefono"].ToString();
+                                objetoUsuario.mail = reader["mail"].ToString();
+                                objetoUsuario.sexo = reader["sexo"].ToString();
+                                objetoUsuario.edad = reader["edad"].ToString();
+                                objetoUsuario.perfil = reader["perfil"].ToString();
 
                                 lista.Add(objetoUsuario);
                             }
@@ -83,17 +83,17 @@ namespace FormNewUIdesign.Modelo
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  " +
-                                                " Id_perfil,  " +
-                                                " Nombre  " +
+                                                " id_perfil,  " +
+                                                " nombre  " +
                                             " FROM perfiles " +
-                                            " ORDER BY Id_perfil ASC ";
+                                            " ORDER BY id_perfil ASC ";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             resultado.Add("0", "Seleccione");
                             while (reader.Read())
                             {
-                                resultado.Add(reader["Id_perfil"].ToString(), reader["Nombre"].ToString());
+                                resultado.Add(reader["id_perfil"].ToString(), reader["nombre"].ToString());
                             }
 
                             reader.Close();
@@ -116,6 +116,7 @@ namespace FormNewUIdesign.Modelo
             return resultado;
         }
 
+
         public static int GuardarUsuario(ObjetoUsuario NuevoUsuario)
         {
             int retorno = 0;
@@ -129,7 +130,7 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " INSERT INTO usuarios (Rut, Nombre, Apellidos, Username, Password, Telefono, Mail, Sexo, Edad, Imagen, Id_perfil) " +
+                            cmd.CommandText = " INSERT INTO usuarios (rut, nombre, apellidos, username, password, telefono, mail, sexo, edad, imagen, id_perfil) " +
                                               " VALUES (@Rut, @Nombre, @Apellidos, @Username, @Password, @Telefono, @Mail, @Sexo, @Edad, @Imagen, @Id_perfil) ";
 
                             cmd.Parameters.AddWithValue("@Rut", NuevoUsuario.rut);
@@ -147,7 +148,7 @@ namespace FormNewUIdesign.Modelo
                             retorno = cmd.ExecuteNonQuery();
                             tran.Commit();
                         }
-                        
+
                         cmd.Dispose();
                     }
                     conn.Close();
@@ -179,7 +180,7 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " DELETE FROM usuarios WHERE Rut = @Rut ";
+                            cmd.CommandText = " DELETE FROM usuarios WHERE rut = @Rut ";
 
                             cmd.Parameters.AddWithValue("@Rut", rut);
 
@@ -215,7 +216,7 @@ namespace FormNewUIdesign.Modelo
                     using (MySqlCommand cmd = conn.CreateCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = " SELECT Id_perfil " +
+                        cmd.CommandText = " SELECT id_perfil " +
                                             " FROM perfiles " +
                                             " WHERE nombre = @nombre ";
 
@@ -225,7 +226,7 @@ namespace FormNewUIdesign.Modelo
                         {
                             while (reader.Read())
                             {
-                                resultado = reader["Id_perfil"].ToString();
+                                resultado = reader["id_perfil"].ToString();
                             }
 
                             reader.Close();
@@ -249,7 +250,6 @@ namespace FormNewUIdesign.Modelo
         }
 
 
-
         public static string ObtenerImagenPerfilUsuario(string rut)
         {
             string resultado = "";
@@ -260,7 +260,7 @@ namespace FormNewUIdesign.Modelo
                     using (MySqlCommand cmd = conn.CreateCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = " SELECT Imagen " +
+                        cmd.CommandText = " SELECT imagen " +
                                             " FROM usuarios " +
                                             " WHERE rut = @rut ";
 
@@ -270,7 +270,7 @@ namespace FormNewUIdesign.Modelo
                         {
                             while (reader.Read())
                             {
-                                resultado = reader["Imagen"].ToString();
+                                resultado = reader["imagen"].ToString();
                             }
 
                             reader.Close();
@@ -294,7 +294,6 @@ namespace FormNewUIdesign.Modelo
         }
 
 
-
         public static int ActualizarUsuario(ObjetoUsuario datosUsuario)
         {
             int retorno = 0;
@@ -308,18 +307,18 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " UPDATE usuarios " + 
-                                                " SET Nombre = @Nombre, " + 
-                                                " Apellidos = @Apellidos, " + 
-                                                " Username = @Username, " + 
-                                                " Password = @Password, " + 
-                                                " Telefono = @Telefono, " + 
-                                                " Mail = @Mail, " +
-                                                " Sexo = @Sexo, " +
-                                                " Edad = @Edad, " +
-                                                " Imagen = @Imagen, " +
-                                                " Id_perfil = @Id_perfil " +
-                                              " WHERE Rut = @Rut ";
+                            cmd.CommandText = " UPDATE usuarios " +
+                                                " SET nombre = @Nombre, " +
+                                                " apellidos = @Apellidos, " +
+                                                " username = @Username, " +
+                                                " password = @Password, " +
+                                                " telefono = @Telefono, " +
+                                                " mail = @Mail, " +
+                                                " sexo = @Sexo, " +
+                                                " edad = @Edad, " +
+                                                " imagen = @Imagen, " +
+                                                " id_perfil = @Id_perfil " +
+                                              " WHERE rut = @Rut ";
 
                             cmd.Parameters.AddWithValue("@Rut", datosUsuario.rut);
                             cmd.Parameters.AddWithValue("@Nombre", datosUsuario.nombre);
@@ -411,19 +410,19 @@ namespace FormNewUIdesign.Modelo
                         cmd.Connection = conn;
                         if (rut != "")
                         {
-                            cmd.CommandText = " SELECT COUNT(1) AS Username " +
+                            cmd.CommandText = " SELECT COUNT(1) AS username " +
                                             " FROM usuarios " +
-                                            " WHERE Username = @username " + 
-                                            " AND Rut <> @rut ";
+                                            " WHERE username = @username " +
+                                            " AND rut <> @rut ";
 
                             cmd.Parameters.AddWithValue("@username", username);
                             cmd.Parameters.AddWithValue("@rut", rut);
                         }
                         else
                         {
-                            cmd.CommandText = " SELECT COUNT(1) AS Username " +
+                            cmd.CommandText = " SELECT COUNT(1) AS username " +
                                             " FROM usuarios " +
-                                            " WHERE Username = @username ";
+                                            " WHERE username = @username ";
 
                             cmd.Parameters.AddWithValue("@username", username);
                         }
@@ -432,7 +431,7 @@ namespace FormNewUIdesign.Modelo
                         {
                             while (reader.Read())
                             {
-                                if (Convert.ToInt32(reader["Username"].ToString()) > 0)
+                                if (Convert.ToInt32(reader["username"].ToString()) > 0)
                                 {
                                     resultado = true;
                                 }
@@ -471,7 +470,7 @@ namespace FormNewUIdesign.Modelo
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT COUNT(1) AS rut " +
                                             " FROM usuarios " +
-                                            " WHERE Rut = @rut ";
+                                            " WHERE rut = @rut ";
 
                         cmd.Parameters.AddWithValue("@rut", rut);
 
@@ -503,6 +502,100 @@ namespace FormNewUIdesign.Modelo
                 Message.ShowMessage("Error MySql", "UsersModel.cs -> ExisteRut() \n" + e2.Message, Message.MessageType.error);
             }
             return resultado;
+        }
+
+
+        public static List<ObjetoUsuario> BuscarUsuarios(ObjetoUsuario filtros)
+        {
+            List<ObjetoUsuario> lista = new List<ObjetoUsuario>();
+            try
+            {
+                using (MySqlConnection conn = ObtenerConexionBD())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Connection = conn;
+                        string query = " SELECT  " +
+                                            " usr.rut,  " +
+                                            " usr.nombre,  " +
+                                            " usr.apellidos,  " +
+                                            " usr.username,  " +
+                                            " usr.password,  " +
+                                            " usr.telefono,  " +
+                                            " usr.mail,  " +
+                                            " CASE WHEN usr.sexo = 'F' THEN 'Femenino' ELSE 'Masculino' END sexo ,  " +
+                                            " usr.edad,  " +
+                                            " prf.nombre AS perfil  " +
+                                        " FROM usuarios AS usr  " +
+                                        " INNER JOIN perfiles AS prf ON prf.id_perfil = usr.id_perfil  " +
+                                        " WHERE 1 = 1 ";
+                        if (filtros.rut != null && filtros.rut != "" && filtros.rut != "Ingrese rut")
+                        {
+                            query = query + " AND usr.rut LIKE '%" + filtros.rut + "%'";
+                        }
+                        if (filtros.nombre != null && filtros.nombre != "" && filtros.nombre != "Ingrese nombre")
+                        {
+                            query = query + " AND usr.nombre LIKE '%" + filtros.nombre + "%'";
+                        }
+                        if (filtros.apellidos != null && filtros.apellidos != "" && filtros.apellidos != "Ingrese apellido(s)")
+                        {
+                            query = query + " AND usr.apellidos LIKE '%" + filtros.apellidos + "%'";
+                        }
+                        if (filtros.mail != null && filtros.mail != "" && filtros.mail != "Ingrese correo")
+                        {
+                            query = query + " AND usr.mail LIKE '%" + filtros.mail + "%'";
+                        }
+                        if (filtros.username != null && filtros.username != "" && filtros.username != "Ingrese username")
+                        {
+                            query = query + " AND usr.username LIKE '%" + filtros.username + "%'";
+                        }
+                        if (filtros.id_perfil != null && filtros.id_perfil != "" && filtros.id_perfil != "0")
+                        {
+                            query = query + " AND usr.id_perfil = '" + filtros.id_perfil + "'";
+                        }
+                        if (filtros.sexo != null && filtros.sexo != "" && filtros.sexo != "0")
+                        {
+                            query = query + " AND usr.sexo ='" + filtros.sexo + "'";
+                        }
+
+                        query = query + " ORDER BY usr.nombre ASC ";
+
+                        cmd.CommandText = query;
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ObjetoUsuario objetoUsuario = new ObjetoUsuario();
+                                objetoUsuario.rut = reader["rut"].ToString();
+                                objetoUsuario.nombre = reader["nombre"].ToString();
+                                objetoUsuario.apellidos = reader["apellidos"].ToString();
+                                objetoUsuario.username = reader["username"].ToString();
+                                objetoUsuario.password = reader["password"].ToString();
+                                objetoUsuario.telefono = reader["telefono"].ToString();
+                                objetoUsuario.mail = reader["mail"].ToString();
+                                objetoUsuario.sexo = reader["sexo"].ToString();
+                                objetoUsuario.edad = reader["edad"].ToString();
+                                objetoUsuario.perfil = reader["perfil"].ToString();
+
+                                lista.Add(objetoUsuario);
+                            }
+                        }
+                        cmd.Dispose();
+                    }
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> BuscarUsuarios() \n" + e.Message, Message.MessageType.error);
+            }
+            catch (Exception e2)
+            {
+                Message.ShowMessage("Error MySql", "UsersModel.cs -> BuscarUsuarios() \n" + e2.Message, Message.MessageType.error);
+            }
+            return lista;
         }
     }
 }

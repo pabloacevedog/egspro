@@ -70,8 +70,8 @@
             this.listUsersData.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -84,7 +84,7 @@
             this.listUsersData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.NullValue = "Sin Datos";
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
@@ -107,8 +107,8 @@
             this.Perfil});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -123,8 +123,8 @@
             this.listUsersData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -132,8 +132,8 @@
             this.listUsersData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
@@ -153,7 +153,7 @@
             this.Rut.HeaderText = "Rut";
             this.Rut.Name = "Rut";
             this.Rut.ReadOnly = true;
-            this.Rut.Width = 58;
+            this.Rut.Width = 59;
             // 
             // Nombre
             // 
@@ -161,7 +161,7 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 90;
+            this.Nombre.Width = 88;
             // 
             // Apellidos
             // 
@@ -169,6 +169,7 @@
             this.Apellidos.HeaderText = "Apellidos";
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.ReadOnly = true;
+            this.Apellidos.Width = 93;
             // 
             // Username
             // 
@@ -176,7 +177,7 @@
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
-            this.Username.Width = 102;
+            this.Username.Width = 99;
             // 
             // Password
             // 
@@ -184,7 +185,7 @@
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
-            this.Password.Width = 98;
+            this.Password.Width = 96;
             // 
             // Telefono
             // 
@@ -192,7 +193,7 @@
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 92;
+            this.Telefono.Width = 89;
             // 
             // Mail
             // 
@@ -200,7 +201,7 @@
             this.Mail.HeaderText = "Mail";
             this.Mail.Name = "Mail";
             this.Mail.ReadOnly = true;
-            this.Mail.Width = 67;
+            this.Mail.Width = 63;
             // 
             // Sexo
             // 
@@ -208,7 +209,7 @@
             this.Sexo.HeaderText = "Sexo";
             this.Sexo.Name = "Sexo";
             this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 68;
+            this.Sexo.Width = 67;
             // 
             // Edad
             // 
@@ -216,7 +217,7 @@
             this.Edad.HeaderText = "Edad";
             this.Edad.Name = "Edad";
             this.Edad.ReadOnly = true;
-            this.Edad.Width = 72;
+            this.Edad.Width = 68;
             // 
             // Perfil
             // 
@@ -224,7 +225,7 @@
             this.Perfil.HeaderText = "Perfil";
             this.Perfil.Name = "Perfil";
             this.Perfil.ReadOnly = true;
-            this.Perfil.Width = 70;
+            this.Perfil.Width = 68;
             // 
             // ListaUsuarios
             // 

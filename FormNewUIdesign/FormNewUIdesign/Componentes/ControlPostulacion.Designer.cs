@@ -89,7 +89,7 @@
             this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnterior.FlatAppearance.BorderSize = 0;
             this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnterior.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnterior.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnterior.ForeColor = System.Drawing.Color.White;
             this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
             this.btnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +113,7 @@
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSiguiente.FlatAppearance.BorderSize = 0;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.Image = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.Image")));
             this.btnSiguiente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,7 +131,7 @@
             // 
             // lblAddFormats
             // 
-            this.lblAddFormats.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddFormats.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddFormats.ForeColor = System.Drawing.Color.DarkGray;
             this.lblAddFormats.Location = new System.Drawing.Point(711, 64);
             this.lblAddFormats.Name = "lblAddFormats";
@@ -142,7 +142,7 @@
             // 
             // lblAddDocs
             // 
-            this.lblAddDocs.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddDocs.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddDocs.ForeColor = System.Drawing.Color.DarkGray;
             this.lblAddDocs.Location = new System.Drawing.Point(561, 64);
             this.lblAddDocs.Name = "lblAddDocs";
@@ -153,7 +153,7 @@
             // 
             // lblAddGrupo
             // 
-            this.lblAddGrupo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddGrupo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddGrupo.ForeColor = System.Drawing.Color.DarkGray;
             this.lblAddGrupo.Location = new System.Drawing.Point(411, 64);
             this.lblAddGrupo.Name = "lblAddGrupo";
@@ -164,7 +164,7 @@
             // 
             // lblCrearGrupo
             // 
-            this.lblCrearGrupo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrearGrupo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCrearGrupo.ForeColor = System.Drawing.Color.DarkGray;
             this.lblCrearGrupo.Location = new System.Drawing.Point(262, 64);
             this.lblCrearGrupo.Name = "lblCrearGrupo";

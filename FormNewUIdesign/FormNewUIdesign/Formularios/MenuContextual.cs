@@ -1,4 +1,5 @@
-﻿using FormNewUIdesign.Funciones;
+﻿using FormNewUIdesign.Componentes;
+using FormNewUIdesign.Funciones;
 using FormNewUIdesign.Modelo;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace FormNewUIdesign.Formularios
     public partial class MenuContextual : Form
     {
         static ObjetoUsuario usuario;
+        static ObjetoGrupo grupo;
         static MenuContextual nuevoMenu;
         public MenuContextual(List<OpcionesMenu> opciones, Point location)
         {
@@ -64,9 +66,19 @@ namespace FormNewUIdesign.Formularios
         }
 
 
-        public static void ShowMenu(List<OpcionesMenu> opciones, Point location, ObjetoUsuario datosUsuario)
+        public static void ShowMenu(List<OpcionesMenu> opciones, Point location, object data, string type)
         {
-            usuario = datosUsuario;
+            if (type == "usuario")
+            {
+                usuario = data as ObjetoUsuario;
+            }
+            else
+            {
+                if (type == "grupo")
+                {
+                    grupo = data as ObjetoGrupo;
+                }
+            }
             nuevoMenu = new MenuContextual(opciones, location);
             nuevoMenu.Show();
         }
@@ -86,8 +98,8 @@ namespace FormNewUIdesign.Formularios
                     nuevoMenu.Dispose();
                     string rut = usuario.rut;
                     string nombre = usuario.nombre + " " + usuario.apellidos;
-                    DialogResult result = Message.ShowMessage("Eliminar Usuario", "Está a punto de eliminar al usuario " + nombre + ", ¿Desea continuar?", Message.MessageType.information);
-                    if (result == DialogResult.Yes)
+                    DialogResult resultUser = Message.ShowMessage("Eliminar Usuario", "Está a punto de eliminar al usuario " + nombre + ", ¿Desea continuar?", Message.MessageType.information);
+                    if (resultUser == DialogResult.Yes)
                     {
                         if (UsersModel.EliminarUsuario(rut) > 0)
                         {
@@ -100,44 +112,26 @@ namespace FormNewUIdesign.Formularios
                     }
                     break;
 
-                case "optActualizarDatos":
+                case "optEliminarGrupo":
                     nuevoMenu.Dispose();
-                    Message.ShowMessage("DATOS DE USUARIO", "Actualizar datos de usuario.", Message.MessageType.warning);
-                    break;
-
-                case "optCambiarPass":
-                    nuevoMenu.Dispose();
-                    Message.ShowMessage("CONTRASEÑA", "Cambiar contraseña de la cuenta.", Message.MessageType.done);
-                    break;
-
-                case "optAyuda":
-                    nuevoMenu.Dispose();
-                    Message.ShowMessage("AYUDA", "Ingrsar al centro de ayuda del sistema.", Message.MessageType.error);
-                    break;
-
-                case "optCerrarSesion":
-                    nuevoMenu.Dispose();
-
-                    FormCollection formulariosAbiertos = Application.OpenForms;
-                    Form formCerrar = null;
-                    Form formMostrar = null;
-                    foreach (Form formulario in formulariosAbiertos)
+                    string identificador = grupo.Identificador;
+                    string proyecto = grupo.Proyecto;
+                    DialogResult resultGrupo = Message.ShowMessage("Eliminar Grupo", "Está a punto de eliminar el grupo " + identificador + " asociado a un proyecto de " + proyecto + ", ¿Desea continuar?", Message.MessageType.information);
+                    if (resultGrupo == DialogResult.Yes)
                     {
-                        switch (formulario.Name)
+                        if (GruposModel.EliminarGrupo(identificador) > 0)
                         {
-                            case "FormPrincipal":
-                                formCerrar = formulario;
-                                break;
-                            case "FormLogin":
-                                formMostrar = formulario;
-                                break;
+                            GruposIngresados.listGruposIng.DataSource = GruposModel.ObtenerGrupos();
+                            GruposIngresados.listGruposIng.ClearSelection();
+                            GruposIngresados.listGruposIng.BringToFront();
+                            Message.ShowMessage("Eliminación correcta", "El grupo " + identificador + ", se ha eliminado correctamente.", Message.MessageType.done);
                         }
                     }
-                    Mixin.VG.activeTabListUsers = true;
-                    Mixin.VG.activeTabAddUser = false;
-                    Mixin.VG.activeTabEditUser = false;
-                    formCerrar.Dispose();
-                    formMostrar.Show();               
+                    break;
+
+                case "optEditarGrupo":
+                    nuevoMenu.Dispose();
+                    Message.ShowMessage("Eliminación correcta", "EDITAR GRUPO", Message.MessageType.done);
                     break;
             }
         }
@@ -156,11 +150,13 @@ namespace FormNewUIdesign.Formularios
             switch (boton.Name)
             {
                 case "optEditarUsuario":
+                case "optEditarGrupo":
                     boton.Image = Image.FromFile("../../iconos/edit/white.png");
                     
                     break;
 
                 case "optEliminarUsuario":
+                case "optEliminarGrupo":
                     boton.Image = Image.FromFile("../../iconos/delete_user/white.png");
                     break;
 
@@ -190,11 +186,13 @@ namespace FormNewUIdesign.Formularios
             switch (boton.Name)
             {
                 case "optEditarUsuario":
+                case "optEditarGrupo":
                     boton.Image = Image.FromFile("../../iconos/edit/grey.png");
 
                     break;
 
                 case "optEliminarUsuario":
+                case "optEliminarGrupo":
                     boton.Image = Image.FromFile("../../iconos/delete_user/grey.png");
                     break;
 

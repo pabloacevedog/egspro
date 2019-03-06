@@ -56,8 +56,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtRut = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panelRegPostulantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listPostulantes)).BeginInit();
             this.panel1.SuspendLayout();
@@ -84,8 +84,8 @@
             this.listPostulantes.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -98,7 +98,7 @@
             this.listPostulantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.NullValue = "Sin Datos";
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
@@ -121,8 +121,8 @@
             this.anio_recep});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -139,8 +139,8 @@
             this.listPostulantes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -148,8 +148,8 @@
             this.listPostulantes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
@@ -167,7 +167,7 @@
             this.Rut.HeaderText = "Rut";
             this.Rut.Name = "Rut";
             this.Rut.ReadOnly = true;
-            this.Rut.Width = 58;
+            this.Rut.Width = 59;
             // 
             // Nombre
             // 
@@ -175,7 +175,7 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 90;
+            this.Nombre.Width = 88;
             // 
             // Apellido
             // 
@@ -183,7 +183,7 @@
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 94;
+            this.Apellido.Width = 87;
             // 
             // Direccion
             // 
@@ -191,6 +191,7 @@
             this.Direccion.HeaderText = "Dirección";
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 93;
             // 
             // Nro_casa
             // 
@@ -198,7 +199,7 @@
             this.Nro_casa.HeaderText = "Nro. Casa";
             this.Nro_casa.Name = "Nro_casa";
             this.Nro_casa.ReadOnly = true;
-            this.Nro_casa.Width = 103;
+            this.Nro_casa.Width = 96;
             // 
             // nom_conyuge
             // 
@@ -206,7 +207,7 @@
             this.nom_conyuge.HeaderText = "Nom. Conyuge";
             this.nom_conyuge.Name = "nom_conyuge";
             this.nom_conyuge.ReadOnly = true;
-            this.nom_conyuge.Width = 135;
+            this.nom_conyuge.Width = 129;
             // 
             // Apell_conyuge
             // 
@@ -214,7 +215,7 @@
             this.Apell_conyuge.HeaderText = "Apell. Conyuge";
             this.Apell_conyuge.Name = "Apell_conyuge";
             this.Apell_conyuge.ReadOnly = true;
-            this.Apell_conyuge.Width = 140;
+            this.Apell_conyuge.Width = 129;
             // 
             // Rut_conyuge
             // 
@@ -222,7 +223,7 @@
             this.Rut_conyuge.HeaderText = "Rut Conyuge";
             this.Rut_conyuge.Name = "Rut_conyuge";
             this.Rut_conyuge.ReadOnly = true;
-            this.Rut_conyuge.Width = 121;
+            this.Rut_conyuge.Width = 117;
             // 
             // Nro_cta_ahorro
             // 
@@ -230,7 +231,7 @@
             this.Nro_cta_ahorro.HeaderText = "Nro. Cta. Ahorro";
             this.Nro_cta_ahorro.Name = "Nro_cta_ahorro";
             this.Nro_cta_ahorro.ReadOnly = true;
-            this.Nro_cta_ahorro.Width = 144;
+            this.Nro_cta_ahorro.Width = 138;
             // 
             // anio_recep
             // 
@@ -238,7 +239,7 @@
             this.anio_recep.HeaderText = "Año Recepción";
             this.anio_recep.Name = "anio_recep";
             this.anio_recep.ReadOnly = true;
-            this.anio_recep.Width = 137;
+            this.anio_recep.Width = 128;
             // 
             // panel1
             // 
@@ -286,6 +287,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1072, 78);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -361,15 +363,6 @@
             this.textBox3.Size = new System.Drawing.Size(198, 23);
             this.textBox3.TabIndex = 2;
             // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(222, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 23);
-            this.textBox2.TabIndex = 1;
-            // 
             // txtRut
             // 
             this.txtRut.AcceptsTab = true;
@@ -382,6 +375,15 @@
             this.txtRut.Size = new System.Drawing.Size(198, 22);
             this.txtRut.TabIndex = 0;
             this.txtRut.Text = "Rut";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Location = new System.Drawing.Point(222, 8);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(8);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(198, 23);
+            this.textBox2.TabIndex = 1;
             // 
             // RegistrarPostulantes
             // 
@@ -427,7 +429,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtRut;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

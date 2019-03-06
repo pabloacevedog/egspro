@@ -43,3 +43,4 @@ D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdes
 D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.Componentes.CrearGrupo.resources
 D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.Componentes.GruposIngresados.resources
 D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.Componentes.RegistrarPostulantes.resources
+D:\PROJECTS\GITHUB\egspro\FormNewUIdesign\FormNewUIdesign\obj\Debug\FormNewUIdesign.Formularios.PopupInfo.resources

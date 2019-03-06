@@ -60,13 +60,13 @@ namespace FormNewUIdesign.Modelo
                     using (MySqlCommand cmd = conn.CreateCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = " SELECT Id_etapa FROM etapas WHERE nombre = '" + nombreEtapa + "'";
+                        cmd.CommandText = " SELECT id_etapa FROM etapas WHERE nombre = '" + nombreEtapa + "'";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                resultado = reader["Id_etapa"].ToString();
+                                resultado = reader["id_etapa"].ToString();
                             }
 
                             reader.Close();
@@ -101,17 +101,17 @@ namespace FormNewUIdesign.Modelo
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  " +
-                                                " Id_proyecto,  " +
-                                                " Nombre  " +
+                                                " id_proyecto,  " +
+                                                " nombre  " +
                                             " FROM proyectos " +
-                                            " ORDER BY Nombre ASC ";
+                                            " ORDER BY nombre ASC ";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             resultado.Add("0", "Seleccione");
                             while (reader.Read())
                             {
-                                resultado.Add(reader["Id_proyecto"].ToString(), reader["Nombre"].ToString());
+                                resultado.Add(reader["id_proyecto"].ToString(), reader["nombre"].ToString());
                             }
 
                             reader.Close();
@@ -147,7 +147,7 @@ namespace FormNewUIdesign.Modelo
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  COUNT(1) AS total " +
                                             " FROM grupos " +
-                                            " WHERE Identificador = '" + identificador + "' ";
+                                            " WHERE identificador = '" + identificador + "' ";
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -193,7 +193,7 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " INSERT INTO grupos (Identificador, Nombre, Razon_social, Personalidad_juridica, Nombre_presidente, Contacto_presidente, Id_proyecto) " +
+                            cmd.CommandText = " INSERT INTO grupos (identificador, nombre, razon_social, personalidad_juridica, nombre_presidente, contacto_presidente, id_proyecto) " +
                                               " VALUES (@Identificador, @Nombre, @Razon_social, @Personalidad_juridica, @Nombre_presidente, @Contacto_presidente, @Id_proyecto) ";
 
                             cmd.Parameters.AddWithValue("@Identificador", nuevoGrupo.Identificador);
@@ -240,7 +240,7 @@ namespace FormNewUIdesign.Modelo
                         using (MySqlTransaction tran = conn.BeginTransaction())
                         {
                             cmd.Transaction = tran;
-                            cmd.CommandText = " INSERT INTO grupos_etapas (Id_etapa, Id_grupo, Estado) " +
+                            cmd.CommandText = " INSERT INTO grupos_etapas (id_etapa, id_grupo, estado) " +
                                               " VALUES (@Id_etapa, @Id_grupo, @Estado) ";
 
                             cmd.Parameters.AddWithValue("@Id_etapa", id_etapa);
@@ -280,52 +280,52 @@ namespace FormNewUIdesign.Modelo
                     {
                         cmd.Connection = conn;
                         cmd.CommandText = " SELECT  " +
-                                            " gp.Identificador, " +
-                                            " gp.Nombre, " +
-                                            " gp.Razon_social, " +
-                                            " gp.Personalidad_juridica, " +
-                                            " gp.Nombre_presidente, " +
-                                            " gp.Contacto_presidente, " +
-                                            " pr.Nombre AS Proyecto, " +
+                                            " gp.identificador, " +
+                                            " gp.nombre, " +
+                                            " gp.razon_social, " +
+                                            " gp.personalidad_juridica, " +
+                                            " gp.nombre_presidente, " +
+                                            " gp.contacto_presidente, " +
+                                            " pr.nombre AS proyecto, " +
                                             " CASE " +
-                                                " WHEN (SELECT ge.Estado FROM grupos_etapas AS ge  " +
-                                                    " JOIN etapas AS et ON et.Id_etapa = ge.Id_etapa  " +
-                                                    " WHERE ge.Id_grupo = gp.Id_grupo AND et.Id_etapa = 1) = 1 THEN 'Completa' " +
+                                                " WHEN (SELECT ge.estado FROM grupos_etapas AS ge  " +
+                                                    " JOIN etapas AS et ON et.id_etapa = ge.id_etapa  " +
+                                                    " WHERE ge.id_grupo = gp.id_grupo AND et.id_etapa = 1) = 1 THEN 'Completa' " +
                                                 " ELSE 'Incompleta' " +
                                             " END AS Etapa_crear_grupo, " +
                                             " CASE " +
-                                                " WHEN (SELECT ge.Estado FROM grupos_etapas AS ge  " +
-                                                    " JOIN etapas AS et ON et.Id_etapa = ge.Id_etapa  " +
-                                                    " WHERE ge.Id_grupo = gp.Id_grupo AND et.Id_etapa = 2) = 1 THEN 'Completa' " +
+                                                " WHEN (SELECT ge.estado FROM grupos_etapas AS ge  " +
+                                                    " JOIN etapas AS et ON et.id_etapa = ge.id_etapa  " +
+                                                    " WHERE ge.id_grupo = gp.id_grupo AND et.id_etapa = 2) = 1 THEN 'Completa' " +
                                                 " ELSE 'Incompleta' " +
                                             " END AS Etapa_reg_postulantes, " +
                                             " CASE " +
-                                                " WHEN (SELECT ge.Estado FROM grupos_etapas AS ge  " +
-                                                    " JOIN etapas AS et ON et.Id_etapa = ge.Id_etapa  " +
-                                                    " WHERE ge.Id_grupo = gp.Id_grupo AND et.Id_etapa = 3) = 1 THEN 'Completa' " +
+                                                " WHEN (SELECT ge.estado FROM grupos_etapas AS ge  " +
+                                                    " JOIN etapas AS et ON et.id_etapa = ge.id_etapa  " +
+                                                    " WHERE ge.id_grupo = gp.id_grupo AND et.id_etapa = 3) = 1 THEN 'Completa' " +
                                                 " ELSE 'Incompleta' " +
                                             " END AS Etapa_add_docs, " +
                                             " CASE " +
-                                                " WHEN (SELECT ge.Estado FROM grupos_etapas AS ge  " +
-                                                    " JOIN etapas AS et ON et.Id_etapa = ge.Id_etapa  " +
-                                                    " WHERE ge.Id_grupo = gp.Id_grupo AND et.Id_etapa = 4) = 1 THEN 'Completa' " +
+                                                " WHEN (SELECT ge.estado FROM grupos_etapas AS ge  " +
+                                                    " JOIN etapas AS et ON et.id_etapa = ge.id_etapa  " +
+                                                    " WHERE ge.id_grupo = gp.id_grupo AND et.id_etapa = 4) = 1 THEN 'Completa' " +
                                                 " ELSE 'Incompleta' " +
                                             " END AS Etapa_add_formats " +
                                         " FROM grupos AS gp " +
-                                        " JOIN proyectos AS pr ON pr.Id_proyecto = gp.Id_proyecto " ;
+                                        " JOIN proyectos AS pr ON pr.id_proyecto = gp.id_proyecto " ;
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
                                 ObjetoGrupo obj = new ObjetoGrupo();
-                                obj.Identificador = reader["Identificador"].ToString();
-                                obj.Nombre = reader["Nombre"].ToString();
-                                obj.Razon_social = reader["Razon_social"].ToString();
-                                obj.Personalidad_juridica = reader["Personalidad_juridica"].ToString();
-                                obj.Nombre_presidente = reader["Nombre_presidente"].ToString();
-                                obj.Contacto_presidente = reader["Contacto_presidente"].ToString();
-                                obj.Proyecto = reader["Proyecto"].ToString();
+                                obj.Identificador = reader["identificador"].ToString();
+                                obj.Nombre = reader["nombre"].ToString();
+                                obj.Razon_social = reader["razon_social"].ToString();
+                                obj.Personalidad_juridica = reader["personalidad_juridica"].ToString();
+                                obj.Nombre_presidente = reader["nombre_presidente"].ToString();
+                                obj.Contacto_presidente = reader["contacto_presidente"].ToString();
+                                obj.Proyecto = reader["proyecto"].ToString();
                                 obj.Etapa_crear_grupo = reader["Etapa_crear_grupo"].ToString();
                                 obj.Etapa_reg_postulantes = reader["Etapa_reg_postulantes"].ToString();
                                 obj.Etapa_add_docs = reader["Etapa_add_docs"].ToString();
@@ -348,6 +348,46 @@ namespace FormNewUIdesign.Modelo
                 Message.ShowMessage("Error MySql", "GruposModel.cs -> ObtenerGrupos() \n" + e2.Message, Message.MessageType.error);
             }
             return lista;
+        }
+
+
+        public static int EliminarGrupo(string identificador)
+        {
+            int retorno = 0;
+            try
+            {
+                using (MySqlConnection conn = ObtenerConexionBD())
+                {
+                    using (MySqlCommand cmd = conn.CreateCommand())
+                    {
+                        cmd.Connection = conn;
+                        using (MySqlTransaction tran = conn.BeginTransaction())
+                        {
+                            cmd.Transaction = tran;
+                            cmd.CommandText = " DELETE ge FROM grupos_etapas AS ge INNER JOIN grupos AS g ON g.id_grupo = ge.id_grupo WHERE g.identificador = @identificador; " + 
+                                                " DELETE FROM grupos WHERE identificador = @Identificador ";
+
+                            cmd.Parameters.AddWithValue("@Identificador", identificador);
+
+                            retorno = cmd.ExecuteNonQuery();
+                            tran.Commit();
+                        }
+
+                        cmd.Dispose();
+                    }
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            catch (MySqlException e)
+            {
+                Message.ShowMessage("Error MySql", "GruposModel.cs -> EliminarGrupo() \n" + e.Message, Message.MessageType.error);
+            }
+            catch (Exception e2)
+            {
+                Message.ShowMessage("Error MySql", "GruposModel.cs -> EliminarGrupo() \n" + e2.Message, Message.MessageType.error);
+            }
+            return retorno;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using FormNewUIdesign.Modelo;
+using FormNewUIdesign.Funciones;
 
 namespace FormNewUIdesign
 {
@@ -157,14 +158,15 @@ namespace FormNewUIdesign
             if (LoginModel.Login(txtUsuario.Text, txtContrasena.Text))
             {
                 ObjetoUsuario objetoUsuario = LoginModel.ObtenerDatosUsuario(txtUsuario.Text);
+                Mixin.VG.Usuario_login = objetoUsuario;
                 FormPrincipal formulario = new FormPrincipal();
                 if (objetoUsuario.sexo == "F")
                 {
-                    formulario.SetTextoUsername("Bienvenida " + objetoUsuario.nombre + " " + objetoUsuario.apellidos);
+                    formulario.SetTextoUsername("Bienvenida " + objetoUsuario.nombre.Substring(0,1).ToUpper() + objetoUsuario.apellidos.Substring(0, 1).ToUpper() + "\n" + objetoUsuario.nombre.Split(' ')[0] + " " + objetoUsuario.apellidos.Split(' ')[0]);
                 }
                 else
                 {
-                    formulario.SetTextoUsername("Bienvenido " + objetoUsuario.nombre + " " + objetoUsuario.apellidos);
+                    formulario.SetTextoUsername("Bienvenido " + objetoUsuario.nombre.Substring(0, 1).ToUpper() + objetoUsuario.apellidos.Substring(0, 1).ToUpper() + "\n" + objetoUsuario.nombre.Split(' ')[0] + " " + objetoUsuario.apellidos.Split(' ')[0]);
                 }
                 formulario.objetoUsuario = objetoUsuario;
                 this.Hide();
