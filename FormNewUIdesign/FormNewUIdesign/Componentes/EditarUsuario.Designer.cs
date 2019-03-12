@@ -925,6 +925,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
+            this.DoubleBuffered = true;
             this.Name = "EditarUsuario";
             this.Padding = new System.Windows.Forms.Padding(11, 0, 5, 0);
             this.Size = new System.Drawing.Size(1100, 605);

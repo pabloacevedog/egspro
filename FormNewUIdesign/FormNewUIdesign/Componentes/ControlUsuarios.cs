@@ -68,9 +68,9 @@ namespace FormNewUIdesign
             else
             {
                 ActivarTabAgregarUsuario();
-            }            
+            }
         }
-        
+
 
         public static void ActivarTabListaUsuarios()
         {
@@ -78,7 +78,9 @@ namespace FormNewUIdesign
             {
                 Mixin.VG.activeTabListUsers = true;
 
-                tabListUsers.BackColor = Color.FromArgb(251, 168, 39);
+                tabListUsers.BackColor = Color.FromArgb(0, 73, 89);
+                tabListUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 141, 173);
+                tabListUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 141, 173);
                 tabListUsers.ForeColor = Color.White;
                 tabListUsers.Image = Image.FromFile("../../iconos/list_users/white.png");
                 tabEditUser.Visible = false;
@@ -88,6 +90,8 @@ namespace FormNewUIdesign
                 {
                     Mixin.VG.activeTabAddUser = false;
                     tabAddUser.BackColor = Color.FromArgb(235, 235, 235);
+                    tabAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(211, 211, 211);
+                    tabAddUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(211, 211, 211);
                     tabAddUser.ForeColor = Color.DimGray;
                     tabAddUser.Image = Image.FromFile("../../iconos/add_user/grey.png");
                 }
@@ -95,11 +99,13 @@ namespace FormNewUIdesign
                 {
                     Mixin.VG.activeTabEditUser = false;
                     tabEditUser.BackColor = Color.FromArgb(235, 235, 235);
+                    tabEditUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(211, 211, 211);
+                    tabEditUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(211, 211, 211);
                     tabEditUser.ForeColor = Color.DimGray;
                     tabEditUser.Image = Image.FromFile("../../iconos/edit_user/grey.png");
                 }
                 listaUsuarios.BringToFront();
-            }            
+            }
         }
 
         public static void ActivarTabAgregarUsuario()
@@ -107,7 +113,9 @@ namespace FormNewUIdesign
             if (!Mixin.VG.activeTabAddUser)
             {
                 Mixin.VG.activeTabAddUser = true;
-                tabAddUser.BackColor = Color.FromArgb(251, 168, 39);
+                tabAddUser.BackColor = Color.FromArgb(0, 73, 89);
+                tabAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 141, 173);
+                tabAddUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 141, 173);
                 tabAddUser.ForeColor = Color.White;
                 tabAddUser.Image = Image.FromFile("../../iconos/add_user/white.png");
                 tabEditUser.Visible = false;
@@ -122,6 +130,8 @@ namespace FormNewUIdesign
                 {
                     Mixin.VG.activeTabListUsers = false;
                     tabListUsers.BackColor = Color.FromArgb(235, 235, 235);
+                    tabListUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(211, 211, 211);
+                    tabListUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(211, 211, 211);
                     tabListUsers.ForeColor = Color.DimGray;
                     tabListUsers.Image = Image.FromFile("../../iconos/list_users/grey.png");
                 }
@@ -129,6 +139,8 @@ namespace FormNewUIdesign
                 {
                     Mixin.VG.activeTabEditUser = false;
                     tabEditUser.BackColor = Color.FromArgb(235, 235, 235);
+                    tabEditUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(211, 211, 211);
+                    tabEditUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(211, 211, 211);
                     tabEditUser.ForeColor = Color.DimGray;
                     tabEditUser.Image = Image.FromFile("../../iconos/edit_user/grey.png");
                 }
@@ -143,7 +155,9 @@ namespace FormNewUIdesign
             if (!Mixin.VG.activeTabEditUser)
             {
                 Mixin.VG.activeTabEditUser = true;
-                tabEditUser.BackColor = Color.FromArgb(251, 168, 39);
+                tabEditUser.BackColor = Color.FromArgb(0, 73, 89);
+                tabEditUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 141, 173);
+                tabEditUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 141, 173);
                 tabEditUser.ForeColor = Color.White;
                 tabEditUser.Image = Image.FromFile("../../iconos/edit_user/white.png");
 
@@ -162,6 +176,8 @@ namespace FormNewUIdesign
                 {
                     Mixin.VG.activeTabAddUser = false;
                     tabAddUser.BackColor = Color.FromArgb(235, 235, 235);
+                    tabAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(211, 211, 211);
+                    tabAddUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(211, 211, 211);
                     tabAddUser.ForeColor = Color.DimGray;
                     tabAddUser.Image = Image.FromFile("../../iconos/add_user/grey.png");
                 }
@@ -169,6 +185,8 @@ namespace FormNewUIdesign
                 {
                     Mixin.VG.activeTabListUsers = false;
                     tabListUsers.BackColor = Color.FromArgb(235, 235, 235);
+                    tabListUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(211, 211, 211);
+                    tabListUsers.FlatAppearance.MouseDownBackColor = Color.FromArgb(211, 211, 211);
                     tabListUsers.ForeColor = Color.DimGray;
                     tabListUsers.Image = Image.FromFile("../../iconos/list_users/grey.png");
                 }

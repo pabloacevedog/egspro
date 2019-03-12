@@ -159,6 +159,8 @@ namespace FormNewUIdesign
             {
                 ObjetoUsuario objetoUsuario = LoginModel.ObtenerDatosUsuario(txtUsuario.Text);
                 Mixin.VG.Usuario_login = objetoUsuario;
+                Mixin.VG.ruta_base_iconos = LoginModel.ObtenerRutaBaseIconos();
+                Mixin.VG.permisos_menu = LoginModel.ObtenerPermisos(objetoUsuario.id_perfil);
                 FormPrincipal formulario = new FormPrincipal();
                 if (objetoUsuario.sexo == "F")
                 {

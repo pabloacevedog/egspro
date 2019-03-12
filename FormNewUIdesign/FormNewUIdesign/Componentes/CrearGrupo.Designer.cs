@@ -550,6 +550,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.Controls.Add(this.panelCrearGrupo);
+            this.DoubleBuffered = true;
             this.Name = "CrearGrupo";
             this.Size = new System.Drawing.Size(1100, 560);
             this.Load += new System.EventHandler(this.CrearGrupo_Load);

@@ -101,7 +101,7 @@ namespace FormNewUIdesign
 
         private void btnMinimizar_MouseEnter(object sender, EventArgs e)
         {
-            btnMinimizar.BackColor = Color.FromArgb(237, 148, 9);
+            btnMinimizar.BackColor = Color.FromArgb(0, 115, 140);
         }
 
         private void btnMinimizar_MouseLeave(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace FormNewUIdesign
 
         private void btnResturar_MouseEnter(object sender, EventArgs e)
         {
-            btnResturar.BackColor = Color.FromArgb(237, 148, 9);
+            btnResturar.BackColor = Color.FromArgb(0, 115, 140);
         }
 
         private void btnResturar_MouseLeave(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace FormNewUIdesign
 
         private void btnMaximizar_MouseEnter(object sender, EventArgs e)
         {
-            btnMaximizar.BackColor = Color.FromArgb(237, 148, 9);
+            btnMaximizar.BackColor = Color.FromArgb(0, 115, 140);
         }
 
         private void btnMaximizar_MouseLeave(object sender, EventArgs e)
@@ -137,17 +137,21 @@ namespace FormNewUIdesign
         {
             if (menuPanel.Width == 200)
             {
-                logo.Visible = false;
+                //logo.Visible = false;
                 menuPanel.Width = 55;
+                panelLogo.Width = 55;
                 imgSlideMenu.Image = Image.FromFile("../../iconos/slide_right/white.png");
+                logo.Image = Image.FromFile("../../iconos/company_name_vertical.png");
                 lblUsername.Visible = false;
                 imgUsername.Location = new Point(6, 4);
             }
             else
             {
                 menuPanel.Width = 200;
+                panelLogo.Width = 200;
                 imgSlideMenu.Image = Image.FromFile("../../iconos/slide_left/white.png");
-                logo.Visible = true;
+                logo.Image = Image.FromFile("../../iconos/company_name.png");
+                //logo.Visible = true;
                 lblUsername.Visible = true;
                 imgUsername.Location = new Point(6, 4);
                 lblUsername.Location = new Point(64, 10);
@@ -156,17 +160,17 @@ namespace FormNewUIdesign
 
         private void colorActiveMenu(string elemento, Button boton)
         {
-            boton.BackColor = Color.FromArgb(251, 168, 39);
+            boton.BackColor = Color.FromArgb(0, 141, 173);
             boton.ForeColor = Color.White;
-            if (boton.BackColor == Color.FromArgb(251, 168, 39))
+            if (boton.BackColor == Color.FromArgb(0, 141, 173))
             {
-                boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
-                boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
+                boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 141, 173);
+                boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 141, 173);
             }
             else
             {
-                boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 137, 201);
-                boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(50, 137, 201);
+                boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
             }
 
             switch (elemento)
@@ -179,16 +183,24 @@ namespace FormNewUIdesign
                     boton.Image = Image.FromFile("../../iconos/account_group/white.png");
                     break;
 
+                case "Perfiles":
+                    boton.Image = Image.FromFile("../../iconos/profile/white.png");
+                    break;
+
+                case "Constantes":
+                    boton.Image = Image.FromFile("../../iconos/constantes/white.png");
+                    break;
+
                 case "Postulación":
                     boton.Image = Image.FromFile("../../iconos/projects/white.png");
                     break;
 
                 case "Postulantes":
-                    boton.Image = Image.FromFile("../../iconos/system/white.png");
+                    boton.Image = Image.FromFile("../../iconos/clients/white.png");
                     break;
 
                 case "Sistema":
-                    boton.Image = Image.FromFile("../../iconos/clients/white.png");
+                    boton.Image = Image.FromFile("../../iconos/system/white.png");
                     break;
 
                 case "Grupos Ingresados":
@@ -215,11 +227,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnDashboard", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/dashboard/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/dashboard/white.png");
                     }
                     break;
 
@@ -227,11 +239,35 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnUsers", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/account_group/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/account_group/white.png");
+                    }
+                    break;
+
+                case "Perfiles":
+                    foreach (Control item in Controls.Find("btnPerfiles", true))
+                    {
+                        boton = item as Button;
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/profile/white.png");
+                    }
+                    break;
+
+                case "Constantes":
+                    foreach (Control item in Controls.Find("btnConstantes", true))
+                    {
+                        boton = item as Button;
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/constantes/white.png");
                     }
                     break;
 
@@ -239,11 +275,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnPostulacion", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/projects/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/projects/white.png");
                     }
                     break;
 
@@ -251,11 +287,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnPostulantes", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/clients/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/clients/white.png");
                     }
                     break;
 
@@ -263,11 +299,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnSystem", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/system/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/system/white.png");
                     }                    
                     break;
 
@@ -275,11 +311,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnGrupos", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/groups/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/groups/white.png");
                     }
                     break;
 
@@ -287,11 +323,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnConfig", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/settings/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/settings/white.png");
                     }
                     break;
 
@@ -299,11 +335,11 @@ namespace FormNewUIdesign
                     foreach (Control item in Controls.Find("btnReportes", true))
                     {
                         boton = item as Button;
-                        boton.BackColor = Color.FromArgb(235, 235, 235);
-                        boton.ForeColor = Color.DimGray;
-                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
-                        boton.Image = Image.FromFile("../../iconos/reports/grey.png");
+                        boton.BackColor = Color.FromArgb(0, 73, 89);
+                        boton.ForeColor = Color.White;
+                        boton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                        boton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
+                        boton.Image = Image.FromFile("../../iconos/reports/white.png");
                     }
                     break;
             }
@@ -318,7 +354,7 @@ namespace FormNewUIdesign
 
         public static void SetUserImage(string rutaImagenPerfil)
         {
-            imgUsername.BackgroundImage = Image.FromFile(rutaImagenPerfil);
+            //imgUsername.BackgroundImage = Image.FromFile(rutaImagenPerfil);
         }
 
         private void btnDataUser_MouseEnter(object sender, EventArgs e)
@@ -437,77 +473,10 @@ namespace FormNewUIdesign
                 }
             }
 
-            //***********************************************************************
-            //***********************************************************************
-            //***** CARGAR DESDE BD TODOS LOS MENUES ASOCIADOS AL PERFIL ACTUAL *****
-            //***********************************************************************
-            //***********************************************************************
 
-            List<OpcionesMenu> opciones = new List<OpcionesMenu>();
-            OpcionesMenu opcion = new OpcionesMenu();
-            opcion.id = "btnDashboard";
-            opcion.texto = "        Dashboard";
-            opcion.imagen = "../../iconos/dashboard/white.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnPostulantes";
-            opcion.texto = "        Postulantes";
-            opcion.imagen = "../../iconos/clients/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnPostulacion";
-            opcion.texto = "        Postulación";
-            opcion.imagen = "../../iconos/projects/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnGrupos";
-            opcion.texto = "        Grupos Ingresados";
-            opcion.imagen = "../../iconos/groups/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnSystem";
-            opcion.texto = "        Sistema";
-            opcion.imagen = "../../iconos/system/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnUsers";
-            opcion.texto = "        Usuarios";
-            opcion.imagen = "../../iconos/account_group/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnPerfiles";
-            opcion.texto = "        Perfiles";
-            opcion.imagen = "../../iconos/account_group/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnConstantes";
-            opcion.texto = "        Constantes";
-            opcion.imagen = "../../iconos/account_group/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnConfig";
-            opcion.texto = "        Configuración";
-            opcion.imagen = "../../iconos/settings/grey.png";
-            opciones.Add(opcion);
-
-            opcion = new OpcionesMenu();
-            opcion.id = "btnReportes";
-            opcion.texto = "        Reportes";
-            opcion.imagen = "../../iconos/reports/grey.png";
-            opciones.Add(opcion);
-
-
-            int posicion_Y = logo.Height + 50;
+            int posicion_Y = logo.Height + 40;
             int x = 0;
-            foreach (var item in opciones)
+            foreach (var item in Mixin.VG.permisos_menu)
             {
                 Panel bordeBoton = new Panel();
                 bordeBoton.BackColor = Color.FromArgb(255, 154, 0);
@@ -524,18 +493,19 @@ namespace FormNewUIdesign
 
                 if (item.id == "btnDashboard")
                 {
-                    botonOpcion.BackColor = Color.FromArgb(251, 168, 39);
+                    botonOpcion.BackColor = Color.FromArgb(0, 106, 130);
                     botonOpcion.ForeColor = Color.White;
-                    botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
-                    botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                    botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 141, 173);
+                    botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 141, 173);
                 }
                 else
                 {
-                    botonOpcion.BackColor = Color.FromArgb(235, 235, 235);
-                    botonOpcion.ForeColor = Color.DimGray;
-                    botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 235, 235);
-                    botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(235, 235, 235);
+                    botonOpcion.BackColor = Color.Transparent;
+                    botonOpcion.ForeColor = Color.White;
+                    botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 73, 89);
+                    botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 73, 89);
                 }
+
                 botonOpcion.FlatStyle = FlatStyle.Flat;
                 botonOpcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 botonOpcion.Image = Image.FromFile(item.imagen); ;
@@ -547,7 +517,7 @@ namespace FormNewUIdesign
                 botonOpcion.Size = new Size(196, 32);
                 botonOpcion.TabIndex = 0;
                 botonOpcion.TabStop = false;
-                botonOpcion.Text = "     " + item.texto;
+                botonOpcion.Text = "             " + item.texto;
                 botonOpcion.UseVisualStyleBackColor = true;
                 botonOpcion.Click += new EventHandler(MenuItem_Click);
                 botonOpcion.MouseEnter += new EventHandler(botonOpcion_MouseEnter);
@@ -596,6 +566,30 @@ namespace FormNewUIdesign
                     contentPanel.Controls.Add(controlUsuarios);
                     controlUsuarios.Dock = DockStyle.Fill;
                     controlUsuarios.BringToFront();
+                    break;
+
+                case "btnPerfiles":
+                    lblTitulo.Text = "Perfiles";
+                    elementoMenuAnterior = elementoMenuActual;
+                    elementoMenuActual = "Perfiles";
+                    imgTitle.Image = Image.FromFile("../../iconos/profile/white.png");
+                    colorActiveMenu(elementoMenuActual, menuItemClicked);
+                    if (elementoMenuActual != elementoMenuAnterior)
+                    {
+                        colorInactiveMenu(elementoMenuAnterior);
+                    }
+                    break;
+
+                case "btnConstantes":
+                    lblTitulo.Text = "Constantes";
+                    elementoMenuAnterior = elementoMenuActual;
+                    elementoMenuActual = "Constantes";
+                    imgTitle.Image = Image.FromFile("../../iconos/constantes/white.png");
+                    colorActiveMenu(elementoMenuActual, menuItemClicked);
+                    if (elementoMenuActual != elementoMenuAnterior)
+                    {
+                        colorInactiveMenu(elementoMenuAnterior);
+                    }
                     break;
 
                 case "btnPostulacion":
@@ -721,7 +715,6 @@ namespace FormNewUIdesign
             Button boton = (Button)sender;
             if (elementoMenuActual != boton.Text.TrimStart())
             {
-                boton.ForeColor = Color.FromArgb(251, 168, 39);
                 boton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             }
             else
@@ -735,7 +728,7 @@ namespace FormNewUIdesign
                 case "btnDashboard":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/dashboard/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/dashboard/white.png");
                     }
                     else
                     {
@@ -746,7 +739,7 @@ namespace FormNewUIdesign
                 case "btnUsers":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/account_group/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/account_group/white.png");
                     }
                     else
                     {
@@ -754,10 +747,32 @@ namespace FormNewUIdesign
                     }
                     break;
 
+                case "btnPerfiles":
+                    if (elementoMenuActual != boton.Text.TrimStart())
+                    {
+                        boton.Image = Image.FromFile("../../iconos/profile/white.png");
+                    }
+                    else
+                    {
+                        boton.Image = Image.FromFile("../../iconos/profile/white.png");
+                    }
+                    break;
+
+                case "btnConstantes":
+                    if (elementoMenuActual != boton.Text.TrimStart())
+                    {
+                        boton.Image = Image.FromFile("../../iconos/constantes/white.png");
+                    }
+                    else
+                    {
+                        boton.Image = Image.FromFile("../../iconos/constantes/white.png");
+                    }
+                    break;
+
                 case "btnPostulacion":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/projects/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/projects/white.png");
                     }
                     else
                     {
@@ -768,7 +783,7 @@ namespace FormNewUIdesign
                 case "btnPostulantes":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/clients/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/clients/white.png");
                     }
                     else
                     {
@@ -779,7 +794,7 @@ namespace FormNewUIdesign
                 case "btnSystem":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/system/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/system/white.png");
                     }
                     else
                     {
@@ -790,7 +805,7 @@ namespace FormNewUIdesign
                 case "btnGrupos":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/groups/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/groups/white.png");
                     }
                     else
                     {
@@ -801,7 +816,7 @@ namespace FormNewUIdesign
                 case "btnConfig":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/settings/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/settings/white.png");
                     }
                     else
                     {
@@ -812,7 +827,7 @@ namespace FormNewUIdesign
                 case "btnReportes":
                     if (elementoMenuActual != boton.Text.TrimStart())
                     {
-                        boton.Image = Image.FromFile("../../iconos/reports/orange.png");
+                        boton.Image = Image.FromFile("../../iconos/reports/white.png");
                     }
                     else
                     {
@@ -832,64 +847,80 @@ namespace FormNewUIdesign
                 case "btnDashboard":
                     if (elementoMenuActual != "Dashboard")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/dashboard/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/dashboard/white.png");
                     }
                     break;
 
                 case "btnUsers":
                     if (elementoMenuActual != "Usuarios")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/account_group/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/account_group/white.png");
+                    }
+                    break;
+
+                case "btnPerfiles":
+                    if (elementoMenuActual != "Perfiles")
+                    {
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/profile/white.png");
+                    }
+                    break;
+
+                case "btnConstantes":
+                    if (elementoMenuActual != "Constantes")
+                    {
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/constantes/white.png");
                     }
                     break;
 
                 case "btnPostulacion":
                     if (elementoMenuActual != "Postulación")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/projects/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/projects/white.png");
                     }
                     break;
 
                 case "btnPostulantes":
                     if (elementoMenuActual != "Postulantes")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/clients/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/clients/white.png");
                     }
                     break;
 
                 case "btnSystem":
                     if (elementoMenuActual != "Sistema")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/system/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/system/White.png");
                     }
                     break;
 
                 case "btnGrupos":
                     if (elementoMenuActual != "Grupos Ingresados")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/groups/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/groups/white.png");
                     }
                     break;
 
                 case "btnConfig":
                     if (elementoMenuActual != "Configuración")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/settings/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/settings/white.png");
                     }
                     break;
 
                 case "btnReportes":
                     if (elementoMenuActual != "Reportes")
                     {
-                        boton.ForeColor = Color.DimGray;
-                        boton.Image = Image.FromFile("../../iconos/reports/grey.png");
+                        boton.ForeColor = Color.White;
+                        boton.Image = Image.FromFile("../../iconos/reports/white.png");
                     }
                     break;
             }

@@ -38,18 +38,19 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.lblCalendario = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.logoPanel = new System.Windows.Forms.Panel();
-            this.imgSlideMenu = new System.Windows.Forms.PictureBox();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.PictureBox();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.btnDataUser = new System.Windows.Forms.PictureBox();
-            this.controlPanel = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.panelUserData = new System.Windows.Forms.Panel();
+            this.imgUsername = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            imgUsername = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.panelUserData = new System.Windows.Forms.Panel();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblCalendario = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.controlPanel = new System.Windows.Forms.Panel();
+            this.btnDataUser = new System.Windows.Forms.PictureBox();
+            this.imgSlideMenu = new System.Windows.Forms.PictureBox();
+            this.logoPanel = new System.Windows.Forms.Panel();
             this.tituloPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgTitle)).BeginInit();
@@ -57,18 +58,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnResturar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.logoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSlideMenu)).BeginInit();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.menuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDataUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.controlPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDataUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSlideMenu)).BeginInit();
+            this.logoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tituloPanel
             // 
-            this.tituloPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
+            this.tituloPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
             this.tituloPanel.Controls.Add(this.panel1);
             this.tituloPanel.Controls.Add(this.btnCerrar);
             this.tituloPanel.Controls.Add(this.btnResturar);
@@ -150,6 +152,59 @@
             this.contentPanel.BackColor = System.Drawing.Color.White;
             this.contentPanel.Name = "contentPanel";
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.White;
+            this.panelLogo.Controls.Add(this.logo);
+            resources.ApplyResources(this.panelLogo, "panelLogo");
+            this.panelLogo.Name = "panelLogo";
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.logo, "logo");
+            this.logo.Name = "logo";
+            this.logo.TabStop = false;
+            // 
+            // menuPanel
+            // 
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
+            this.menuPanel.Controls.Add(this.panelLogo);
+            this.menuPanel.Controls.Add(this.btnDataUser);
+            this.menuPanel.Controls.Add(this.controlPanel);
+            this.menuPanel.Controls.Add(this.logoPanel);
+            resources.ApplyResources(this.menuPanel, "menuPanel");
+            this.menuPanel.Name = "menuPanel";
+            // 
+            // imgUsername
+            // 
+            resources.ApplyResources(this.imgUsername, "imgUsername");
+            this.imgUsername.BackColor = System.Drawing.Color.Transparent;
+            this.imgUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgUsername.Name = "imgUsername";
+            // 
+            // shapeContainer1
+            // 
+            resources.ApplyResources(this.shapeContainer1, "shapeContainer1");
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.imgUsername});
+            this.shapeContainer1.TabStop = false;
+            // 
+            // panelUserData
+            // 
+            resources.ApplyResources(this.panelUserData, "panelUserData");
+            this.panelUserData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.panelUserData.Name = "panelUserData";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoEllipsis = true;
+            resources.ApplyResources(this.lblUsername, "lblUsername");
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Name = "lblUsername";
+            // 
             // lblCalendario
             // 
             resources.ApplyResources(this.lblCalendario, "lblCalendario");
@@ -161,51 +216,6 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            // 
-            // logoPanel
-            // 
-            this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
-            this.logoPanel.Controls.Add(this.imgSlideMenu);
-            this.logoPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.logoPanel, "logoPanel");
-            this.logoPanel.Name = "logoPanel";
-            this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logoPanel_MouseDown);
-            // 
-            // imgSlideMenu
-            // 
-            this.imgSlideMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.imgSlideMenu, "imgSlideMenu");
-            this.imgSlideMenu.Name = "imgSlideMenu";
-            this.imgSlideMenu.TabStop = false;
-            this.imgSlideMenu.Click += new System.EventHandler(this.imgSlideMenu_Click);
-            // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.logo, "logo");
-            this.logo.Name = "logo";
-            this.logo.TabStop = false;
-            // 
-            // menuPanel
-            // 
-            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.menuPanel.Controls.Add(this.btnDataUser);
-            this.menuPanel.Controls.Add(this.controlPanel);
-            this.menuPanel.Controls.Add(this.logo);
-            this.menuPanel.Controls.Add(this.logoPanel);
-            resources.ApplyResources(this.menuPanel, "menuPanel");
-            this.menuPanel.Name = "menuPanel";
-            // 
-            // btnDataUser
-            // 
-            this.btnDataUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
-            this.btnDataUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnDataUser, "btnDataUser");
-            this.btnDataUser.Name = "btnDataUser";
-            this.btnDataUser.TabStop = false;
-            this.btnDataUser.Click += new System.EventHandler(this.btnDataUser_Click);
-            this.btnDataUser.MouseEnter += new System.EventHandler(this.btnDataUser_MouseEnter);
-            this.btnDataUser.MouseLeave += new System.EventHandler(this.btnDataUser_MouseLeave);
             // 
             // controlPanel
             // 
@@ -219,34 +229,33 @@
             resources.ApplyResources(this.controlPanel, "controlPanel");
             this.controlPanel.Name = "controlPanel";
             // 
-            // lblUsername
+            // btnDataUser
             // 
-            this.lblUsername.AutoEllipsis = true;
-            resources.ApplyResources(this.lblUsername, "lblUsername");
-            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Name = "lblUsername";
+            this.btnDataUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.btnDataUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnDataUser, "btnDataUser");
+            this.btnDataUser.Name = "btnDataUser";
+            this.btnDataUser.TabStop = false;
+            this.btnDataUser.Click += new System.EventHandler(this.btnDataUser_Click);
+            this.btnDataUser.MouseEnter += new System.EventHandler(this.btnDataUser_MouseEnter);
+            this.btnDataUser.MouseLeave += new System.EventHandler(this.btnDataUser_MouseLeave);
             // 
-            // panelUserData
+            // imgSlideMenu
             // 
-            resources.ApplyResources(this.panelUserData, "panelUserData");
-            this.panelUserData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.panelUserData.Name = "panelUserData";
+            this.imgSlideMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.imgSlideMenu, "imgSlideMenu");
+            this.imgSlideMenu.Name = "imgSlideMenu";
+            this.imgSlideMenu.TabStop = false;
+            this.imgSlideMenu.Click += new System.EventHandler(this.imgSlideMenu_Click);
             // 
-            // shapeContainer1
+            // logoPanel
             // 
-            resources.ApplyResources(this.shapeContainer1, "shapeContainer1");
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            imgUsername});
-            this.shapeContainer1.TabStop = false;
-            // 
-            // imgUsername
-            // 
-            resources.ApplyResources(imgUsername, "imgUsername");
-            imgUsername.BackColor = System.Drawing.Color.Transparent;
-            imgUsername.Cursor = System.Windows.Forms.Cursors.Hand;
-            imgUsername.Name = "imgUsername";
+            this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
+            this.logoPanel.Controls.Add(this.imgSlideMenu);
+            this.logoPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.logoPanel, "logoPanel");
+            this.logoPanel.Name = "logoPanel";
+            this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logoPanel_MouseDown);
             // 
             // FormPrincipal
             // 
@@ -255,6 +264,7 @@
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.tituloPanel);
             this.Controls.Add(this.menuPanel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
             this.Tag = "";
@@ -268,14 +278,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnResturar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.logoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgSlideMenu)).EndInit();
+            this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.menuPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnDataUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.controlPanel.ResumeLayout(false);
             this.controlPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDataUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSlideMenu)).EndInit();
+            this.logoPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,21 +299,22 @@
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox imgTitle;
-        private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel logoPanel;
-        private System.Windows.Forms.PictureBox imgSlideMenu;
+        private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Panel menuPanel;
-        private System.Windows.Forms.Label lblCalendario;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnDataUser;
         public System.Windows.Forms.Panel controlPanel;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblCalendario;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Panel panelUserData;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private System.Windows.Forms.PictureBox btnDataUser;
-        public static Microsoft.VisualBasic.PowerPacks.OvalShape imgUsername;
+        public Microsoft.VisualBasic.PowerPacks.OvalShape imgUsername;
+        private System.Windows.Forms.Panel logoPanel;
+        private System.Windows.Forms.PictureBox imgSlideMenu;
     }
 }
 

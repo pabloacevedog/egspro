@@ -117,6 +117,7 @@
             this.ClientSize = new System.Drawing.Size(241, 104);
             this.Controls.Add(this.lblPopupInfo);
             this.Controls.Add(this.barraMessageBox);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PopupInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

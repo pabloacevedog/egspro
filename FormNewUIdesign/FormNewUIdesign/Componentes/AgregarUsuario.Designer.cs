@@ -918,6 +918,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.Controls.Add(this.panelAgregarUsuario);
+            this.DoubleBuffered = true;
             this.Name = "AgregarUsuario";
             this.Size = new System.Drawing.Size(1100, 605);
             this.panelAgregarUsuario.ResumeLayout(false);

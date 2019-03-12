@@ -122,6 +122,9 @@
     <Compile Include="Formularios\Message.Designer.cs">
       <DependentUpon>Message.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modelo\GruposModel.cs" />
     <Compile Include="Modelo\LoginModel.cs" />
     <Compile Include="Modelo\ConexionMySql.cs" />

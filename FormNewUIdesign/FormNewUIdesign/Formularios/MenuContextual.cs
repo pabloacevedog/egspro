@@ -36,11 +36,11 @@ namespace FormNewUIdesign.Formularios
                 botonOpcion.FlatAppearance.BorderSize = 0;
                 botonOpcion.FlatAppearance.BorderColor = Color.FromArgb(167, 204, 232);
                 botonOpcion.Cursor = Cursors.Hand;
-                botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(251, 168, 39);
-                botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(251, 168, 39);
+                botonOpcion.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 141, 173);
+                botonOpcion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 141, 173);
                 botonOpcion.BackColor = Color.FromArgb(245, 245, 245);
                 botonOpcion.FlatStyle = FlatStyle.Flat;
-                botonOpcion.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                botonOpcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 botonOpcion.ForeColor = Color.DimGray;
                 botonOpcion.Image = Image.FromFile(item.imagen); ;
                 botonOpcion.ImageAlign = ContentAlignment.MiddleRight;

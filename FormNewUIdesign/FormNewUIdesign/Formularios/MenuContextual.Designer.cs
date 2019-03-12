@@ -48,6 +48,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(200, 40);
             this.Controls.Add(this.contenedorOpciones);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(200, 40);
             this.Name = "MenuContextual";

@@ -122,10 +122,12 @@
             // 
             // tabListUsers
             // 
-            tabListUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(168)))), ((int)(((byte)(39)))));
+            tabListUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(89)))));
             tabListUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             tabListUsers.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             tabListUsers.FlatAppearance.BorderSize = 0;
+            tabListUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(173)))));
+            tabListUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(141)))), ((int)(((byte)(173)))));
             tabListUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             tabListUsers.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabListUsers.ForeColor = System.Drawing.Color.White;
@@ -652,6 +654,7 @@
             this.Controls.Add(tabEditUser);
             this.Controls.Add(tabAddUser);
             this.Controls.Add(tabListUsers);
+            this.DoubleBuffered = true;
             this.Name = "ControlUsuarios";
             this.Size = new System.Drawing.Size(1117, 663);
             ((System.ComponentModel.ISupportInitialize)(btnFiltros)).EndInit();

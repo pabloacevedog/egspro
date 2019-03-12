@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace FormNewUIdesign.Funciones
@@ -18,6 +16,8 @@ namespace FormNewUIdesign.Funciones
             public static string etapaAgregarDocs = "Agregar Documentación";
             public static string etapaGenerarFormatos = "Generar Formatos";
             public static ObjetoUsuario Usuario_login;
+            public static string ruta_base_iconos = "";
+            public static List<OpcionesMenu> permisos_menu;
         }
 
         

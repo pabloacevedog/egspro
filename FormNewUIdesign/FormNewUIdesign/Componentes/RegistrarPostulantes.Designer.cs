@@ -56,8 +56,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtRut = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRut = new System.Windows.Forms.TextBox();
             this.panelRegPostulantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listPostulantes)).BeginInit();
             this.panel1.SuspendLayout();
@@ -363,6 +363,15 @@
             this.textBox3.Size = new System.Drawing.Size(198, 23);
             this.textBox3.TabIndex = 2;
             // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Location = new System.Drawing.Point(222, 8);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(8);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(198, 23);
+            this.textBox2.TabIndex = 1;
+            // 
             // txtRut
             // 
             this.txtRut.AcceptsTab = true;
@@ -376,15 +385,6 @@
             this.txtRut.TabIndex = 0;
             this.txtRut.Text = "Rut";
             // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(222, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 23);
-            this.textBox2.TabIndex = 1;
-            // 
             // RegistrarPostulantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,6 +392,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRegPostulantes);
+            this.DoubleBuffered = true;
             this.Name = "RegistrarPostulantes";
             this.Size = new System.Drawing.Size(1100, 560);
             this.panelRegPostulantes.ResumeLayout(false);

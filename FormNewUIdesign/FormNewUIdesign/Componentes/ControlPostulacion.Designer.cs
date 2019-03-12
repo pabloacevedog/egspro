@@ -352,6 +352,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelPostulacion);
+            this.DoubleBuffered = true;
             this.Name = "ControlPostulacion";
             this.Size = new System.Drawing.Size(1100, 660);
             this.panelPostulacion.ResumeLayout(false);
